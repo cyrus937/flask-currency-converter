@@ -1,0 +1,286 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - Currency Converter{% endblock %}
+
+{% block content %}
+<div class="row">
+    <!-- Bienvenue -->
+    <div class="col-12 mb-4">
+        <div class="card">
+            <div class="card-body">
+                <h1 class="card-title">Bienvenue, {{ user.get_full_name() }}!</h1>
+                <p class="card-text text-muted">
+                    Gérez vos conversions de devises en temps réel avec les meilleurs taux du marché.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Statistiques rapides -->
+    <div class="col-md-3 mb-4">
+        <div class="card currency-card text-white bg-primary">
+            <div class="card-body">
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <h6 class="card-title">Conversions</h6>
+                        <h3 class="mb-0" id="total-conversions">-</h3>
+                    </div>
+                    <div class="align-self-center">
+                        <i class="fas fa-exchange-alt fa-2x"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3 mb-4">
+        <div class="card currency-card text-white bg-success">
+            <div class="card-body">
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <h6 class="card-title">Volume</h6>
+                        <h3 class="mb-0" id="total-volume">-</h3>
+                    </div>
+                    <div class="align-self-center">
+                        <i class="fas fa-chart-line fa-2x"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3 mb-4">
+        <div class="card currency-card text-white bg-info">
+            <div class="card-body">
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <h6 class="card-title">Devise préférée</h6>
+                        <h3 class="mb-0">{{ user.preferred_currency }}</h3>
+                    </div>
+                    <div class="align-self-center">
+                        <i class="fas fa-star fa-2x"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3 mb-4">
+        <div class="card currency-card text-white bg-warning">
+            <div class="card-body">
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <h6 class="card-title">Statut</h6>
+                        <h3 class="mb-0">
+                            {% if user.is_premium %}Premium{% else %}Standard{% endif %}
+                        </h3>
+                    </div>
+                    <div class="align-self-center">
+                        <i class="fas fa-crown fa-2x"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <!-- Conversion rapide -->
+    <div class="col-lg-8 mb-4">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="fas fa-bolt me-2"></i>Conversion rapide</h5>
+            </div>
+            <div class="card-body">
+                <form id="quick-convert-form">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label class="form-label">Montant</label>
+                            <input type="number" class="form-control" id="amount" value="100" step="0.01" min="0.01">
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label">De</label>
+                            <select class="form-select" id="from-currency">
+                                <option value="USD">USD - Dollar américain</option>
+                                <option value="EUR">EUR - Euro</option>
+                                <option value="GBP">GBP - Livre sterling</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label">Vers</label>
+                            <select class="form-select" id="to-currency">
+                                <option value="EUR">EUR - Euro</option>
+                                <option value="USD">USD - Dollar américain</option>
+                                <option value="GBP">GBP - Livre sterling</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label">&nbsp;</label>
+                            <button type="submit" class="btn btn-primary w-100">
+                                <i class="fas fa-exchange-alt me-1"></i>Convertir
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                
+                <!-- Résultat de conversion -->
+                <div id="conversion-result" class="mt-4" style="display: none;">
+                    <div class="card conversion-result text-white">
+                        <div class="card-body text-center">
+                            <h3 class="mb-0" id="result-text"></h3>
+                            <small id="result-details"></small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Devises favorites -->
+    <div class="col-lg-4 mb-4">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="fas fa-heart me-2"></i>Devises favorites</h5>
+            </div>
+            <div class="card-body">
+                {% if user_favorites %}
+                    <div class="list-group list-group-flush">
+                        {% for currency in user_favorites %}
+                        <div class="list-group-item d-flex justify-content-between align-items-center px-0">
+                            <span><strong>{{ currency }}</strong></span>
+                            <small class="text-muted">1 {{ user.preferred_currency }} = <span class="rate-{{ currency }}">...</span> {{ currency }}</small>
+                        </div>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    <p class="text-muted">Aucune devise favorite.</p>
+                    <a href="{{ url_for('dashboard.currency_converter') }}" class="btn btn-outline-primary btn-sm">
+                        Ajouter des favoris
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Conversions récentes -->
+{% if recent_conversions %}
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0"><i class="fas fa-history me-2"></i>Conversions récentes</h5>
+                <a href="{{ url_for('dashboard.conversion_history') }}" class="btn btn-outline-primary btn-sm">
+                    Voir tout
+                </a>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Montant</th>
+                                <th>De</th>
+                                <th>Vers</th>
+                                <th>Résultat</th>
+                                <th>Taux</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for conversion in recent_conversions %}
+                            <tr>
+                                <td>{{ conversion.created_at.strftime('%d/%m %H:%M') }}</td>
+                                <td>{{ "%.2f"|format(conversion.original_amount) }}</td>
+                                <td><span class="badge bg-secondary">{{ conversion.from_currency }}</span></td>
+                                <td><span class="badge bg-secondary">{{ conversion.to_currency }}</span></td>
+                                <td><strong>{{ "%.2f"|format(conversion.converted_amount) }}</strong></td>
+                                <td>{{ "%.4f"|format(conversion.exchange_rate) }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endblock %}
+
+{% block scripts %}
+<script>
+// Charger les statistiques utilisateur
+async function loadUserStats() {
+    try {
+        const response = await axios.get('/api/user/stats');
+        const stats = response.data;
+        
+        document.getElementById('total-conversions').textContent = stats.conversions.total;
+        document.getElementById('total-volume').textContent = `$${stats.conversions.volume.toFixed(2)}`;
+    } catch (error) {
+        console.error('Erreur lors du chargement des stats:', error);
+    }
+}
+
+// Conversion rapide
+document.getElementById('quick-convert-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const amount = document.getElementById('amount').value;
+    const fromCurrency = document.getElementById('from-currency').value;
+    const toCurrency = document.getElementById('to-currency').value;
+    
+    try {
+        const response = await axios.post('/dashboard/api/quick-convert', {
+            amount: parseFloat(amount),
+            from_currency: fromCurrency,
+            to_currency: toCurrency
+        });
+        
+        const result = response.data;
+        
+        document.getElementById('result-text').textContent = 
+            `${amount} ${fromCurrency} = ${result.converted_amount.toFixed(2)} ${toCurrency}`;
+        document.getElementById('result-details').textContent = 
+            `Taux: ${result.exchange_rate.toFixed(4)} | Frais: ${result.fee_amount.toFixed(2)} ${toCurrency}`;
+        document.getElementById('conversion-result').style.display = 'block';
+        
+    } catch (error) {
+        alert('Erreur lors de la conversion: ' + (error.response?.data?.error || error.message));
+    }
+});
+
+// Charger les taux pour les favoris
+async function loadFavoriteRates() {
+    const favorites = {{ user_favorites|tojson }};
+    const baseCurrency = '{{ user.preferred_currency }}';
+    
+    for (const currency of favorites) {
+        if (currency !== baseCurrency) {
+            try {
+                const response = await axios.post('/api/conversions/convert', {
+                    amount: 1,
+                    from_currency: baseCurrency,
+                    to_currency: currency
+                });
+                
+                const rate = response.data.exchange_rate.toFixed(4);
+                const element = document.querySelector(`.rate-${currency}`);
+                if (element) {
+                    element.textContent = rate;
+                }
+            } catch (error) {
+                console.error(`Erreur pour ${currency}:`, error);
+            }
+        }
+    }
+}
+
+// Initialisation
+document.addEventListener('DOMContentLoaded', () => {
+    loadUserStats();
+    loadFavoriteRates();
+});
+</script>
+{% endblock %}
