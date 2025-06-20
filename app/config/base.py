@@ -55,3 +55,106 @@ class BaseConfig:
     
     # CORS
     CORS_ORIGINS = ["http://localhost:3000", "http://localhost:5000"]
+
+    # Configuration OpenAPI/Swagger
+    API_TITLE = "Currency Converter API"
+    API_VERSION = "v1"
+    OPENAPI_VERSION = "3.0.2"
+    OPENAPI_URL_PREFIX = "/"
+    OPENAPI_SWAGGER_UI_PATH = "/docs"
+    OPENAPI_SWAGGER_UI_URL = "https://cdn.jsdelivr.net/npm/swagger-ui-dist/"
+    OPENAPI_REDOC_PATH = "/redoc"
+    OPENAPI_REDOC_URL = "https://cdn.jsdelivr.net/npm/redoc@2.0.0/bundles/redoc.standalone.js"
+    
+    # Description de l'API
+    API_SPEC_OPTIONS = {
+        'info': {
+            'title': 'Currency Converter API',
+            'version': 'v1',
+            'description': '''
+## API de Conversion de Devises avec Authentification
+
+Cette API offre des services complets de conversion de devises en temps réel avec un système d'authentification sécurisé.
+
+### Fonctionnalités principales :
+- 🔐 **Authentification JWT** avec refresh tokens
+- 💱 **Conversion de 40+ devises** (fiat et crypto)
+- 📊 **Historique des conversions**
+- ⭐ **Gestion des devises favorites**
+- 🚀 **Cache Redis** pour performances optimales
+- 📈 **Statistiques et analytics**
+
+### Providers de taux :
+- Fixer.io (API premium)
+- Banque Centrale Européenne (gratuit)
+- Fallback automatique
+
+### Sécurité :
+- Rate limiting intelligent
+- Tokens JWT avec expiration
+- Blacklist des tokens révoqués
+- Validation des données avec Marshmallow
+
+### Commencer :
+1. Créez un compte avec `/api/auth/register`
+2. Connectez-vous avec `/api/auth/login`
+3. Utilisez le token dans l'en-tête `Authorization: Bearer <token>`
+4. Convertissez des devises avec `/api/conversions/convert`
+            ''',
+            'contact': {
+                'name': 'Support API',
+                'email': 'support@currencyconverter.com'
+            },
+            'license': {
+                'name': 'MIT',
+                'url': 'https://opensource.org/licenses/MIT'
+            }
+        },
+        'servers': [
+            {
+                'url': 'http://localhost:5000',
+                'description': 'Serveur de développement'
+            },
+            {
+                'url': 'https://api.currencyconverter.com',
+                'description': 'Serveur de production'
+            }
+        ],
+        'tags': [
+            {
+                'name': 'Authentication',
+                'description': 'Endpoints d\'authentification et gestion des comptes'
+            },
+            {
+                'name': 'Conversions',
+                'description': 'Conversion de devises en temps réel'
+            },
+            {
+                'name': 'Currencies',
+                'description': 'Gestion des devises et taux de change'
+            },
+            {
+                'name': 'User',
+                'description': 'Gestion du profil utilisateur'
+            },
+            {
+                'name': 'Dashboard',
+                'description': 'Interface web et statistiques'
+            }
+        ],
+        'components': {
+            'securitySchemes': {
+                'bearerAuth': {
+                    'type': 'http',
+                    'scheme': 'bearer',
+                    'bearerFormat': 'JWT',
+                    'description': 'Token JWT obtenu via /api/auth/login'
+                }
+            }
+        },
+        'security': [
+            {
+                'bearerAuth': []
+            }
+        ]
+    }
