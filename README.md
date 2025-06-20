@@ -66,7 +66,11 @@ cp .env.example .env
 # Éditer .env avec vos configurations
 
 # 5. Initialiser la base de données
+## Migration base de données
+flask db init
+flask db migrate -m "Initial migration"
 flask db upgrade
+
 python scripts/populate_currencies.py
 
 # 6. Créer un utilisateur admin (optionnel)
