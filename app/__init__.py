@@ -1,6 +1,6 @@
 # app/__init__.py
 from flask import Flask, jsonify
-from app.extensions import db, jwt, limiter, cache, cors, mail, migrate
+from app.extensions import db, jwt, limiter, cache, cors, mail, migrate, api
 from app.config import get_config
 
 
@@ -37,36 +37,39 @@ def init_extensions(app):
     mail.init_app(app)
     migrate.init_app(app, db)
 
+    api.init_app(app)  # Initialiser Swagger
+
 
 def register_blueprints(app):
     """Enregistre tous les blueprints"""
-    # from app.routes.auth import auth_bp
-    # from app.routes.user import user_bp
-    # from app.routes.currencies import currencies_bp
-    # from app.routes.conversions import conversions_bp
-    # from app.routes.dashboard import dashboard_bp
-    
-    # app.register_blueprint(auth_bp)
-    # app.register_blueprint(user_bp)
-    # app.register_blueprint(currencies_bp)
-    # app.register_blueprint(conversions_bp)
-    # app.register_blueprint(dashboard_bp)
+    from app.routes.auth import auth_bp
+    from app.routes.user import user_bp
+    from app.routes.currencies import currencies_bp
+    from app.routes.conversions import conversions_bp
+    from app.routes.dashboard import dashboard_bp
+
+    app.register_blueprint(auth_bp)
+    app.register_blueprint(user_bp)
+    app.register_blueprint(currencies_bp)
+    app.register_blueprint(conversions_bp)
+
+    app.register_blueprint(dashboard_bp)
 
 
 def register_error_handlers(app):
     """Gestionnaires d'erreurs globaux"""
     from flask import jsonify
-    # from app.utils.exceptions import AuthenticationError, CurrencyError, ValidationError
+    from app.utils.exceptions import AuthenticationError, CurrencyError, ValidationError
     
-    # @app.errorhandler(AuthenticationError)
+    @app.errorhandler(AuthenticationError)
     def handle_auth_error(e):
         return jsonify({'error': str(e)}), 401
     
-    # @app.errorhandler(CurrencyError)
+    @app.errorhandler(CurrencyError)
     def handle_currency_error(e):
         return jsonify({'error': str(e)}), 400
     
-    # @app.errorhandler(ValidationError)
+    @app.errorhandler(ValidationError)
     def handle_validation_error(e):
         return jsonify({'error': str(e)}), 400
     
@@ -81,13 +84,13 @@ def register_error_handlers(app):
 
 def setup_jwt_callbacks(app):
     """Configuration des callbacks JWT"""
-    # from flask_jwt_extended import get_jwt
-    # from app.services.token_service import TokenService
-    
-    # @jwt.token_in_blocklist_loader
-    # def check_if_token_revoked(jwt_header, jwt_payload):
-    #    jti = jwt_payload['jti']
-    #    return TokenService.is_token_blacklisted(jti)
+    from flask_jwt_extended import get_jwt
+    from app.services.token_service import TokenService
+
+    @jwt.token_in_blocklist_loader
+    def check_if_token_revoked(jwt_header, jwt_payload):
+       jti = jwt_payload['jti']
+       return TokenService.is_token_blacklisted(jti)
     
     @jwt.expired_token_loader
     def expired_token_callback(jwt_header, jwt_payload):
