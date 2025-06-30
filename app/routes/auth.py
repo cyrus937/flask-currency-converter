@@ -302,8 +302,8 @@
 #         return jsonify({'error': 'Erreur lors de la suppression de la session'}), 500
 # 
 
-from flask import request
-from flask_smorest import Blueprint, abort
+from flask import request, Blueprint
+from flask_smorest import Blueprint as V, abort
 from flask_jwt_extended import jwt_required, get_jwt_identity, get_jwt
 from marshmallow import ValidationError
 from app.services.auth_service import AuthService
@@ -323,14 +323,15 @@ auth_bp = Blueprint(
     'auth', 
     __name__, 
     url_prefix='/api/auth',
-    description='Authentification et gestion des comptes utilisateur'
+    # description='Authentification et gestion des comptes utilisateur'
 )
 
+
 @auth_bp.route('/register', methods=['POST'])
-@auth_bp.arguments(RegisterSchema, location='json')
-@auth_bp.response(201, MessageSchema)
-@auth_bp.response(400, ErrorSchema)
-@auth_bp.alt_response(400, schema=ErrorSchema, description='Erreur de validation')
+# @auth_bp.arguments(RegisterSchema, location='json')
+# @auth_bp.response(201, MessageSchema)
+# @auth_bp.response(400, ErrorSchema)
+# @auth_bp.alt_response(400, schema=ErrorSchema, description='Erreur de validation')
 @limiter.limit("5 per minute")
 def register(args):
     """
@@ -360,9 +361,9 @@ def register(args):
 
 
 @auth_bp.route('/login', methods=['POST'])
-@auth_bp.arguments(LoginSchema, location='json')
-@auth_bp.response(200, LoginResponseSchema)
-@auth_bp.response(401, ErrorSchema)
+# @auth_bp.arguments(LoginSchema, location='json')
+# @auth_bp.response(200, LoginResponseSchema)
+# @auth_bp.response(401, ErrorSchema)
 @limiter.limit("10 per minute")
 def login(args):
     """
@@ -394,9 +395,9 @@ def login(args):
 
 
 @auth_bp.route('/refresh', methods=['POST'])
-@auth_bp.arguments(RefreshTokenSchema, location='json')
-@auth_bp.response(200, RefreshResponseSchema)
-@auth_bp.response(401, ErrorSchema)
+# @auth_bp.arguments(RefreshTokenSchema, location='json')
+# @auth_bp.response(200, RefreshResponseSchema)
+# @auth_bp.response(401, ErrorSchema)
 @limiter.limit("20 per minute")
 def refresh(args):
     """
@@ -427,9 +428,9 @@ def refresh(args):
 
 
 @auth_bp.route('/logout', methods=['POST'])
-@auth_bp.doc(security=[{"bearerAuth": []}])
-@auth_bp.response(200, MessageSchema)
-@auth_bp.response(401, ErrorSchema)
+# @auth_bp.doc(security=[{"bearerAuth": []}])
+# @auth_bp.response(200, MessageSchema)
+# @auth_bp.response(401, ErrorSchema)
 @jwt_required()
 def logout():
     """
@@ -452,8 +453,8 @@ def logout():
 
 
 @auth_bp.route('/logout-all', methods=['POST'])
-@auth_bp.doc(security=[{"bearerAuth": []}])
-@auth_bp.response(200, MessageSchema)
+# @auth_bp.doc(security=[{"bearerAuth": []}])
+# @auth_bp.response(200, MessageSchema)
 @jwt_required()
 def logout_all():
     """
@@ -473,10 +474,10 @@ def logout_all():
 
 
 @auth_bp.route('/change-password', methods=['POST'])
-@auth_bp.doc(security=[{"bearerAuth": []}])
-@auth_bp.arguments(ChangePasswordSchema, location='json')
-@auth_bp.response(200, MessageSchema)
-@auth_bp.response(400, ErrorSchema)
+# @auth_bp.doc(security=[{"bearerAuth": []}])
+# @auth_bp.arguments(ChangePasswordSchema, location='json')
+# @auth_bp.response(200, MessageSchema)
+# @auth_bp.response(400, ErrorSchema)
 @jwt_required()
 @limiter.limit("3 per minute")
 def change_password(args):
@@ -504,9 +505,9 @@ def change_password(args):
 
 
 @auth_bp.route('/profile', methods=['GET'])
-@auth_bp.doc(security=[{"bearerAuth": []}])
-@auth_bp.response(200, UserProfileSchema)
-@auth_bp.response(404, ErrorSchema)
+# @auth_bp.doc(security=[{"bearerAuth": []}])
+# @auth_bp.response(200, UserProfileSchema)
+# @auth_bp.response(404, ErrorSchema)
 @jwt_required()
 def get_profile():
     """
@@ -531,8 +532,8 @@ def get_profile():
 
 
 @auth_bp.route('/sessions', methods=['GET'])
-@auth_bp.doc(security=[{"bearerAuth": []}])
-@auth_bp.response(200, SessionsResponseSchema)
+# @auth_bp.doc(security=[{"bearerAuth": []}])
+# @auth_bp.response(200, SessionsResponseSchema)
 @jwt_required()
 def get_sessions():
     """
@@ -566,9 +567,9 @@ def get_sessions():
 
 
 @auth_bp.route('/sessions/<session_id>', methods=['DELETE'])
-@auth_bp.doc(security=[{"bearerAuth": []}])
-@auth_bp.response(200, MessageSchema)
-@auth_bp.response(404, ErrorSchema)
+# @auth_bp.doc(security=[{"bearerAuth": []}])
+# @auth_bp.response(200, MessageSchema)
+# @auth_bp.response(404, ErrorSchema)
 @jwt_required()
 def delete_session(session_id):
     """
