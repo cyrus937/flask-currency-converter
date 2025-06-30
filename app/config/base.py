@@ -21,7 +21,7 @@ class BaseConfig:
     
     # Session Configuration
     SESSION_TIMEOUT = timedelta(days=30)
-    MAX_SESSIONS_PER_USER = 5
+    MAX_SESSIONS_PER_USER = 150000
     
     # Cache Configuration (Redis)
     CACHE_TYPE = "redis"

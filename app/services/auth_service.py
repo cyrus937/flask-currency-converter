@@ -9,6 +9,7 @@ from app.models.refresh_token import RefreshToken
 from app.services.session_service import SessionService
 from app.services.token_service import TokenService
 from app.utils.exceptions import AuthenticationError, ValidationError
+import logging
 
 
 class AuthService:
@@ -20,13 +21,16 @@ class AuthService:
         
         # Validation basique
         if not email or not password or not first_name or not last_name:
+            logging.error("Tous les champs sont requis pour l'enregistrement")
             raise ValidationError("Tous les champs sont requis")
         
         if len(password) < 8:
+            logging.error("Le mot de passe doit contenir au moins 8 caractères")
             raise ValidationError("Le mot de passe doit contenir au moins 8 caractères")
         
         # Vérifier si l'utilisateur existe déjà
         if User.find_by_email(email):
+            logging.error(f"Un utilisateur avec l'email {email} existe déjà")
             raise ValidationError("Un utilisateur avec cet email existe déjà")
         
         # Créer l'utilisateur
@@ -36,9 +40,10 @@ class AuthService:
             first_name=first_name,
             last_name=last_name
         )
+        print(f"Enregistrement de l'utilisateur avec email: {email}")
         user.preferred_currency = preferred_currency
         user.save()
-        
+        print(f"Utilisateur {email} enregistré avec succès")
         return user
     
     @staticmethod
@@ -47,14 +52,19 @@ class AuthService:
         
         # Trouver l'utilisateur
         user = User.find_by_email(email)
+        print(f"Tentative de connexion pour l'utilisateur avec email: {email}")
+        print(f"User trouvé: {user}")
         if not user or not user.check_password(password):
+            print(f"Authentication failed for email: {email}")
             raise AuthenticationError("Email ou mot de passe incorrect")
         
         if not user.is_active:
+            print(f"Compte désactivé pour l'utilisateur: {email}")
             raise AuthenticationError("Compte désactivé")
         
         # Vérifier le nombre de sessions
         if not user.can_create_session():
+            print(f"Nombre maximum de sessions atteint pour l'utilisateur: {email}")
             raise AuthenticationError("Nombre maximum de sessions atteint")
         
         # Créer une session
@@ -63,9 +73,13 @@ class AuthService:
             ip_address=ip_address,
             user_agent=user_agent
         )
+
+        print(f"Session créée pour l'utilisateur {email} avec ID: {session.id}")
         
         # Générer les tokens
         access_token, refresh_token = user.generate_tokens(session.id)
+
+        print(f"Tokens générés pour l'utilisateur {email}: Access Token: {access_token}, Refresh Token: {refresh_token}")
         
         # Sauvegarder le refresh token
         refresh_token_obj = RefreshToken(

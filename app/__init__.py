@@ -48,10 +48,10 @@ def register_blueprints(app):
     from app.routes.conversions import conversions_bp
     from app.routes.dashboard import dashboard_bp
 
-    app.register_blueprint(auth_bp)
-    app.register_blueprint(user_bp)
-    app.register_blueprint(currencies_bp)
-    app.register_blueprint(conversions_bp)
+    api.register_blueprint(auth_bp)
+    api.register_blueprint(user_bp)
+    api.register_blueprint(currencies_bp)
+    api.register_blueprint(conversions_bp)
 
     app.register_blueprint(dashboard_bp)
 
