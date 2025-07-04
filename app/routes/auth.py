@@ -335,7 +335,7 @@ auth_bp = Blueprint(
     description="Crée un nouveau compte utilisateur avec email et mot de passe.",
     tags=['Authentication'],)
 @auth_bp.arguments(RegisterSchema, location='json', content_type='application/json')
-@auth_bp.response(201, Union[MessageSchema, Any], content_type='application/json')
+@auth_bp.response(201, UserProfileSchema, content_type='application/json')
 @auth_bp.response(400, ErrorSchema, content_type='application/json')
 @auth_bp.alt_response(400, schema=ErrorSchema, description='Erreur de validation', content_type='application/json')
 @limiter.limit("5 per minute")
@@ -355,14 +355,11 @@ def register(args):
             first_name=data['first_name'],
             last_name=data['last_name'],
             preferred_currency=data.get('preferred_currency', 'USD')
-        )
+        ).to_dict(include_sensitive=True)
 
         print(f"Utilisateur enregistré avec succès : {user}")
         
-        return {
-            'message': 'Utilisateur créé avec succès',
-            'user': user.to_dict()
-        }
+        return user
         
     # except (AuthenticationError, CustomValidationError) as e:
     #     logging.error(f"Erreur lors de l'enregistrement : {str(e)}")
