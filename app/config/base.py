@@ -54,7 +54,7 @@ class BaseConfig:
     BCRYPT_LOG_ROUNDS = 12
     
     # CORS
-    CORS_ORIGINS = ["http://localhost:3000", "http://localhost:5000"]
+    CORS_ORIGINS = ["http://localhost:3000", "http://localhost:5000", "https://localhost:5000"]
 
     # Configuration OpenAPI/Swagger
     API_TITLE = "Currency Converter API"

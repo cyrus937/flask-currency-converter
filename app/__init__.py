@@ -1,6 +1,6 @@
 # app/__init__.py
 from flask import Flask, jsonify
-from app.extensions import db, jwt, limiter, cache, cors, mail, migrate, api
+from app.extensions import db, jwt, limiter, cache, mail, migrate, api, cors
 from app.config import get_config
 
 
