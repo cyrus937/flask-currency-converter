@@ -143,8 +143,8 @@ class User(BaseModel):
             'is_verified': self.is_verified,
             'is_premium': self.is_premium,
             'preferred_currency': self.preferred_currency,
-            'created_at': self.created_at.isoformat(),
-            'last_login': self.last_login.isoformat() if self.last_login else None
+            'created_at': self.created_at,
+            'last_login': self.last_login if self.last_login else None
         }
         
         if include_sensitive:
