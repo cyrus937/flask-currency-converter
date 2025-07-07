@@ -24,11 +24,3 @@ class UserProfileSchema(Schema):
     last_login = fields.DateTime(allow_none=True)
     favorite_currencies = fields.List(fields.Str())
     active_sessions = fields.Int()
-
-# class RegisterUserSchema(Schema):
-#     """Schéma pour l'enregistrement d'un nouvel utilisateur"""
-#     email = fields.Email(required=True)
-#     password = fields.Str(required=True, load_only=True, validate=validate.Length(min=6))
-#     first_name = fields.Str(required=True, validate=validate.Length(min=2, max=50))
-#     last_name = fields.Str(required=True, validate=validate.Length(min=2, max=50))
-#     preferred_currency = fields.Str(required=True, validate=validate.Length(equal=3))
