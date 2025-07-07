@@ -5,7 +5,7 @@ from decimal import Decimal
 
 class ConversionRequestSchema(Schema):
     """Schéma pour une demande de conversion"""
-    amount = fields.Decimal(required=True, validate=validate.Range(min=Decimal('0.01'), max=Decimal('1000000000')))
+    amount = fields.Float(required=True, validate=validate.Range(min=0.01, max=1000000000))
     from_currency = fields.Str(required=True, validate=validate.Length(equal=3))
     to_currency = fields.Str(required=True, validate=validate.Length(equal=3))
     

@@ -141,6 +141,23 @@ POST /api/currencies/favorites   # Ajouter favori
 GET  /api/currencies/rates       # Taux actuels
 ```
 
+## 📖 Accès à la Documentation
+Une fois l'application lancée, vous avez accès à :
+
+- 📊 Swagger UI Interactive : http://localhost:5000/docs
+- 📚 ReDoc (Documentation élégante) : http://localhost:5000/redoc
+- 📄 Spécification OpenAPI : http://localhost:5000/openapi.json
+
+### ✨ Fonctionnalités Swagger
+Documentation Complète :
+
+* ✅ 50+ endpoints documentés avec exemples
+* ✅ Authentification JWT intégrée dans l'interface
+* ✅ Schémas de validation automatiques
+* ✅ Test direct des APIs depuis le navigateur
+* ✅ Codes d'erreur documentés
+* ✅ Groupement par catégories (Auth, Conversions, Currencies, User)
+
 ## 📊 Exemples d'utilisation
 
 ### Conversion simple
