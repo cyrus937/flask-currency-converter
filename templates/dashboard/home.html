@@ -8,7 +8,7 @@
     <div class="col-12 mb-4">
         <div class="card">
             <div class="card-body">
-                <h1 class="card-title">Bienvenue, {{ user.get_full_name() }}!</h1>
+                <!-- <h1 class="card-title">Bienvenue, {{ user.get_full_name() }}!</h1> -->
                 <p class="card-text text-muted">
                     Gérez vos conversions de devises en temps réel avec les meilleurs taux du marché.
                 </p>
@@ -55,7 +55,8 @@
                 <div class="d-flex justify-content-between">
                     <div>
                         <h6 class="card-title">Devise préférée</h6>
-                        <h3 class="mb-0">{{ user.preferred_currency }}</h3>
+                        <!-- <h3 class="mb-0">{{ user.preferred_currency }}</h3> -->
+                        <h3 class="mb-0">USD</h3>
                     </div>
                     <div class="align-self-center">
                         <i class="fas fa-star fa-2x"></i>
@@ -71,9 +72,10 @@
                 <div class="d-flex justify-content-between">
                     <div>
                         <h6 class="card-title">Statut</h6>
-                        <h3 class="mb-0">
+                        <!-- <h3 class="mb-0">
                             {% if user.is_premium %}Premium{% else %}Standard{% endif %}
-                        </h3>
+                        </h3> -->
+
                     </div>
                     <div class="align-self-center">
                         <i class="fas fa-crown fa-2x"></i>
@@ -147,8 +149,8 @@
                     <div class="list-group list-group-flush">
                         {% for currency in user_favorites %}
                         <div class="list-group-item d-flex justify-content-between align-items-center px-0">
-                            <span><strong>{{ currency }}</strong></span>
-                            <small class="text-muted">1 {{ user.preferred_currency }} = <span class="rate-{{ currency }}">...</span> {{ currency }}</small>
+                            <!-- <span><strong>{{ currency }}</strong></span> -->
+                            <!-- <small class="text-muted">1 {{ user.preferred_currency }} = <span class="rate-{{ currency }}">...</span> {{ currency }}</small> -->
                         </div>
                         {% endfor %}
                     </div>
@@ -188,7 +190,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            {% for conversion in recent_conversions %}
+                            {% for conversion in [] %}
                             <tr>
                                 <td>{{ conversion.created_at.strftime('%d/%m %H:%M') }}</td>
                                 <td>{{ "%.2f"|format(conversion.original_amount) }}</td>
@@ -254,7 +256,8 @@ document.getElementById('quick-convert-form').addEventListener('submit', async (
 // Charger les taux pour les favoris
 async function loadFavoriteRates() {
     const favorites = {{ user_favorites|tojson }};
-    const baseCurrency = '{{ user.preferred_currency }}';
+    // const baseCurrency = '{{ user.preferred_currency }}';
+    const baseCurrency = 'USD'; // Remplacer par la devise préférée de l'utilisateur si nécessaire
     
     for (const currency of favorites) {
         if (currency !== baseCurrency) {
@@ -282,5 +285,10 @@ document.addEventListener('DOMContentLoaded', () => {
     loadUserStats();
     loadFavoriteRates();
 });
+
+setInterval(() => {
+    loadUserStats();
+    loadFavoriteRates();
+}, 30000);
 </script>
 {% endblock %}

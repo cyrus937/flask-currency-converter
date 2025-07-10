@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription - Currency Converter</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+        .register-card {
+            max-width: 500px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        .form-control:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+        }
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+        }
+        .alert-danger {
+            border-radius: 10px;
+            border: none;
+            background-color: #ffe6e6;
+            color: #d63384;
+        }
+        .alert-success {
+            border-radius: 10px;
+            border: none;
+            background-color: #e6ffe6;
+            color: #198754;
+        }
+        .password-strength {
+            height: 5px;
+            background-color: #e9ecef;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        .password-strength-bar {
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+        .strength-weak { background-color: #dc3545; width: 25%; }
+        .strength-fair { background-color: #fd7e14; width: 50%; }
+        .strength-good { background-color: #ffc107; width: 75%; }
+        .strength-strong { background-color: #198754; width: 100%; }
+        .loading {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="register-card p-4">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-exchange-alt fa-3x text-primary mb-3"></i>
+                        <h2 class="fw-bold">Currency Converter</h2>
+                        <p class="text-muted">Créez votre compte gratuit</p>
+                    </div>
+
+                    <!-- Alert pour les erreurs et succès -->
+                    <div id="error-alert" class="alert alert-danger d-none" role="alert">
+                        <i class="fas fa-exclamation-triangle me-2"></i>
+                        <span id="error-message"></span>
+                    </div>
+
+                    <div id="success-alert" class="alert alert-success d-none" role="alert">
+                        <i class="fas fa-check-circle me-2"></i>
+                        <span id="success-message"></span>
+                    </div>
+
+                    <!-- Formulaire d'inscription -->
+                    <form id="register-form">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="first-name" class="form-label">
+                                    <i class="fas fa-user me-2"></i>Prénom *
+                                </label>
+                                <input type="text" class="form-control" id="first-name" required 
+                                       placeholder="Jean" maxlength="50">
+                                <div class="invalid-feedback"></div>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label for="last-name" class="form-label">
+                                    <i class="fas fa-user me-2"></i>Nom *
+                                </label>
+                                <input type="text" class="form-control" id="last-name" required 
+                                       placeholder="Dupont" maxlength="50">
+                                <div class="invalid-feedback"></div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">
+                                <i class="fas fa-envelope me-2"></i>Email *
+                            </label>
+                            <input type="email" class="form-control" id="email" required 
+                                   placeholder="jean.dupont@email.com">
+                            <div class="invalid-feedback"></div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="password" class="form-label">
+                                <i class="fas fa-lock me-2"></i>Mot de passe *
+                            </label>
+                            <div class="input-group">
+                                <input type="password" class="form-control" id="password" required 
+                                       placeholder="••••••••" minlength="8">
+                                <button class="btn btn-outline-secondary" type="button" id="toggle-password">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                            <div class="password-strength mt-2">
+                                <div class="password-strength-bar" id="strength-bar"></div>
+                            </div>
+                            <small class="text-muted">
+                                Le mot de passe doit contenir au moins 8 caractères
+                            </small>
+                            <div class="invalid-feedback"></div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="confirm-password" class="form-label">
+                                <i class="fas fa-lock me-2"></i>Confirmer le mot de passe *
+                            </label>
+                            <input type="password" class="form-control" id="confirm-password" required 
+                                   placeholder="••••••••">
+                            <div class="invalid-feedback"></div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="preferred-currency" class="form-label">
+                                <i class="fas fa-coins me-2"></i>Devise préférée
+                            </label>
+                            <select class="form-select" id="preferred-currency">
+                                <option value="EUR">EUR - Euro</option>
+                                <option value="USD">USD - Dollar américain</option>
+                                <option value="GBP">GBP - Livre sterling</option>
+                                <option value="JPY">JPY - Yen japonais</option>
+                                <option value="CHF">CHF - Franc suisse</option>
+                                <option value="CAD">CAD - Dollar canadien</option>
+                            </select>
+                            <small class="text-muted">
+                                Vous pourrez la modifier plus tard dans vos paramètres
+                            </small>
+                        </div>
+
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="terms" required>
+                            <label class="form-check-label" for="terms">
+                                J'accepte les <a href="#" class="text-decoration-none">conditions d'utilisation</a> 
+                                et la <a href="#" class="text-decoration-none">politique de confidentialité</a> *
+                            </label>
+                            <div class="invalid-feedback"></div>
+                        </div>
+
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="newsletter">
+                            <label class="form-check-label" for="newsletter">
+                                Je souhaite recevoir des informations sur les nouveautés et offres spéciales
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100 mb-3 btn-lg">
+                            <span class="normal-text">
+                                <i class="fas fa-user-plus me-2"></i>Créer mon compte
+                            </span>
+                            <span class="loading">
+                                <i class="fas fa-spinner fa-spin me-2"></i>Création en cours...
+                            </span>
+                        </button>
+                    </form>
+
+                    <div class="text-center">
+                        <p class="text-muted">
+                            Vous avez déjà un compte ? 
+                            <a href="/login" class="text-decoration-none fw-bold">Se connecter</a>
+                        </p>
+                    </div>
+
+                    <!-- Avantages -->
+                    <div class="mt-4 p-3 bg-light rounded">
+                        <h6 class="mb-3">
+                            <i class="fas fa-gift me-2"></i>Pourquoi nous rejoindre ?
+                        </h6>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <small class="d-block mb-2">
+                                    <i class="fas fa-check text-success me-1"></i>
+                                    Taux de change en temps réel
+                                </small>
+                                <small class="d-block mb-2">
+                                    <i class="fas fa-check text-success me-1"></i>
+                                    Historique de conversions
+                                </small>
+                            </div>
+                            <div class="col-md-6">
+                                <small class="d-block mb-2">
+                                    <i class="fas fa-check text-success me-1"></i>
+                                    Devises favorites
+                                </small>
+                                <small class="d-block mb-2">
+                                    <i class="fas fa-check text-success me-1"></i>
+                                    Alertes de taux
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    
+    <script>
+        // Vérifier si déjà connecté
+        document.addEventListener('DOMContentLoaded', function() {
+            const token = localStorage.getItem('access_token');
+            if (token) {
+                axios.get('/api/auth/me', {
+                    headers: { 'Authorization': `Bearer ${token}` }
+                }).then(response => {
+                    window.location.href = '/dashboard/';
+                }).catch(error => {
+                    localStorage.removeItem('access_token');
+                    localStorage.removeItem('refresh_token');
+                });
+            }
+        });
+
+        // Toggle password visibility
+        document.getElementById('toggle-password').addEventListener('click', function() {
+            const passwordInput = document.getElementById('password');
+            const icon = this.querySelector('i');
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                passwordInput.type = 'password';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            }
+        });
+
+        // Vérification de la force du mot de passe
+        document.getElementById('password').addEventListener('input', function() {
+            const password = this.value;
+            const strengthBar = document.getElementById('strength-bar');
+            
+            let strength = 0;
+            if (password.length >= 8) strength++;
+            if (/[a-z]/.test(password)) strength++;
+            if (/[A-Z]/.test(password)) strength++;
+            if (/\d/.test(password)) strength++;
+            if (/[^a-zA-Z\d]/.test(password)) strength++;
+            
+            // Supprimer les classes précédentes
+            strengthBar.className = 'password-strength-bar';
+            
+            if (strength <= 2) {
+                strengthBar.classList.add('strength-weak');
+            } else if (strength === 3) {
+                strengthBar.classList.add('strength-fair');
+            } else if (strength === 4) {
+                strengthBar.classList.add('strength-good');
+            } else {
+                strengthBar.classList.add('strength-strong');
+            }
+        });
+
+        // Validation en temps réel
+        function validateField(fieldId, validator, errorMessage) {
+            const field = document.getElementById(fieldId);
+            const feedback = field.nextElementSibling;
+            
+            if (validator(field.value)) {
+                field.classList.remove('is-invalid');
+                field.classList.add('is-valid');
+                return true;
+            } else {
+                field.classList.remove('is-valid');
+                field.classList.add('is-invalid');
+                if (feedback && feedback.classList.contains('invalid-feedback')) {
+                    feedback.textContent = errorMessage;
+                }
+                return false;
+            }
+        }
+
+        // Validateurs
+        document.getElementById('first-name').addEventListener('blur', function() {
+            validateField('first-name', 
+                value => value.trim().length >= 2,
+                'Le prénom doit contenir au moins 2 caractères'
+            );
+        });
+
+        document.getElementById('last-name').addEventListener('blur', function() {
+            validateField('last-name', 
+                value => value.trim().length >= 2,
+                'Le nom doit contenir au moins 2 caractères'
+            );
+        });
+
+        document.getElementById('email').addEventListener('blur', function() {
+            validateField('email', 
+                value => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value),
+                'Veuillez entrer une adresse email valide'
+            );
+        });
+
+        document.getElementById('password').addEventListener('blur', function() {
+            validateField('password', 
+                value => value.length >= 8,
+                'Le mot de passe doit contenir au moins 8 caractères'
+            );
+        });
+
+        document.getElementById('confirm-password').addEventListener('blur', function() {
+            const password = document.getElementById('password').value;
+            validateField('confirm-password', 
+                value => value === password,
+                'Les mots de passe ne correspondent pas'
+            );
+        });
+
+        document.getElementById('terms').addEventListener('change', function() {
+            const feedback = this.nextElementSibling.nextElementSibling;
+            if (this.checked) {
+                this.classList.remove('is-invalid');
+                this.classList.add('is-valid');
+            } else {
+                this.classList.remove('is-valid');
+                this.classList.add('is-invalid');
+                if (feedback && feedback.classList.contains('invalid-feedback')) {
+                    feedback.textContent = 'Vous devez accepter les conditions d\'utilisation';
+                }
+            }
+        });
+
+        // Fonctions pour afficher les messages
+        function showError(message) {
+            const errorAlert = document.getElementById('error-alert');
+            const errorMessage = document.getElementById('error-message');
+            
+            errorMessage.textContent = message;
+            errorAlert.classList.remove('d-none');
+            
+            setTimeout(() => {
+                errorAlert.classList.add('d-none');
+            }, 5000);
+        }
+
+        function showSuccess(message) {
+            const successAlert = document.getElementById('success-alert');
+            const successMessage = document.getElementById('success-message');
+            
+            successMessage.textContent = message;
+            successAlert.classList.remove('d-none');
+        }
+
+        function hideAlerts() {
+            document.getElementById('error-alert').classList.add('d-none');
+            document.getElementById('success-alert').classList.add('d-none');
+        }
+
+        function toggleLoading(show) {
+            const normalText = document.querySelector('.normal-text');
+            const loadingText = document.querySelector('.loading');
+            const submitBtn = document.querySelector('button[type="submit"]');
+            
+            if (show) {
+                normalText.style.display = 'none';
+                loadingText.style.display = 'inline';
+                submitBtn.disabled = true;
+            } else {
+                normalText.style.display = 'inline';
+                loadingText.style.display = 'none';
+                submitBtn.disabled = false;
+            }
+        }
+
+        // Gestion du formulaire d'inscription
+        document.getElementById('register-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            hideAlerts();
+            
+            // Validation complète
+            const firstName = document.getElementById('first-name').value.trim();
+            const lastName = document.getElementById('last-name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+            const preferredCurrency = document.getElementById('preferred-currency').value;
+            const termsAccepted = document.getElementById('terms').checked;
+            
+            // Validations
+            let isValid = true;
+            
+            if (firstName.length < 2) {
+                showError('Le prénom doit contenir au moins 2 caractères');
+                isValid = false;
+            }
+            
+            if (lastName.length < 2) {
+                showError('Le nom doit contenir au moins 2 caractères');
+                isValid = false;
+            }
+            
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                showError('Veuillez entrer une adresse email valide');
+                isValid = false;
+            }
+            
+            if (password.length < 8) {
+                showError('Le mot de passe doit contenir au moins 8 caractères');
+                isValid = false;
+            }
+            
+            if (password !== confirmPassword) {
+                showError('Les mots de passe ne correspondent pas');
+                isValid = false;
+            }
+            
+            if (!termsAccepted) {
+                showError('Vous devez accepter les conditions d\'utilisation');
+                isValid = false;
+            }
+            
+            if (!isValid) return;
+            
+            toggleLoading(true);
+            
+            try {
+                const response = await axios.post('/api/auth/register', {
+                    first_name: firstName,
+                    last_name: lastName,
+                    email: email,
+                    password: password,
+                    preferred_currency: preferredCurrency
+                });
+                
+                const data = response.data;
+                
+                // Stocker les tokens
+                localStorage.setItem('access_token', data.access_token);
+                localStorage.setItem('refresh_token', data.refresh_token);
+                
+                showSuccess('Compte créé avec succès ! Redirection...');
+                
+                // Rediriger vers le dashboard après 2 secondes
+                setTimeout(() => {
+                    window.location.href = '/dashboard/';
+                }, 2000);
+                
+            } catch (error) {
+                let errorMessage = 'Erreur lors de la création du compte';
+                
+                if (error.response && error.response.data && error.response.data.error) {
+                    errorMessage = error.response.data.error;
+                } else if (error.response) {
+                    switch (error.response.status) {
+                        case 409:
+                            errorMessage = 'Cette adresse email est déjà utilisée';
+                            break;
+                        case 500:
+                            errorMessage = 'Erreur serveur. Veuillez réessayer plus tard.';
+                            break;
+                        default:
+                            errorMessage = 'Une erreur inattendue s\'est produite';
+                    }
+                }
+                
+                showError(errorMessage);
+                toggleLoading(false);
+            }
+        });
+
+        // Auto-complétion du nom à partir du prénom (optionnel)
+        document.getElementById('first-name').addEventListener('input', function() {
+            // Capitaliser la première lettre
+            this.value = this.value.charAt(0).toUpperCase() + this.value.slice(1).toLowerCase();
+        });
+
+        document.getElementById('last-name').addEventListener('input', function() {
+            this.value = this.value.toUpperCase();
+        });
+    </script>
+</body>
+</html>

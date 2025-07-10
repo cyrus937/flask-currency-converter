@@ -1,0 +1,490 @@
+{% extends "base.html" %}
+
+{% block title %}Convertisseur - Currency Converter{% endblock %}
+
+{% block content %}
+<div class="row">
+    <!-- Convertisseur principal -->
+    <div class="col-lg-8 mb-4">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="mb-0">
+                    <i class="fas fa-calculator me-2"></i>Convertisseur de devises
+                </h4>
+                <small class="text-muted">Convertissez vos devises en temps réel avec les meilleurs taux</small>
+            </div>
+            <div class="card-body">
+                <form id="conversion-form">
+                    <div class="row">
+                        <!-- Montant -->
+                        <div class="col-md-4 mb-3">
+                            <label class="form-label fw-bold">Montant</label>
+                            <div class="input-group">
+                                <input type="number" class="form-control form-control-lg" 
+                                       id="amount" value="1000" step="0.01" min="0.01" 
+                                       placeholder="0.00" required>
+                                <button class="btn btn-outline-secondary" type="button" 
+                                        onclick="clearAmount()">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Devise source -->
+                        <div class="col-md-4 mb-3">
+                            <label class="form-label fw-bold">De</label>
+                            <!-- <select class="form-select form-select-lg" id="from-currency">
+                                <option value="">Sélectionner...</option>
+                                {% for currency in currencies %}
+                                <option value="{{ currency.code }}" 
+                                        data-symbol="{{ currency.symbol }}"
+                                        {% if currency.code == user.preferred_currency %}selected{% endif %}>
+                                    {{ currency.code }} - {{ currency.name }}
+                                </option>
+                                {% endfor %}
+                            </select> -->
+                        </div>
+                        
+                        <!-- Devise cible -->
+                        <div class="col-md-4 mb-3">
+                            <label class="form-label fw-bold">Vers</label>
+                            <select class="form-select form-select-lg" id="to-currency">
+                                <option value="">Sélectionner...</option>
+                                {% for currency in currencies %}
+                                <option value="{{ currency.code }}" 
+                                        data-symbol="{{ currency.symbol }}">
+                                    {{ currency.code }} - {{ currency.name }}
+                                </option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <!-- Boutons d'action -->
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <button type="submit" class="btn btn-primary btn-lg w-100">
+                                <i class="fas fa-exchange-alt me-2"></i>Convertir
+                            </button>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <button type="button" class="btn btn-outline-secondary btn-lg w-100" 
+                                    onclick="swapCurrencies()">
+                                <i class="fas fa-retweet me-2"></i>Inverser
+                            </button>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <button type="button" class="btn btn-outline-info btn-lg w-100" 
+                                    onclick="resetForm()">
+                                <i class="fas fa-redo me-2"></i>Reset
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                
+                <!-- Résultat de conversion -->
+                <div id="conversion-result" class="mt-4" style="display: none;">
+                    <div class="card result-card">
+                        <div class="card-body text-center">
+                            <h2 class="mb-3" id="result-main"></h2>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <small class="text-muted">Taux de change</small>
+                                    <div class="fw-bold" id="result-rate"></div>
+                                </div>
+                                <div class="col-md-4">
+                                    <small class="text-muted">Frais</small>
+                                    <div class="fw-bold" id="result-fees"></div>
+                                </div>
+                                <div class="col-md-4">
+                                    <small class="text-muted">Mise à jour</small>
+                                    <div class="fw-bold" id="result-timestamp"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Graphique des taux (placeholder) -->
+                <div id="rate-chart" class="mt-4" style="display: none;">
+                    <div class="card">
+                        <div class="card-header">
+                            <h6 class="mb-0">Évolution du taux (7 derniers jours)</h6>
+                        </div>
+                        <div class="card-body">
+                            <canvas id="chart-canvas" height="100"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Sidebar -->
+    <div class="col-lg-4">
+        <!-- Devises favorites -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h6 class="mb-0">
+                    <i class="fas fa-star me-2"></i>Devises favorites
+                </h6>
+            </div>
+            <div class="card-body">
+                {% if user_favorites %}
+                    <div class="list-group list-group-flush">
+                        {% for currency in user_favorites %}
+                        <div class="list-group-item d-flex justify-content-between align-items-center px-0 cursor-pointer" 
+                             onclick="selectCurrency('{{ currency }}')">
+                            <span><strong>{{ currency }}</strong></span>
+                            <span class="badge bg-primary rate-{{ currency }}">...</span>
+                        </div>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    <p class="text-muted mb-3">Aucune devise favorite.</p>
+                {% endif %}
+                <button class="btn btn-outline-primary btn-sm w-100" onclick="manageFavorites()">
+                    <i class="fas fa-cog me-1"></i>Gérer les favoris
+                </button>
+            </div>
+        </div>
+        
+        <!-- Conversions rapides -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h6 class="mb-0">
+                    <i class="fas fa-bolt me-2"></i>Conversions rapides
+                </h6>
+            </div>
+            <div class="card-body">
+                <div class="row g-2">
+                    <div class="col-6">
+                        <button class="btn btn-outline-secondary btn-sm w-100" 
+                                onclick="quickConvert('USD', 'EUR')">
+                            USD → EUR
+                        </button>
+                    </div>
+                    <div class="col-6">
+                        <button class="btn btn-outline-secondary btn-sm w-100" 
+                                onclick="quickConvert('EUR', 'USD')">
+                            EUR → USD
+                        </button>
+                    </div>
+                    <div class="col-6">
+                        <button class="btn btn-outline-secondary btn-sm w-100" 
+                                onclick="quickConvert('GBP', 'EUR')">
+                            GBP → EUR
+                        </button>
+                    </div>
+                    <div class="col-6">
+                        <button class="btn btn-outline-secondary btn-sm w-100" 
+                                onclick="quickConvert('USD', 'GBP')">
+                            USD → GBP
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Informations du marché -->
+        <div class="card">
+            <div class="card-header">
+                <h6 class="mb-0">
+                    <i class="fas fa-chart-line me-2"></i>Informations du marché
+                </h6>
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <small class="text-muted">Devise la plus forte aujourd'hui</small>
+                    <div class="fw-bold text-success" id="strongest-currency">...</div>
+                </div>
+                <div class="mb-3">
+                    <small class="text-muted">Devise la plus faible aujourd'hui</small>
+                    <div class="fw-bold text-danger" id="weakest-currency">...</div>
+                </div>
+                <div class="mb-3">
+                    <small class="text-muted">Dernière mise à jour</small>
+                    <div class="fw-bold" id="last-update">...</div>
+                </div>
+                <button class="btn btn-outline-info btn-sm w-100" onclick="refreshMarketData()">
+                    <i class="fas fa-sync me-1"></i>Actualiser
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal pour gérer les favoris -->
+<div class="modal fade" id="favoritesModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Gérer les devises favorites</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    {% for currency in currencies %}
+                    <div class="col-md-6 mb-2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" 
+                                   value="{{ currency.code }}" id="fav-{{ currency.code }}"
+                                   {% if currency.code in user_favorites %}checked{% endif %}>
+                            <label class="form-check-label" for="fav-{{ currency.code }}">
+                                {{ currency.code }} - {{ currency.name }}
+                            </label>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                <button type="button" class="btn btn-primary" onclick="saveFavorites()">Sauvegarder</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.result-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.cursor-pointer:hover {
+    background-color: #f8f9fa;
+}
+
+#chart-canvas {
+    max-height: 200px;
+}
+</style>
+{% endblock %}
+
+{% block scripts %}
+<script>
+let lastConversionData = null;
+
+// Gestion du formulaire de conversion
+document.getElementById('conversion-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const amount = document.getElementById('amount').value;
+    const fromCurrency = document.getElementById('from-currency').value;
+    const toCurrency = document.getElementById('to-currency').value;
+    
+    if (!amount || !fromCurrency || !toCurrency) {
+        alert('Veuillez remplir tous les champs');
+        return;
+    }
+    
+    if (fromCurrency === toCurrency) {
+        alert('Les devises source et cible doivent être différentes');
+        return;
+    }
+    
+    try {
+        // Afficher un spinner
+        const submitBtn = document.querySelector('button[type="submit"]');
+        const originalHtml = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Conversion...';
+        submitBtn.disabled = true;
+        
+        const response = await axios.post('/dashboard/api/quick-convert', {
+            amount: parseFloat(amount),
+            from_currency: fromCurrency,
+            to_currency: toCurrency
+        });
+        
+        lastConversionData = response.data;
+        displayConversionResult(response.data);
+        
+        // Restaurer le bouton
+        submitBtn.innerHTML = originalHtml;
+        submitBtn.disabled = false;
+        
+    } catch (error) {
+        console.error('Erreur conversion:', error);
+        alert('Erreur lors de la conversion: ' + (error.response?.data?.error || error.message));
+        
+        // Restaurer le bouton
+        const submitBtn = document.querySelector('button[type="submit"]');
+        submitBtn.innerHTML = '<i class="fas fa-exchange-alt me-2"></i>Convertir';
+        submitBtn.disabled = false;
+    }
+});
+
+// Afficher le résultat de conversion
+function displayConversionResult(data) {
+    const resultDiv = document.getElementById('conversion-result');
+    const amount = document.getElementById('amount').value;
+    const fromCurrency = document.getElementById('from-currency').value;
+    const toCurrency = document.getElementById('to-currency').value;
+    
+    document.getElementById('result-main').textContent = 
+        `${amount} ${fromCurrency} = ${data.converted_amount.toFixed(2)} ${toCurrency}`;
+    document.getElementById('result-rate').textContent = 
+        `1 ${fromCurrency} = ${data.exchange_rate.toFixed(4)} ${toCurrency}`;
+    document.getElementById('result-fees').textContent = 
+        `${data.fee_amount.toFixed(2)} ${toCurrency}`;
+    document.getElementById('result-timestamp').textContent = 
+        new Date().toLocaleTimeString();
+    
+    resultDiv.style.display = 'block';
+    resultDiv.scrollIntoView({ behavior: 'smooth' });
+}
+
+// Inverser les devises
+function swapCurrencies() {
+    const fromCurrency = document.getElementById('from-currency');
+    const toCurrency = document.getElementById('to-currency');
+    
+    const temp = fromCurrency.value;
+    fromCurrency.value = toCurrency.value;
+    toCurrency.value = temp;
+}
+
+// Reset du formulaire
+function resetForm() {
+    document.getElementById('amount').value = '1000';
+    // document.getElementById('from-currency').value = '{{ user.preferred_currency }}';
+    document.getElementById('from-currency').value = 'USD';
+    document.getElementById('to-currency').value = '';
+    document.getElementById('conversion-result').style.display = 'none';
+}
+
+// Vider le montant
+function clearAmount() {
+    document.getElementById('amount').value = '';
+    document.getElementById('amount').focus();
+}
+
+// Conversion rapide
+function quickConvert(from, to) {
+    document.getElementById('from-currency').value = from;
+    document.getElementById('to-currency').value = to;
+    document.getElementById('conversion-form').dispatchEvent(new Event('submit'));
+}
+
+// Sélectionner une devise favorite
+function selectCurrency(currency) {
+    const toCurrency = document.getElementById('to-currency');
+    if (toCurrency.value === '') {
+        toCurrency.value = currency;
+    } else {
+        const fromCurrency = document.getElementById('from-currency');
+        if (fromCurrency.value !== currency) {
+            toCurrency.value = currency;
+        }
+    }
+}
+
+// Gérer les favoris
+function manageFavorites() {
+    const modal = new bootstrap.Modal(document.getElementById('favoritesModal'));
+    modal.show();
+}
+
+// Sauvegarder les favoris
+async function saveFavorites() {
+    const checkboxes = document.querySelectorAll('#favoritesModal input[type="checkbox"]:checked');
+    const favorites = Array.from(checkboxes).map(cb => cb.value);
+    
+    try {
+        await axios.post('/api/user/favorites', { currencies: favorites });
+        location.reload(); // Recharger pour mettre à jour l'affichage
+    } catch (error) {
+        alert('Erreur lors de la sauvegarde des favoris');
+    }
+}
+
+// Charger les taux pour les favoris
+async function loadFavoriteRates() {
+    const favorites = {{ user_favorites|tojson }};
+    // const baseCurrency = '{{ user.preferred_currency }}';
+    const baseCurrency = 'USD'; // Remplacer par la devise préférée de l'utilisateur si nécessaire
+    
+    for (const currency of favorites) {
+        if (currency !== baseCurrency) {
+            try {
+                const response = await axios.post('/dashboard/api/quick-convert', {
+                    amount: 1,
+                    from_currency: baseCurrency,
+                    to_currency: currency
+                });
+                
+                const rate = response.data.exchange_rate.toFixed(4);
+                const element = document.querySelector(`.rate-${currency}`);
+                if (element) {
+                    element.textContent = rate;
+                }
+            } catch (error) {
+                console.error(`Erreur pour ${currency}:`, error);
+            }
+        }
+    }
+}
+
+// Actualiser les données du marché
+function refreshMarketData() {
+    // Simuler des données de marché (à remplacer par de vraies données)
+    document.getElementById('strongest-currency').textContent = 'CHF (+0.8%)';
+    document.getElementById('weakest-currency').textContent = 'TRY (-1.2%)';
+    document.getElementById('last-update').textContent = new Date().toLocaleTimeString();
+}
+
+// Montants prédéfinis
+document.addEventListener('DOMContentLoaded', () => {
+    // Ajouter des boutons de montants rapides
+    const amountInput = document.getElementById('amount');
+    const quickAmounts = [100, 500, 1000, 5000, 10000];
+    
+    const quickAmountDiv = document.createElement('div');
+    quickAmountDiv.className = 'mt-2';
+    quickAmountDiv.innerHTML = '<small class="text-muted">Montants rapides:</small><br>';
+    
+    quickAmounts.forEach(amount => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'btn btn-outline-secondary btn-sm me-1 mb-1';
+        btn.textContent = amount.toLocaleString();
+        btn.onclick = () => amountInput.value = amount;
+        quickAmountDiv.appendChild(btn);
+    });
+    
+    amountInput.parentNode.parentNode.appendChild(quickAmountDiv);
+    
+    // Charger les données initiales
+    loadFavoriteRates();
+    refreshMarketData();
+});
+
+// Auto-complétion et validation
+document.getElementById('amount').addEventListener('input', function(e) {
+    let value = this.value;
+    if (value < 0) this.value = 0;
+    if (value > 1000000) this.value = 1000000;
+});
+
+// Raccourcis clavier
+document.addEventListener('keydown', function(e) {
+    if (e.ctrlKey || e.metaKey) {
+        switch (e.key) {
+            case 'Enter':
+                e.preventDefault();
+                document.getElementById('conversion-form').dispatchEvent(new Event('submit'));
+                break;
+            case 'r':
+                e.preventDefault();
+                swapCurrencies();
+                break;
+        }
+    }
+});
+</script>
+{% endblock %}
