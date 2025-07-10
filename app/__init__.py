@@ -6,7 +6,7 @@ from app.config import get_config
 
 def create_app(config_name='development'):
     """Factory pattern pour créer l'application Flask"""
-    app = Flask(__name__)
+    app = Flask(__name__, static_folder='../static', template_folder='../templates')
     
     # Configuration
     config = get_config(config_name)
@@ -42,18 +42,20 @@ def init_extensions(app):
 
 def register_blueprints(app):
     """Enregistre tous les blueprints"""
-    from app.routes.auth import auth_bp
+    from app.routes.auth import auth_bp, auth_pages_bp
     from app.routes.user import user_bp
     from app.routes.currencies import currencies_bp
     from app.routes.conversions import conversions_bp
-    from app.routes.dashboard import dashboard_bp
+    from app.routes.dashboard import dashboard_bp, api_dashboard
 
     api.register_blueprint(auth_bp)
     api.register_blueprint(user_bp)
     api.register_blueprint(currencies_bp)
     api.register_blueprint(conversions_bp)
+    api.register_blueprint(api_dashboard)  # API pour le dashboard
 
     app.register_blueprint(dashboard_bp)
+    app.register_blueprint(auth_pages_bp)  # Pages d'authentification pour l'interface web
 
 
 def register_error_handlers(app):
