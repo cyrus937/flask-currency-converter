@@ -19,6 +19,7 @@ class TokenResponseSchema(Schema):
     refresh_token = fields.Str(required=True, description="Token de rafraîchissement")
     user = fields.Nested('UserProfileSchema', required=True)
     session_id = fields.Str(description="ID de la session")
+    expires_in = fields.Int(description="Durée de validité du token en secondes")
 
 class LoginResponseSchema(TokenResponseSchema):
     """Schéma pour la réponse de connexion"""
@@ -29,6 +30,7 @@ class RefreshResponseSchema(Schema):
     message = fields.Str(required=True)
     access_token = fields.Str(required=True)
     refresh_token = fields.Str(required=True)
+    expires_in = fields.Int(description="Durée de validité du token en secondes")
 
 class ConversionListResponseSchema(Schema):
     """Schéma pour la liste des conversions"""

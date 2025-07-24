@@ -90,7 +90,8 @@ def login(args):
             'user': result['user'].to_dict(include_sensitive=True),
             'access_token': result['access_token'],
             'refresh_token': result['refresh_token'],
-            'session_id': result['session'].id
+            'session_id': result['session'].id,
+            'expires_in': result['expires_in']
         }
         
     except AuthenticationError as e:

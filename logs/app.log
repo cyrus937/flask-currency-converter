@@ -1,0 +1,1348 @@
+2025-07-21 07:59:03,160 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-21 07:59:03,250 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-21 07:59:47,528 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-21 07:59:47,528 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-21 07:59:47,528 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-21 07:59:47,528 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-21 08:00:14,475 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/login - IP: 172.18.0.1
+2025-07-21 08:00:14,664 DEBUG [app] [/app/app/__init__.py:109] - Response: 500 - POST http://localhost:5000/api/auth/login
+2025-07-21 08:03:42,590 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-21 08:03:42,590 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-21 08:03:42,590 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-21 08:03:42,590 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-21 08:04:00,810 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/currencies - IP: 172.18.0.1
+2025-07-21 08:04:00,856 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - GET http://localhost:5000/api/currencies
+2025-07-21 08:04:16,953 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/login - IP: 172.18.0.1
+2025-07-21 08:04:17,111 DEBUG [app] [/app/app/__init__.py:109] - Response: 500 - POST http://localhost:5000/api/auth/login
+2025-07-21 08:14:21,580 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/login - IP: 172.18.0.1
+2025-07-21 08:14:21,766 DEBUG [app] [/app/app/__init__.py:109] - Response: 500 - POST http://localhost:5000/api/auth/login
+2025-07-21 08:18:02,600 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-21 08:18:02,600 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-21 08:18:02,600 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-21 08:18:02,600 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-21 08:18:08,327 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/login - IP: 172.18.0.1
+2025-07-21 08:18:08,507 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - POST http://localhost:5000/api/auth/login
+2025-07-21 08:21:35,861 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/login - IP: 172.18.0.1
+2025-07-21 08:21:35,863 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/login
+2025-07-21 08:21:35,883 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/login - IP: 172.18.0.1
+2025-07-21 08:21:36,068 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - POST http://localhost:5000/api/auth/login
+2025-07-21 08:37:34,088 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-21 08:37:34,106 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/logout
+2025-07-21 08:37:34,124 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-21 08:37:34,242 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - POST http://localhost:5000/api/auth/logout
+2025-07-21 08:37:52,230 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/login - IP: 172.18.0.1
+2025-07-21 08:37:52,234 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/login
+2025-07-21 08:37:52,338 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/login - IP: 172.18.0.1
+2025-07-21 08:37:52,624 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/login
+2025-07-21 08:38:07,260 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/login - IP: 172.18.0.1
+2025-07-21 08:38:07,277 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/login
+2025-07-21 08:38:07,305 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/login - IP: 172.18.0.1
+2025-07-21 08:38:07,614 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/login
+2025-07-21 08:39:01,938 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/login - IP: 172.18.0.1
+2025-07-21 08:39:01,948 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/login
+2025-07-21 08:39:01,969 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/login - IP: 172.18.0.1
+2025-07-21 08:39:02,166 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/login
+2025-07-21 08:42:41,413 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/login - IP: 172.18.0.1
+2025-07-21 08:42:41,426 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/login
+2025-07-21 08:42:41,438 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/login - IP: 172.18.0.1
+2025-07-21 08:42:41,469 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/login
+2025-07-21 08:43:09,247 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/login - IP: 172.18.0.1
+2025-07-21 08:43:09,254 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/login
+2025-07-21 08:43:09,271 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/login - IP: 172.18.0.1
+2025-07-21 08:43:09,525 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - POST http://localhost:5000/api/auth/login
+2025-07-21 08:57:04,184 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-21 08:57:04,184 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-21 08:57:04,184 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-21 08:57:04,184 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-21 19:54:22,906 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-21 19:54:22,905 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-21 19:54:22,905 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-21 19:54:22,906 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-21 19:54:24,759 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-21 19:54:24,759 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-21 19:54:24,762 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/refresh
+2025-07-21 19:54:24,762 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/refresh
+2025-07-21 19:54:24,792 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-21 19:54:24,797 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-21 19:54:25,027 DEBUG [app] [/app/app/__init__.py:109] - Response: 500 - POST http://localhost:5000/api/auth/refresh
+2025-07-21 19:54:25,028 DEBUG [app] [/app/app/__init__.py:109] - Response: 500 - POST http://localhost:5000/api/auth/refresh
+2025-07-21 19:54:25,192 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-21 19:54:25,193 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/logout
+2025-07-21 19:54:25,198 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-21 19:54:25,200 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-21 19:54:25,247 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-21 19:54:25,249 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-21 19:54:25,329 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-21 19:54:25,332 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-21 19:54:25,340 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-21 19:54:25,378 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-21 19:54:25,549 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-21 19:54:25,553 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-21 19:54:25,554 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-21 19:54:25,557 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-21 23:52:23,197 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-21 23:52:23,199 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-21 23:52:23,202 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-21 23:52:23,248 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-22 09:51:10,371 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-22 09:51:10,373 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-22 09:51:10,484 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-22 09:51:10,709 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-22 12:21:23,766 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-22 12:21:23,805 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-22 12:21:23,848 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-22 12:21:23,883 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-22 12:23:19,344 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/login - IP: 172.18.0.1
+2025-07-22 12:23:19,358 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/login
+2025-07-22 12:23:19,439 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/login - IP: 172.18.0.1
+2025-07-22 12:23:19,827 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - POST http://localhost:5000/api/auth/login
+2025-07-22 12:24:30,434 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-22 12:24:30,434 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-22 12:52:32,799 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 12:52:32,803 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 12:52:32,827 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/profile
+2025-07-22 12:52:32,827 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/profile
+2025-07-22 12:52:32,866 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 12:52:33,172 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - GET http://localhost:5000/api/auth/profile
+2025-07-22 12:52:33,183 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 12:52:33,191 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - GET http://localhost:5000/api/auth/profile
+2025-07-22 12:52:33,205 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 12:52:33,525 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - GET http://localhost:5000/api/auth/profile
+2025-07-22 12:52:33,535 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 12:52:33,545 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - GET http://localhost:5000/api/auth/profile
+2025-07-22 12:53:15,161 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 12:53:15,162 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/profile
+2025-07-22 12:53:15,171 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 12:53:15,177 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - GET http://localhost:5000/api/auth/profile
+2025-07-22 12:53:15,317 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 12:53:15,331 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/profile
+2025-07-22 12:53:15,353 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 12:53:15,609 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - GET http://localhost:5000/api/auth/profile
+2025-07-22 12:53:17,196 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 12:53:17,205 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - GET http://localhost:5000/api/auth/profile
+2025-07-22 12:53:17,367 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 12:53:17,568 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - GET http://localhost:5000/api/auth/profile
+2025-07-22 13:00:28,940 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 13:00:28,942 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 13:00:28,947 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/profile
+2025-07-22 13:00:28,949 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/profile
+2025-07-22 13:00:28,958 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 13:00:28,987 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - GET http://localhost:5000/api/auth/profile
+2025-07-22 13:00:28,996 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 13:00:29,001 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - GET http://localhost:5000/api/auth/profile
+2025-07-22 13:07:29,693 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 13:07:29,711 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/profile
+2025-07-22 13:07:29,715 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 13:07:29,723 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/profile
+2025-07-22 13:07:29,736 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 13:07:29,891 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - GET http://localhost:5000/api/auth/profile
+2025-07-22 13:07:29,904 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 13:07:29,911 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - GET http://localhost:5000/api/auth/profile
+2025-07-22 13:07:31,551 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 13:07:31,633 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - GET http://localhost:5000/api/auth/profile
+2025-07-22 13:07:31,648 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 13:07:31,654 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - GET http://localhost:5000/api/auth/profile
+2025-07-22 13:08:39,498 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 13:08:39,501 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/profile
+2025-07-22 13:08:39,557 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 13:08:39,662 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 13:08:39,678 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/profile
+2025-07-22 13:08:39,685 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - GET http://localhost:5000/api/auth/profile
+2025-07-22 13:08:39,710 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 13:08:39,853 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - GET http://localhost:5000/api/auth/profile
+2025-07-22 13:14:12,622 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 13:14:12,631 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/profile
+2025-07-22 13:14:12,645 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 13:14:12,700 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - GET http://localhost:5000/api/auth/profile
+2025-07-22 13:32:06,308 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 13:32:06,356 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/profile
+2025-07-22 13:32:06,340 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 13:32:06,382 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/profile
+2025-07-22 13:32:07,173 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 13:32:07,337 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - GET http://localhost:5000/api/auth/profile
+2025-07-22 13:33:45,466 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 13:33:45,470 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/profile
+2025-07-22 13:33:45,470 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 13:33:45,474 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/profile
+2025-07-22 13:33:45,560 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 13:33:45,664 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - GET http://localhost:5000/api/auth/profile
+2025-07-22 13:33:45,680 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 13:33:45,696 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - GET http://localhost:5000/api/auth/profile
+2025-07-22 13:39:28,057 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 13:39:28,057 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 13:39:28,070 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/profile
+2025-07-22 13:39:28,080 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/profile
+2025-07-22 13:39:28,163 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 13:39:28,337 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - GET http://localhost:5000/api/auth/profile
+2025-07-22 13:39:28,350 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 13:39:28,444 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - GET http://localhost:5000/api/auth/profile
+2025-07-22 13:41:03,986 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 13:41:03,987 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 13:41:03,990 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/profile
+2025-07-22 13:41:03,992 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/profile
+2025-07-22 13:41:04,001 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 13:41:04,011 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - GET http://localhost:5000/api/auth/profile
+2025-07-22 13:41:04,021 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 13:41:04,038 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - GET http://localhost:5000/api/auth/profile
+2025-07-22 13:52:08,597 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 13:52:08,594 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 13:52:08,607 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/profile
+2025-07-22 13:52:08,608 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/profile
+2025-07-22 13:52:08,624 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 13:52:08,702 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - GET http://localhost:5000/api/auth/profile
+2025-07-22 13:52:08,714 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 13:52:08,720 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - GET http://localhost:5000/api/auth/profile
+2025-07-22 13:56:31,313 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 13:56:31,317 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/profile
+2025-07-22 13:56:31,337 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 13:56:31,513 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 13:56:31,534 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/profile
+2025-07-22 13:56:31,582 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - GET http://localhost:5000/api/auth/profile
+2025-07-22 13:56:31,770 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 13:56:31,895 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - GET http://localhost:5000/api/auth/profile
+2025-07-22 14:19:57,785 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 14:19:57,802 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/profile
+2025-07-22 14:19:57,886 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 14:19:57,978 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - GET http://localhost:5000/api/auth/profile
+2025-07-22 14:20:11,071 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 14:20:11,077 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/profile
+2025-07-22 14:20:11,090 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 14:20:11,099 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - GET http://localhost:5000/api/auth/profile
+2025-07-22 14:20:11,163 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 14:20:11,175 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/profile
+2025-07-22 14:20:11,189 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 14:20:11,382 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - GET http://localhost:5000/api/auth/profile
+2025-07-22 14:20:16,519 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 14:20:16,522 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 14:20:16,524 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/profile
+2025-07-22 14:20:16,524 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/profile
+2025-07-22 14:20:16,538 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 14:20:16,546 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - GET http://localhost:5000/api/auth/profile
+2025-07-22 14:20:16,554 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 14:20:16,613 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - GET http://localhost:5000/api/auth/profile
+2025-07-22 14:20:20,112 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 14:20:20,117 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - GET http://localhost:5000/api/auth/profile
+2025-07-22 14:20:20,133 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 14:20:20,143 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:49:06,083 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-22 19:49:06,083 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-22 19:49:06,083 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-22 19:49:06,083 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-22 19:54:42,549 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-22 19:54:42,549 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-22 19:54:42,549 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-22 19:54:42,551 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-22 19:58:22,345 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:22,370 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/profile
+2025-07-22 19:58:22,785 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:22,857 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:23,257 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:23,275 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:23,305 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:23,955 DEBUG [app] [/app/app/__init__.py:109] - Response: 500 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:24,142 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:24,144 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/logout
+2025-07-22 19:58:24,145 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:24,148 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/logout
+2025-07-22 19:58:24,148 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:24,157 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/logout
+2025-07-22 19:58:24,174 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:24,176 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:24,182 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:24,213 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:24,397 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:24,373 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:24,410 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:24,409 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:24,629 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:24,948 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:25,109 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:25,111 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:25,120 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:25,122 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:25,153 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:25,155 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:25,157 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:25,160 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:25,372 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:25,372 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:25,374 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:25,380 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:25,377 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:25,381 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:25,380 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:25,384 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:25,385 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:25,386 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:25,387 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:25,393 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:26,454 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:26,456 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:26,472 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:26,476 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:26,497 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:26,501 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:26,603 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:26,629 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:26,632 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:26,633 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:26,635 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:26,635 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:26,638 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:27,075 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:27,217 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:27,220 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:27,233 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:27,235 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:27,358 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:27,362 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:27,364 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:27,369 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:27,452 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:27,454 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:27,460 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:27,463 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:27,469 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:27,473 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:27,475 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:27,476 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:27,476 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:27,481 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:27,483 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:27,486 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:28,093 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:28,093 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:28,095 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/profile
+2025-07-22 19:58:28,096 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/profile
+2025-07-22 19:58:28,105 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:28,107 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:28,117 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:28,119 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:28,216 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:28,225 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:28,229 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:28,277 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:28,279 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:28,281 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:28,281 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:28,282 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:28,283 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:28,375 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:28,614 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:28,616 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:28,625 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:28,626 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:28,638 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:28,639 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:28,648 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:28,651 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:28,740 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:28,743 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:28,765 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:28,766 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:28,767 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:28,768 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:28,771 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:28,773 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:29,166 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:29,168 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:29,176 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:29,177 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:29,192 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:29,197 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:29,298 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:29,302 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:29,325 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:29,328 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/logout
+2025-07-22 19:58:29,341 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:29,343 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/logout
+2025-07-22 19:58:29,345 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:29,345 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:29,346 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/logout
+2025-07-22 19:58:29,347 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:29,363 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:29,365 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:29,367 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:29,367 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:29,755 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:29,756 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:29,766 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:29,768 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:29,782 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:29,785 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:29,788 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:29,791 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:29,985 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:29,987 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:30,011 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:30,011 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:30,014 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:30,014 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:30,029 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:30,030 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:30,029 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:30,032 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:30,032 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:30,032 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:30,403 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:30,404 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:30,412 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:30,413 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:30,424 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:30,427 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:30,517 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:30,522 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:30,558 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:30,560 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:30,592 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:30,592 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:30,595 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:30,595 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:30,604 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:30,605 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:30,605 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:30,606 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:30,607 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:30,607 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:31,139 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:31,141 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:31,148 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:31,150 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:31,171 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:31,176 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:31,177 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:31,181 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:31,313 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:31,315 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:31,318 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:31,319 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:31,326 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:31,329 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:31,338 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:31,340 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:31,341 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:31,342 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:31,344 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:31,344 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:31,895 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:31,897 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:31,902 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:31,904 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:31,934 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:31,936 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:31,938 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:31,942 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:32,107 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:32,109 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:32,126 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:32,129 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:32,130 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:32,130 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:32,133 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:32,133 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:32,139 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:32,133 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:32,147 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:32,150 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:32,598 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:32,600 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:32,607 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:32,609 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:32,633 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:32,636 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:32,638 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:32,639 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:32,793 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:32,795 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:32,800 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:32,803 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:32,803 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:32,804 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:32,805 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:32,806 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:32,808 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:32,809 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:32,811 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:32,812 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:33,229 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:33,230 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/profile
+2025-07-22 19:58:33,231 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:33,232 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/profile
+2025-07-22 19:58:33,238 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:33,240 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:33,252 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:33,254 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:33,351 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:33,353 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:33,354 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:33,358 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:33,438 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:33,440 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:33,444 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:33,446 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:33,446 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:33,449 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:33,449 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:33,449 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:33,449 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:33,452 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:33,451 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:33,455 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:33,877 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:33,879 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:33,885 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:33,888 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:33,901 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:33,903 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:33,917 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:33,922 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:34,019 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:34,023 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:34,047 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:34,049 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:34,063 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:34,064 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:34,065 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:34,066 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:34,082 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:34,082 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:34,084 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:34,085 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:34,084 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:34,087 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:34,489 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:34,491 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:34,499 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:34,501 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:34,513 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:34,517 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:34,598 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:34,602 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:34,623 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:34,625 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/logout
+2025-07-22 19:58:34,628 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:34,630 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/logout
+2025-07-22 19:58:34,630 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:34,631 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/logout
+2025-07-22 19:58:34,646 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:34,646 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:34,649 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:34,649 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:34,655 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:34,657 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:35,081 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:35,084 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:35,092 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:35,093 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:35,109 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:35,112 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:35,113 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:35,116 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:35,292 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:35,295 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:35,306 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:35,306 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:35,309 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:35,310 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:35,309 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:35,313 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:35,314 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:35,315 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:35,315 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:35,319 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:35,787 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:35,790 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:35,801 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:35,803 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:35,819 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:35,826 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:35,936 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:35,941 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:35,958 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:35,960 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:35,964 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:35,965 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:35,965 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:35,967 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:36,445 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:36,447 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:36,457 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:36,459 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:36,528 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:36,529 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:36,533 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:36,534 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:36,718 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:36,721 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:36,725 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:36,727 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:36,727 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:36,730 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:36,731 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:36,731 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:36,733 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:36,733 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:36,733 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:36,735 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:37,128 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:37,130 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:37,138 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:37,141 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:37,160 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:37,164 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:37,172 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:37,176 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:37,339 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:37,342 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:37,351 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:37,353 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:37,355 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:37,356 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:37,370 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:37,373 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:37,407 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:37,409 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:37,410 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:37,412 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:37,741 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:37,744 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:37,752 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:37,754 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:37,771 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:37,773 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:37,775 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:37,777 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:37,895 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:37,897 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:37,920 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:37,922 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:37,939 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:37,941 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:37,942 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:37,945 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:37,945 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:37,947 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:37,947 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:37,949 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:38,278 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:38,279 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/profile
+2025-07-22 19:58:38,279 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:38,280 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/profile
+2025-07-22 19:58:38,296 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:38,298 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:38,307 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:38,309 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:38,410 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:38,410 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:38,413 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:38,413 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:38,496 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:38,498 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:38,501 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:38,503 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:38,504 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:38,505 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:38,509 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:38,509 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:38,510 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:38,511 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:38,511 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:38,513 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:38,847 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:38,849 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:38,859 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:38,861 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:38,870 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:38,874 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:38,987 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:38,988 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:39,023 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:39,027 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:39,041 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:39,036 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:39,044 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:39,048 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:39,048 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:39,046 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:39,510 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:39,512 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:39,524 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:39,526 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:39,543 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:39,545 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:39,547 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:39,554 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:39,759 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:39,762 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/logout
+2025-07-22 19:58:39,778 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:39,783 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/logout
+2025-07-22 19:58:39,785 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:39,788 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/logout
+2025-07-22 19:58:39,801 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:39,810 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/logout
+2025-07-22 19:58:39,809 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:39,811 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:39,812 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/logout
+2025-07-22 19:58:39,812 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:39,815 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:39,817 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:39,816 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/logout
+2025-07-22 19:58:39,818 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:39,821 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:39,826 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:39,822 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:39,825 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:39,850 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:39,844 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:39,860 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:39,868 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:40,328 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:40,330 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:40,338 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:40,340 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:40,364 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:40,366 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:40,369 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:40,372 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:40,535 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:40,538 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:40,550 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:40,551 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:40,551 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:40,552 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:40,553 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:40,553 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:40,554 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:40,556 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:40,558 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:40,559 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:40,914 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:40,916 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:40,925 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:40,928 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:40,950 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:40,952 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:40,955 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:40,957 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:41,102 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:41,104 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:41,108 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:41,111 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:41,111 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:41,112 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:41,114 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:41,113 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:41,115 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:41,117 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:41,122 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:41,125 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:41,459 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:41,461 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:41,468 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:41,470 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:41,489 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:41,492 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:41,494 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:41,498 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:41,664 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:41,665 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:41,670 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:41,672 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:41,674 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:41,677 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:41,678 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:41,681 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:41,681 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:41,682 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:41,683 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:41,687 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:42,088 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:42,089 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:42,097 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:42,099 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:42,116 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:42,120 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:42,221 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:42,225 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:42,256 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:42,258 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:42,276 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:42,280 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:42,282 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:42,282 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:42,637 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:42,638 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:42,646 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:42,647 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:42,660 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:42,663 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:42,771 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:42,775 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:42,810 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:42,812 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:42,841 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:42,843 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:42,843 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:42,845 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:42,859 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:42,861 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:42,869 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:42,869 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:42,872 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:42,872 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:43,416 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:43,418 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/profile
+2025-07-22 19:58:43,418 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:43,419 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/profile
+2025-07-22 19:58:43,425 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:43,427 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:43,436 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:43,438 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:43,544 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:43,545 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:43,549 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:43,549 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:43,607 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:43,608 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:43,610 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:43,611 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:43,610 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:43,614 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:43,618 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:43,618 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:43,618 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:43,620 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:43,620 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:43,620 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:44,047 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:44,049 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:44,056 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:44,057 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:44,087 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:44,089 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:44,089 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:44,091 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:44,102 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:44,102 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:44,106 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:44,106 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:44,259 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:44,261 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:44,269 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:44,272 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:44,272 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:44,273 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:44,277 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:44,277 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:44,277 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:44,281 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:44,283 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:44,285 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:44,663 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:44,664 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:44,677 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:44,679 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:44,694 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:44,702 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:44,704 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:44,711 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:44,881 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:44,883 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/logout
+2025-07-22 19:58:44,895 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:44,898 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/logout
+2025-07-22 19:58:44,899 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:44,899 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:44,902 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:44,903 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/logout
+2025-07-22 19:58:44,903 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/logout
+2025-07-22 19:58:44,905 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/logout
+2025-07-22 19:58:44,907 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:44,908 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/logout
+2025-07-22 19:58:44,917 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:44,916 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:44,919 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:44,921 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:44,921 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:44,922 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:44,922 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:44,926 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:44,925 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:44,928 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:44,932 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:44,936 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:45,373 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:45,374 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:45,381 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:45,383 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:45,402 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:45,405 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:45,409 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:45,416 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:45,455 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:45,457 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:45,485 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:45,487 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:45,487 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:45,489 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:45,489 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:45,491 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:45,507 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:45,509 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:45,511 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:45,513 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:45,952 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:45,954 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:45,963 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:45,965 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:45,988 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:45,992 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:45,993 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:45,996 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:46,186 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:46,189 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:46,200 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:46,201 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:46,202 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:46,202 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:46,205 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:46,205 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:46,204 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:46,207 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:46,210 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:46,214 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:46,625 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:46,628 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:46,635 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:46,637 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:46,729 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:46,734 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:46,738 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:46,743 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:46,803 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:46,806 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:46,811 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:46,812 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:46,813 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:46,813 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:46,813 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:46,814 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:46,825 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:46,828 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:46,832 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:46,836 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:47,217 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:47,218 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:47,227 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:47,229 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:47,245 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:47,247 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:47,250 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:47,251 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:47,416 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:47,419 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:47,419 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:47,421 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:47,423 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:47,424 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:47,425 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:47,426 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:47,426 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:47,427 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:47,428 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:47,430 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:47,766 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:47,768 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:47,775 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:47,777 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:47,792 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:47,796 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:47,800 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:47,807 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:47,942 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:47,944 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:47,948 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:47,950 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:47,955 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:47,956 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:47,956 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:47,957 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:47,959 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:47,959 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:47,959 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:47,960 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:48,325 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:48,327 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:48,334 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:48,336 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:48,348 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:48,352 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:48,464 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:48,468 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:48,491 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:48,493 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:48,504 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:48,504 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:48,506 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:48,506 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:48,874 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:48,874 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:48,876 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/profile
+2025-07-22 19:58:48,876 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/profile
+2025-07-22 19:58:48,886 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:48,889 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:48,900 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:48,903 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:48,913 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:48,919 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:49,069 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:49,079 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:49,139 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:49,142 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:49,144 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:49,146 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:49,148 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:49,150 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:49,592 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:49,594 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:49,602 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:49,604 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:49,621 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:49,623 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:49,632 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:49,636 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:49,728 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:49,732 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:49,767 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:49,769 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:49,776 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:49,777 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:49,778 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:49,779 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:50,186 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:50,188 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:50,195 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:50,196 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:50,207 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:50,211 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:50,309 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:50,312 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:50,340 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:50,342 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/logout
+2025-07-22 19:58:50,359 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:50,360 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/logout
+2025-07-22 19:58:50,364 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:50,366 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/logout
+2025-07-22 19:58:50,378 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:50,380 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:50,393 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:50,387 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:50,398 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:50,398 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:50,398 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:50,400 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:50,401 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:50,402 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:50,406 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:50,409 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:51,010 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:51,013 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:51,026 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:51,028 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:51,047 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:51,050 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:51,154 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:51,158 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:51,187 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:51,190 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:51,211 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:51,211 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:51,213 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:51,213 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:51,225 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:51,226 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:51,227 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:51,229 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:51,230 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:51,232 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:52,122 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:52,124 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:52,133 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:52,135 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:52,257 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:52,261 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:52,263 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:52,266 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:52,425 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:52,427 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:52,435 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:52,438 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:52,445 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:52,446 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:52,447 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:52,448 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:52,448 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:52,453 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:52,458 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:52,460 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:53,146 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:53,149 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:53,165 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:53,167 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:53,190 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:53,196 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:53,364 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:53,372 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:53,455 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:53,458 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:53,461 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:53,461 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:53,463 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:53,463 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:53,477 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:53,479 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:53,479 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:53,482 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:53,483 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:53,485 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:53,956 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:53,957 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:53,958 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/profile
+2025-07-22 19:58:53,959 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/profile
+2025-07-22 19:58:53,967 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:53,970 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:53,983 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:53,987 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:54,012 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:54,017 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:54,180 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:54,184 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:54,228 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:54,230 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:54,237 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:54,237 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:54,239 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:54,239 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:59,456 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:59,456 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:59,457 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/profile
+2025-07-22 19:58:59,457 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/profile
+2025-07-22 19:58:59,470 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:59,472 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:59,485 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:58:59,489 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:58:59,498 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:59,500 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:59,509 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:59,513 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:59,698 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:58:59,705 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:58:59,747 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:59,750 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/logout
+2025-07-22 19:58:59,750 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:59,752 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/logout
+2025-07-22 19:58:59,755 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:59,757 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/logout
+2025-07-22 19:58:59,772 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:59,771 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:59,780 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:58:59,782 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:59,785 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:58:59,788 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:59:00,607 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:59:00,609 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:59:00,616 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:59:00,618 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:59:00,641 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:59:00,644 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:59:00,646 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:59:00,649 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:59:01,405 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:59:01,407 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:59:01,409 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:59:01,411 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:59:01,412 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:59:01,412 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:59:01,423 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:59:01,424 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:59:01,425 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:59:01,429 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:59:01,427 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:59:01,434 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:59:02,087 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:59:02,089 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:59:02,096 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:59:02,098 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:59:02,120 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:59:02,122 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:59:02,124 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:59:02,126 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:59:02,387 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:59:02,388 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:59:02,395 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:59:02,397 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:59:02,401 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:59:02,404 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:59:02,407 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:59:02,408 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:59:02,410 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:59:02,410 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:59:02,410 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:59:02,412 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:59:03,020 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:59:03,022 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:59:03,032 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:59:03,034 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:59:03,062 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:59:03,065 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:59:03,070 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:59:03,069 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:59:03,331 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:59:03,333 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:59:03,342 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:59:03,344 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:59:03,344 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:59:03,346 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:59:03,347 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:59:03,349 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:59:03,352 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:59:03,354 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:59:03,354 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:59:03,359 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:59:04,124 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:59:04,126 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:59:04,139 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 19:59:04,141 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - GET http://localhost:5000/api/auth/profile
+2025-07-22 19:59:04,167 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:59:04,170 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:59:04,172 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:59:04,174 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:59:04,459 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:59:04,462 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:59:04,469 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:59:04,471 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:59:04,472 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:59:04,475 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:59:04,475 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:59:04,485 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:59:04,481 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:59:04,488 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:59:04,488 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:59:04,491 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:59:04,562 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:59:04,564 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/refresh
+2025-07-22 19:59:04,564 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:59:04,566 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/refresh
+2025-07-22 19:59:04,576 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:59:04,579 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:59:04,581 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:59:04,582 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:59:04,669 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:59:04,673 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:59:04,675 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:59:04,675 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:59:04,678 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/refresh - IP: 172.18.0.1
+2025-07-22 19:59:04,679 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:59:04,679 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:59:04,685 DEBUG [app] [/app/app/__init__.py:109] - Response: 400 - POST http://localhost:5000/api/auth/refresh
+2025-07-22 19:59:04,761 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:59:04,764 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 19:59:04,794 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/logout - IP: 172.18.0.1
+2025-07-22 19:59:04,797 DEBUG [app] [/app/app/__init__.py:109] - Response: 401 - POST http://localhost:5000/api/auth/logout
+2025-07-22 20:00:32,052 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/login - IP: 172.18.0.1
+2025-07-22 20:00:32,067 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/login
+2025-07-22 20:00:32,079 DEBUG [app] [/app/app/__init__.py:105] - Request: POST http://localhost:5000/api/auth/login - IP: 172.18.0.1
+2025-07-22 20:00:32,389 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - POST http://localhost:5000/api/auth/login
+2025-07-22 20:27:15,037 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 20:27:15,071 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/profile
+2025-07-22 20:27:15,061 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 20:27:15,095 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/profile
+2025-07-22 20:27:15,479 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 20:27:15,895 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - GET http://localhost:5000/api/auth/profile
+2025-07-22 20:27:15,912 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 20:27:16,530 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - GET http://localhost:5000/api/auth/profile
+2025-07-22 20:27:16,544 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 20:27:16,553 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - GET http://localhost:5000/api/auth/profile
+2025-07-22 20:27:16,974 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 20:27:17,780 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - GET http://localhost:5000/api/auth/profile
+2025-07-22 20:44:30,780 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 20:44:30,795 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/profile
+2025-07-22 20:44:30,831 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 20:44:30,848 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/profile
+2025-07-22 20:44:30,851 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 20:44:30,945 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - GET http://localhost:5000/api/auth/profile
+2025-07-22 20:44:30,954 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 20:44:30,959 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - GET http://localhost:5000/api/auth/profile
+2025-07-22 20:45:42,647 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 20:45:42,650 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/profile
+2025-07-22 20:45:42,657 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 20:45:42,660 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/profile
+2025-07-22 20:45:42,765 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 20:45:43,002 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - GET http://localhost:5000/api/auth/profile
+2025-07-22 20:45:43,020 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 20:45:43,030 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - GET http://localhost:5000/api/auth/profile
+2025-07-22 20:48:04,143 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 20:48:04,150 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/profile
+2025-07-22 20:48:04,166 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 20:48:04,295 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - GET http://localhost:5000/api/auth/profile
+2025-07-22 20:48:04,663 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 20:48:04,718 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - GET http://localhost:5000/api/auth/profile
+2025-07-22 20:48:58,218 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 20:48:58,229 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/profile
+2025-07-22 20:48:58,248 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 20:48:58,272 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - GET http://localhost:5000/api/auth/profile
+2025-07-22 20:48:58,701 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 20:48:58,730 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - GET http://localhost:5000/api/auth/profile
+2025-07-22 20:49:13,660 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 20:49:13,666 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/profile
+2025-07-22 20:49:13,748 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 20:49:14,158 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - GET http://localhost:5000/api/auth/profile
+2025-07-22 20:49:14,656 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 20:49:14,698 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - GET http://localhost:5000/api/auth/profile
+2025-07-22 20:55:23,566 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 20:55:23,570 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 20:55:23,582 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/profile
+2025-07-22 20:55:23,589 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/profile
+2025-07-22 20:55:23,607 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 20:55:23,716 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - GET http://localhost:5000/api/auth/profile
+2025-07-22 20:55:23,732 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 20:55:23,748 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - GET http://localhost:5000/api/auth/profile
+2025-07-22 20:55:26,952 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 20:55:27,272 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - GET http://localhost:5000/api/auth/profile
+2025-07-22 20:55:27,291 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 20:55:27,302 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - GET http://localhost:5000/api/auth/profile
+2025-07-22 20:57:37,839 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 20:57:37,854 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/profile
+2025-07-22 20:57:37,885 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 20:57:38,204 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - GET http://localhost:5000/api/auth/profile
+2025-07-22 21:07:48,230 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 21:07:48,228 DEBUG [app] [/app/app/__init__.py:105] - Request: OPTIONS http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 21:07:48,265 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/profile
+2025-07-22 21:07:48,279 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - OPTIONS http://localhost:5000/api/auth/profile
+2025-07-22 21:07:48,643 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 21:07:49,188 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - GET http://localhost:5000/api/auth/profile
+2025-07-22 21:07:49,230 DEBUG [app] [/app/app/__init__.py:105] - Request: GET http://localhost:5000/api/auth/profile - IP: 172.18.0.1
+2025-07-22 21:07:49,651 DEBUG [app] [/app/app/__init__.py:109] - Response: 200 - GET http://localhost:5000/api/auth/profile
+2025-07-22 22:12:13,787 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-22 22:12:13,798 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-22 22:12:13,972 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-22 22:12:14,051 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-23 01:29:31,686 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-23 01:29:31,686 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-23 01:29:31,692 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-23 01:29:31,833 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-23 01:30:22,975 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-23 01:30:22,984 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-23 01:30:23,019 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-23 01:30:23,055 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-23 01:47:45,214 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-23 01:47:45,214 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-23 01:47:45,214 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-23 01:47:45,214 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-23 02:05:42,307 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-23 02:05:42,334 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-23 02:05:42,856 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-23 02:05:43,120 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-23 02:27:47,489 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-23 02:27:47,501 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-23 02:27:47,611 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès
+2025-07-23 02:27:47,648 INFO [app] [/app/app/__init__.py:123] - Application Flask démarrée avec succès

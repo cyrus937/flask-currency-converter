@@ -1,5 +1,8 @@
 # app/__init__.py
-from flask import Flask, jsonify
+import logging
+from logging.handlers import RotatingFileHandler
+import os
+from flask import Flask, jsonify, request
 from app.extensions import db, jwt, limiter, cache, mail, migrate, api, cors
 from app.config import get_config
 
@@ -38,7 +41,86 @@ def init_extensions(app):
     migrate.init_app(app, db)
 
     api.init_app(app)  # Initialiser Swagger
+    
+    setup_logging(app)
 
+
+def setup_logging(app):
+    """Configuration avancée des logs pour Flask"""
+    
+    # Créer le dossier logs s'il n'existe pas
+    if not os.path.exists('logs'):
+        os.mkdir('logs')
+    
+    # Configuration du niveau de log selon l'environnement
+    if app.debug:
+        log_level = logging.DEBUG
+    else:
+        log_level = logging.INFO
+    
+    # Format des logs
+    formatter = logging.Formatter(
+        '%(asctime)s %(levelname)s [%(name)s] [%(pathname)s:%(lineno)d] - %(message)s'
+    )
+    
+    # Handler pour fichier principal (rotation automatique)
+    file_handler = RotatingFileHandler(
+        'logs/app.log', 
+        maxBytes=10240000,  # 10MB
+        backupCount=10
+    )
+    file_handler.setFormatter(formatter)
+    file_handler.setLevel(log_level)
+    
+    # Handler pour les erreurs (fichier séparé)
+    error_handler = RotatingFileHandler(
+        'logs/errors.log',
+        maxBytes=10240000,
+        backupCount=5
+    )
+    error_handler.setFormatter(formatter)
+    error_handler.setLevel(logging.ERROR)
+    
+    # Handler pour la console (development)
+    if app.debug:
+        console_handler = logging.StreamHandler()
+        console_handler.setFormatter(logging.Formatter(
+            '%(asctime)s %(levelname)s: %(message)s [in %(pathname)s:%(lineno)d]'
+        ))
+        console_handler.setLevel(logging.DEBUG)
+        app.logger.addHandler(console_handler)
+    
+    # Ajouter les handlers à l'app logger
+    app.logger.addHandler(file_handler)
+    app.logger.addHandler(error_handler)
+    app.logger.setLevel(log_level)
+    
+    # Désactiver les logs par défaut de Werkzeug en production
+    if not app.debug:
+        logging.getLogger('werkzeug').setLevel(logging.ERROR)
+    
+    # Logger pour les requêtes
+    @app.before_request
+    def log_request_info():
+        app.logger.debug(f"Request: {request.method} {request.url} - IP: {request.remote_addr}")
+    
+    @app.after_request
+    def log_response_info(response):
+        app.logger.debug(f"Response: {response.status_code} - {request.method} {request.url}")
+        return response
+    
+    # Logger pour les erreurs non gérées
+    @app.errorhandler(500)
+    def internal_error(error):
+        app.logger.error(f"Erreur serveur: {str(error)}")
+        return jsonify({'message': 'Erreur interne du serveur'}), 500
+    
+    @app.errorhandler(404)
+    def not_found(error):
+        app.logger.warning(f"Page non trouvée: {request.url} - IP: {request.remote_addr}")
+        return jsonify({'message': 'Ressource non trouvée'}), 404
+    
+    app.logger.info('Application Flask démarrée avec succès')
 
 def register_blueprints(app):
     """Enregistre tous les blueprints"""

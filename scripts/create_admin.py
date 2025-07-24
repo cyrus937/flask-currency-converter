@@ -44,7 +44,8 @@ def create_admin_user():
                 email=email,
                 password=password,
                 first_name=first_name,
-                last_name=last_name
+                last_name=last_name,
+                is_admin=True  # Marquer comme administrateur
             )
             
             # Marquer comme premium et vérifié

@@ -22,5 +22,6 @@ class UserProfileSchema(Schema):
     preferred_currency = fields.Str()
     created_at = fields.DateTime()
     last_login = fields.DateTime(allow_none=True)
+    role = fields.Str()
     favorite_currencies = fields.List(fields.Str())
     active_sessions = fields.Int()

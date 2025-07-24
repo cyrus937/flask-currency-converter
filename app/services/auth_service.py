@@ -3,6 +3,7 @@ from flask import request
 from werkzeug.security import generate_password_hash
 from datetime import datetime
 import secrets
+from app.config import BaseConfig
 from app.models.user import User
 from app.models.session import Session
 from app.models.refresh_token import RefreshToken
@@ -86,12 +87,19 @@ class AuthService:
         
         # Mettre à jour la dernière connexion
         user.update_last_login()
+        print("Here is the user profile after authentication:")
+        logging.info("Here is the user profile after authentication:")
+        print(f"User {user.email} authenticated successfully. Expires in {BaseConfig.JWT_TIME} seconds ")
+        logging.info(f"User {user.email} authenticated successfully. Expires in {BaseConfig.JWT_TIME} seconds")
+        print(f"Session ID: {session.id}")
+        logging.info(f"Session ID: {session.id}")
         
         return {
             'user': user,
             'session': session,
             'access_token': access_token,
-            'refresh_token': refresh_token
+            'refresh_token': refresh_token,
+            'expires_in': BaseConfig.JWT_TIME
         }
     
     @staticmethod
@@ -156,7 +164,8 @@ class AuthService:
         
         return {
             'access_token': access_token,
-            'refresh_token': new_refresh_token
+            'refresh_token': new_refresh_token,
+            'expires_in': app.config['JWT_ACCESS_TOKEN_EXPIRES'].total_seconds()
         }
     
     @staticmethod
