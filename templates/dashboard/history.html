@@ -1,0 +1,531 @@
+{% extends "base.html" %}
+
+{% block title %}Historique - Currency Converter{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <h4 class="mb-0">
+                            <i class="fas fa-history me-2"></i>Historique des conversions
+                        </h4>
+                        <small class="text-muted">Retrouvez toutes vos conversions passées</small>
+                    </div>
+                    <div class="col-auto">
+                        <button class="btn btn-outline-primary" data-bs-toggle="collapse" 
+                                data-bs-target="#filters" aria-expanded="false">
+                            <i class="fas fa-filter me-2"></i>Filtres
+                        </button>
+                        <button class="btn btn-outline-success" onclick="exportHistory()">
+                            <i class="fas fa-download me-2"></i>Exporter
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Filtres -->
+            <div class="collapse" id="filters">
+                <div class="card-body border-bottom">
+                    <form id="filter-form" class="row g-3">
+                        <div class="col-md-3">
+                            <label class="form-label">Date de début</label>
+                            <input type="date" class="form-control" id="date-from">
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label">Date de fin</label>
+                            <input type="date" class="form-control" id="date-to">
+                        </div>
+                        <div class="col-md-2">
+                            <label class="form-label">Devise source</label>
+                            <select class="form-select" id="filter-from-currency">
+                                <option value="">Toutes</option>
+                                <option value="USD">USD</option>
+                                <option value="EUR">EUR</option>
+                                <option value="GBP">GBP</option>
+                                <option value="JPY">JPY</option>
+                                <option value="CHF">CHF</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <label class="form-label">Devise cible</label>
+                            <select class="form-select" id="filter-to-currency">
+                                <option value="">Toutes</option>
+                                <option value="USD">USD</option>
+                                <option value="EUR">EUR</option>
+                                <option value="GBP">GBP</option>
+                                <option value="JPY">JPY</option>
+                                <option value="CHF">CHF</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <label class="form-label">&nbsp;</label>
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-search me-1"></i>Filtrer
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="card-body">
+                <!-- Statistiques rapides -->
+                <div class="row mb-4">
+                    <div class="col-md-3">
+                        <div class="card bg-primary text-white">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Total conversions</h5>
+                                <h3 id="stats-total">{{ conversions.total }}</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card bg-success text-white">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Volume total</h5>
+                                <h3 id="stats-volume">-</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card bg-info text-white">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Paire la plus utilisée</h5>
+                                <h3 id="stats-popular">-</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card bg-warning text-white">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Ce mois</h5>
+                                <h3 id="stats-month">-</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                {% if conversions.items %}
+                <!-- Tableau des conversions -->
+                <div class="table-responsive">
+                    <table class="table table-hover" id="conversions-table">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Date & Heure</th>
+                                <th>Montant original</th>
+                                <th>De</th>
+                                <th>Vers</th>
+                                <th>Montant converti</th>
+                                <th>Taux de change</th>
+                                <th>Frais</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for conversion in conversions.items %}
+                            <tr data-conversion-id="{{ conversion.id }}">
+                                <td>
+                                    <div>{{ conversion.created_at.strftime('%d/%m/%Y') }}</div>
+                                    <small class="text-muted">{{ conversion.created_at.strftime('%H:%M:%S') }}</small>
+                                </td>
+                                <td>
+                                    <span class="fw-bold">{{ "%.2f"|format(conversion.original_amount) }}</span>
+                                </td>
+                                <td>
+                                    <span class="badge bg-secondary">{{ conversion.from_currency }}</span>
+                                </td>
+                                <td>
+                                    <span class="badge bg-secondary">{{ conversion.to_currency }}</span>
+                                </td>
+                                <td>
+                                    <span class="fw-bold text-success">{{ "%.2f"|format(conversion.converted_amount) }}</span>
+                                </td>
+                                <td>
+                                    <span class="font-monospace">{{ "%.4f"|format(conversion.exchange_rate) }}</span>
+                                </td>
+                                <td>
+                                    <span class="text-muted">{{ "%.2f"|format(conversion.fee_amount or 0) }}</span>
+                                </td>
+                                <td>
+                                    <div class="btn-group btn-group-sm">
+                                        <button class="btn btn-outline-primary" 
+                                                onclick="repeatConversion({{ conversion.id }})"
+                                                title="Répéter cette conversion">
+                                            <i class="fas fa-redo"></i>
+                                        </button>
+                                        <button class="btn btn-outline-info" 
+                                                onclick="viewDetails({{ conversion.id }})"
+                                                title="Voir les détails">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="btn btn-outline-danger" 
+                                                onclick="deleteConversion({{ conversion.id }})"
+                                                title="Supprimer">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                
+                <!-- Pagination -->
+                {% if conversions.pages > 1 %}
+                <nav aria-label="Navigation des pages">
+                    <ul class="pagination justify-content-center">
+                        {% if conversions.has_prev %}
+                        <li class="page-item">
+                            <a class="page-link" href="{{ url_for('dashboard.conversion_history', page=conversions.prev_num) }}">
+                                <i class="fas fa-chevron-left"></i>
+                            </a>
+                        </li>
+                        {% endif %}
+                        
+                        {% for page_num in conversions.iter_pages() %}
+                            {% if page_num %}
+                                {% if page_num != conversions.page %}
+                                <li class="page-item">
+                                    <a class="page-link" href="{{ url_for('dashboard.conversion_history', page=page_num) }}">{{ page_num }}</a>
+                                </li>
+                                {% else %}
+                                <li class="page-item active">
+                                    <span class="page-link">{{ page_num }}</span>
+                                </li>
+                                {% endif %}
+                            {% else %}
+                            <li class="page-item disabled">
+                                <span class="page-link">…</span>
+                            </li>
+                            {% endif %}
+                        {% endfor %}
+                        
+                        {% if conversions.has_next %}
+                        <li class="page-item">
+                            <a class="page-link" href="{{ url_for('dashboard.conversion_history', page=conversions.next_num) }}">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </li>
+                        {% endif %}
+                    </ul>
+                </nav>
+                {% endif %}
+                
+                {% else %}
+                <!-- État vide -->
+                <div class="text-center py-5">
+                    <i class="fas fa-history fa-3x text-muted mb-3"></i>
+                    <h5 class="text-muted">Aucune conversion trouvée</h5>
+                    <p class="text-muted">Vous n'avez pas encore effectué de conversions ou aucune ne correspond aux filtres appliqués.</p>
+                    <a href="{{ url_for('dashboard.currency_converter') }}" class="btn btn-primary">
+                        <i class="fas fa-plus me-2"></i>Effectuer ma première conversion
+                    </a>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal détails conversion -->
+<div class="modal fade" id="detailsModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Détails de la conversion</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body" id="details-content">
+                <!-- Contenu dynamique -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                <button type="button" class="btn btn-primary" id="repeat-from-modal">
+                    <i class="fas fa-redo me-2"></i>Répéter cette conversion
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal confirmation suppression -->
+<div class="modal fade" id="deleteModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Confirmer la suppression</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                Êtes-vous sûr de vouloir supprimer cette conversion de votre historique ?
+                <br><small class="text-muted">Cette action est irréversible.</small>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                <button type="button" class="btn btn-danger" id="confirm-delete">
+                    <i class="fas fa-trash me-2"></i>Supprimer
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+let currentConversionId = null;
+
+// Charger les statistiques
+async function loadStats() {
+    try {
+        const response = await axios.get('/api/user/conversion-stats');
+        const stats = response.data;
+        
+        document.getElementById('stats-volume').textContent = 
+            `$${stats.total_volume.toFixed(0)}`;
+        document.getElementById('stats-popular').textContent = 
+            stats.most_popular_pair || 'N/A';
+        document.getElementById('stats-month').textContent = 
+            stats.this_month || '0';
+            
+    } catch (error) {
+        console.error('Erreur lors du chargement des stats:', error);
+    }
+}
+
+// Filtrer les conversions
+document.getElementById('filter-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const params = new URLSearchParams();
+    
+    const dateFrom = document.getElementById('date-from').value;
+    const dateTo = document.getElementById('date-to').value;
+    const fromCurrency = document.getElementById('filter-from-currency').value;
+    const toCurrency = document.getElementById('filter-to-currency').value;
+    
+    if (dateFrom) params.append('date_from', dateFrom);
+    if (dateTo) params.append('date_to', dateTo);
+    if (fromCurrency) params.append('from_currency', fromCurrency);
+    if (toCurrency) params.append('to_currency', toCurrency);
+    
+    const url = `${window.location.pathname}?${params.toString()}`;
+    window.location.href = url;
+});
+
+// Répéter une conversion
+async function repeatConversion(conversionId) {
+    try {
+        const response = await axios.get(`/api/conversions/${conversionId}/details`);
+        const conversion = response.data;
+        
+        // Rediriger vers le convertisseur avec les valeurs pré-remplies
+        const url = new URL('/dashboard/converter', window.location.origin);
+        url.searchParams.set('amount', conversion.original_amount);
+        url.searchParams.set('from', conversion.from_currency);
+        url.searchParams.set('to', conversion.to_currency);
+        
+        window.location.href = url.toString();
+        
+    } catch (error) {
+        alert('Erreur lors de la récupération des détails de conversion');
+    }
+}
+
+// Voir les détails d'une conversion
+async function viewDetails(conversionId) {
+    try {
+        const response = await axios.get(`/api/conversions/${conversionId}/details`);
+        const conversion = response.data;
+        
+        const detailsHtml = `
+            <div class="row">
+                <div class="col-md-6">
+                    <h6>Informations générales</h6>
+                    <table class="table table-sm">
+                        <tr><td><strong>ID:</strong></td><td>${conversion.id}</td></tr>
+                        <tr><td><strong>Date:</strong></td><td>${new Date(conversion.created_at).toLocaleString()}</td></tr>
+                        <tr><td><strong>Statut:</strong></td><td><span class="badge bg-success">Complétée</span></td></tr>
+                    </table>
+                </div>
+                <div class="col-md-6">
+                    <h6>Détails de conversion</h6>
+                    <table class="table table-sm">
+                        <tr><td><strong>Montant original:</strong></td><td>${conversion.original_amount.toFixed(2)} ${conversion.from_currency}</td></tr>
+                        <tr><td><strong>Montant converti:</strong></td><td>${conversion.converted_amount.toFixed(2)} ${conversion.to_currency}</td></tr>
+                        <tr><td><strong>Taux de change:</strong></td><td>${conversion.exchange_rate.toFixed(4)}</td></tr>
+                        <tr><td><strong>Frais:</strong></td><td>${(conversion.fee_amount || 0).toFixed(2)} ${conversion.to_currency}</td></tr>
+                    </table>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-12">
+                    <h6>Calcul détaillé</h6>
+                    <div class="bg-light p-3 rounded">
+                        <div>${conversion.original_amount.toFixed(2)} ${conversion.from_currency} × ${conversion.exchange_rate.toFixed(4)} = ${conversion.converted_amount.toFixed(2)} ${conversion.to_currency}</div>
+                        ${conversion.fee_amount ? `<div>Frais appliqués: ${conversion.fee_amount.toFixed(2)} ${conversion.to_currency}</div>` : ''}
+                        <div><strong>Montant final: ${conversion.converted_amount.toFixed(2)} ${conversion.to_currency}</strong></div>
+                    </div>
+                </div>
+            </div>
+        `;
+        
+        document.getElementById('details-content').innerHTML = detailsHtml;
+        
+        // Configurer le bouton de répétition dans le modal
+        document.getElementById('repeat-from-modal').onclick = () => {
+            bootstrap.Modal.getInstance(document.getElementById('detailsModal')).hide();
+            repeatConversion(conversionId);
+        };
+        
+        const modal = new bootstrap.Modal(document.getElementById('detailsModal'));
+        modal.show();
+        
+    } catch (error) {
+        alert('Erreur lors de la récupération des détails');
+    }
+}
+
+// Supprimer une conversion
+function deleteConversion(conversionId) {
+    currentConversionId = conversionId;
+    const modal = new bootstrap.Modal(document.getElementById('deleteModal'));
+    modal.show();
+}
+
+// Confirmer la suppression
+document.getElementById('confirm-delete').addEventListener('click', async function() {
+    if (!currentConversionId) return;
+    
+    try {
+        await axios.delete(`/api/conversions/${currentConversionId}`);
+        
+        // Supprimer la ligne du tableau
+        const row = document.querySelector(`tr[data-conversion-id="${currentConversionId}"]`);
+        if (row) {
+            row.remove();
+        }
+        
+        // Fermer le modal
+        bootstrap.Modal.getInstance(document.getElementById('deleteModal')).hide();
+        
+        // Afficher un message de succès
+        showToast('Conversion supprimée avec succès', 'success');
+        
+        // Recharger les stats
+        loadStats();
+        
+    } catch (error) {
+        alert('Erreur lors de la suppression');
+    }
+    
+    currentConversionId = null;
+});
+
+// Exporter l'historique
+async function exportHistory() {
+    try {
+        // Récupérer les filtres actuels
+        const params = new URLSearchParams(window.location.search);
+        params.append('export', 'csv');
+        
+        const response = await axios.get(`/api/conversions/export?${params.toString()}`, {
+            responseType: 'blob'
+        });
+        
+        // Créer un lien de téléchargement
+        const url = window.URL.createObjectURL(new Blob([response.data]));
+        const link = document.createElement('a');
+        link.href = url;
+        link.setAttribute('download', `conversions_${new Date().toISOString().split('T')[0]}.csv`);
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        
+        showToast('Export téléchargé avec succès', 'success');
+        
+    } catch (error) {
+        alert('Erreur lors de l\'export');
+    }
+}
+
+// Fonction pour afficher des toasts
+function showToast(message, type = 'info') {
+    // Créer un toast simple (vous pouvez utiliser une bibliothèque comme Toastify)
+    const alertDiv = document.createElement('div');
+    alertDiv.className = `alert alert-${type === 'success' ? 'success' : 'info'} alert-dismissible fade show position-fixed`;
+    alertDiv.style.top = '20px';
+    alertDiv.style.right = '20px';
+    alertDiv.style.zIndex = '9999';
+    alertDiv.innerHTML = `
+        ${message}
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    `;
+    
+    document.body.appendChild(alertDiv);
+    
+    // Auto-suppression après 3 secondes
+    setTimeout(() => {
+        if (alertDiv.parentNode) {
+            alertDiv.parentNode.removeChild(alertDiv);
+        }
+    }, 3000);
+}
+
+// Initialisation de la page
+document.addEventListener('DOMContentLoaded', function() {
+    loadStats();
+    
+    // Définir les dates par défaut (dernier mois)
+    const today = new Date();
+    const lastMonth = new Date(today.getFullYear(), today.getMonth() - 1, today.getDate());
+    
+    document.getElementById('date-to').value = today.toISOString().split('T')[0];
+    document.getElementById('date-from').value = lastMonth.toISOString().split('T')[0];
+    
+    // Tri des colonnes (optionnel)
+    setupTableSorting();
+});
+
+// Configuration du tri des colonnes (simple)
+function setupTableSorting() {
+    const table = document.getElementById('conversions-table');
+    const headers = table.querySelectorAll('th');
+    
+    headers.forEach((header, index) => {
+        if (index < 6) { // Seulement les colonnes triables
+            header.style.cursor = 'pointer';
+            header.addEventListener('click', () => sortTable(index));
+        }
+    });
+}
+
+// Fonction de tri simple
+function sortTable(columnIndex) {
+    const table = document.getElementById('conversions-table');
+    const tbody = table.querySelector('tbody');
+    const rows = Array.from(tbody.querySelectorAll('tr'));
+    
+    rows.sort((a, b) => {
+        const aVal = a.cells[columnIndex].textContent.trim();
+        const bVal = b.cells[columnIndex].textContent.trim();
+        
+        // Essayer de comparer comme des nombres
+        if (!isNaN(aVal) && !isNaN(bVal)) {
+            return parseFloat(aVal) - parseFloat(bVal);
+        }
+        
+        // Sinon comparer comme des chaînes
+        return aVal.localeCompare(bVal);
+    });
+    
+    // Réinsérer les lignes triées
+    rows.forEach(row => tbody.appendChild(row));
+}
+</script>
+{% endblock %}

@@ -1,6 +1,6 @@
 # # app/routes/auth.py
 import http
-from flask import request
+from flask import request, Blueprint as BL, render_template
 from flask_smorest import Blueprint, abort
 from flask_jwt_extended import jwt_required, get_jwt_identity, get_jwt
 from app.services.auth_service import AuthService
@@ -24,6 +24,18 @@ auth_bp = Blueprint(
     description='Authentification et gestion des comptes utilisateur'
 )
 
+auth_pages_bp = BL('auth_pages', __name__, url_prefix='/auth')
+
+@auth_pages_bp.route('/login')
+def login_page():
+    """Page de connexion"""
+    return render_template('auth/login.html')
+
+
+@auth_pages_bp.route('/register')
+def register_page():
+    """Page d'inscription"""
+    return render_template('auth/register.html')
 
 @auth_bp.route('/register', methods=['POST'])
 @auth_bp.doc(

@@ -1,16 +1,56 @@
 # app/routes/dashboard.py
+from typing import Any
 from flask import Blueprint, render_template, request, jsonify
-from flask_jwt_extended import jwt_required, get_jwt_identity
+from flask_jwt_extended import decode_token, jwt_required, get_jwt_identity
 from app.models.user import User
 from app.models.conversion import Conversion
 from app.models.currency import Currency
+from app.schemas.dashboard_schemas import GeneralResponseSchema
+from app.schemas.response_schemas import ConversionHistoryResponseSchema
 from app.services.conversion_service import ConversionService
+from flask_smorest import Blueprint as BL, abort
 
 dashboard_bp = Blueprint('dashboard', __name__, url_prefix='/dashboard')
 
+api_dashboard = BL(
+    'api_dashboard', 
+    __name__, 
+    url_prefix='/api/dashboard',
+    description='Conversion de devises en temps réel'
+)
+
+@api_dashboard.route('/general', methods=['GET'])
+@api_dashboard.doc(security=[{"bearerAuth": []}])
+@api_dashboard.response(200, GeneralResponseSchema)
+@api_dashboard.doc(
+    summary="Historique des conversions",
+    description="Récupère l'historique des conversions de l'utilisateur connecté",
+    tags=['Dashboard']
+)
+@jwt_required()
+def get_conversion_history():
+    """Historique des conversions utilisateur"""
+    try:
+        user_id = get_jwt_identity()
+        user: User = User.query.get(user_id)
+
+        recent_conversions = Conversion.get_user_history(user_id, limit=5)
+        popular_currencies = Currency.get_popular_currencies()
+        # user_favorites = user.get_favorite_currencies()
+        
+        return {
+            user: user.to_dict(include_sensitive=True),
+            'recent_conversions': [conv.to_dict() for conv in recent_conversions],
+            'popular_currencies': [currency.to_dict() for currency in popular_currencies],
+            # 'user_favorites': user_favorites
+        }
+        
+    except Exception as e:
+        abort(500, message='Erreur lors de la récupération de l\'historique: ' + str(e))
+
 
 @dashboard_bp.route('/')
-@jwt_required()
+# @jwt_required()
 def dashboard_home():
     """
     Dashboard principal (interface web)
@@ -18,26 +58,17 @@ def dashboard_home():
     GET /dashboard/
     """
     try:
-        user_id = get_jwt_identity()
-        user = User.query.get(user_id)
-        
-        if not user:
-            return render_template('error.html', message='Utilisateur non trouvé'), 404
-        
-        # Données pour le dashboard
-        recent_conversions = Conversion.get_user_history(user_id, limit=5)
-        popular_currencies = Currency.get_popular_currencies()
-        user_favorites = user.get_favorite_currencies()
-        
-        return render_template('dashboard/home.html', 
-                             user=user, 
-                             recent_conversions=recent_conversions,
-                             popular_currencies=popular_currencies,
-                             user_favorites=user_favorites)
+        print("Loading dashboard home...")  # Debugging line
+        return render_template('dashboard/home.html'
+                            #  user=user, 
+                            #  recent_conversions=recent_conversions,
+                            #  popular_currencies=popular_currencies,
+                            #  user_favorites=user_favorites
+                            )
         
     except Exception as e:
-        return render_template('error.html', message='Erreur lors du chargement du dashboard'), 500
-
+        print(f"Error loading dashboard: {e}")
+        return render_template('errors/500.html', message='Erreur lors du chargement du dashboard'), 500
 
 @dashboard_bp.route('/converter')
 @jwt_required()
