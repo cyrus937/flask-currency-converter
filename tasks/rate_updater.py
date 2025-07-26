@@ -13,7 +13,7 @@ from app.config.currencies import POPULAR_PAIRS
 from app.extensions import db
 
 
-@celery.task
+# @celery.task
 def update_exchange_rates():
     """Met à jour les taux de change toutes les 5 minutes"""
     print("Mise à jour des taux de change...")
@@ -36,6 +36,16 @@ def update_exchange_rates():
     
     print(f"Mise à jour terminée. {updated_count} taux mis à jour, {error_count} erreurs")
     return {'updated': updated_count, 'errors': error_count}
+
+@celery.task
+def fetch_all_exchange_rates():
+    """Récupère tous les taux de change"""
+    print("Récupération de tous les taux de change...")
+    from app.providers.currencyapi_provider import CurrencyAPIProvider
+    rate_fetcher = CurrencyAPIProvider()
+    rate_fetcher.fetch_exchange_rates()
+    print("Récupération terminée.")
+    return {'status': 'completed'}
 
 
 @celery.task
@@ -68,15 +78,21 @@ from celery.schedules import crontab
 
 celery.conf.beat_schedule = {
     # Mise à jour des taux toutes les 5 minutes
-    'update-rates': {
-        'task': 'tasks.rate_updater.update_exchange_rates',
-        'schedule': 300.0,  # 5 minutes
-    },
+    # 'update-rates': {
+    #     'task': 'tasks.rate_updater.update_exchange_rates',
+    #     'schedule': 300.0,  # 5 minutes
+    # },
     
     # Nettoyage quotidien à 2h du matin
     'cleanup-old-data': {
         'task': 'tasks.rate_updater.cleanup_old_data',
         'schedule': crontab(hour=2, minute=0),
+    },
+    
+    # Récupération de tous les taux toutes les 2.5 heures
+    'fetch-all-exchange-rates': {
+        'task': 'tasks.rate_updater.fetch_all_exchange_rates',
+        'schedule': 60 * 150,  # Toutes les 2.5 heures
     },
 }
 
