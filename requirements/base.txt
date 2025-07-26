@@ -22,3 +22,5 @@ APScheduler==3.10.4
 flask-smorest==0.42.1
 apispec[validation]==6.3.0
 webargs==8.3.0
+
+currencyapicom
