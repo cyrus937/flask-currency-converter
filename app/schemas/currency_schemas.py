@@ -10,7 +10,7 @@ class CurrencySchema(Schema):
     symbol = fields.Str()
     decimal_places = fields.Int()
     is_crypto = fields.Bool()
-    country_code = fields.Str(allow_none=True)
+    countries_code = fields.Str(allow_none=True)
 
 
 class CurrencyListSchema(Schema):

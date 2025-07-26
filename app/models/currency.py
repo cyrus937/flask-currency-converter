@@ -9,18 +9,22 @@ class Currency(BaseModel):
     
     code = db.Column(db.String(3), unique=True, nullable=False, index=True)  # USD, EUR, etc.
     name = db.Column(db.String(100), nullable=False)  # US Dollar, Euro, etc.
-    symbol = db.Column(db.String(10))  # $, €, etc.
+    symbol = db.Column(db.String(100), nullable=True) 
+    symbol_native = db.Column(db.String(10))  # $, €, etc.
     decimal_places = db.Column(db.Integer, default=2)  # Nombre de décimales
+    rounding = db.Column(db.Float, default=0.0)  # Rounding value
+    name_plural = db.Column(db.String(100), default="")  # Nom pluriel
     is_active = db.Column(db.Boolean, default=True)
     is_crypto = db.Column(db.Boolean, default=False)
-    country_code = db.Column(db.String(2))  # ISO country code
-    
-    def __init__(self, code, name, symbol=None, **kwargs):
+    countries_code = db.Column(db.String(200), default="")  # ISO country code
+
+
+    def __init__(self, code, name, symbol_native=None, **kwargs):
         super().__init__(**kwargs)
         self.code = code.upper()
         self.name = name
-        self.symbol = symbol
-    
+        self.symbol_native = symbol_native
+
     @classmethod
     def get_active_currencies(cls):
         """Retourne toutes les devises actives"""
@@ -43,8 +47,8 @@ class Currency(BaseModel):
             'id': self.id,
             'code': self.code,
             'name': self.name,
-            'symbol': self.symbol,
+            'symbol': self.symbol_native,
             'decimal_places': self.decimal_places,
             'is_crypto': self.is_crypto,
-            'country_code': self.country_code
+            'countries_code': self.countries_code
         }

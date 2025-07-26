@@ -48,6 +48,8 @@ class BaseConfig:
     FIXER_API_KEY = os.environ.get('FIXER_API_KEY')
     EXCHANGERATE_API_KEY = os.environ.get('EXCHANGERATE_API_KEY')
     
+    CURRENCYAPI_API_KEY = os.environ.get('CURRENCYAPI_API_KEY', 'cur_live_sS9vwGwpGcclZEZ778vobqiWE36mVJL40MbNGTg9')
+    
     # Currency Configuration
     DEFAULT_BASE_CURRENCY = 'USD'
     RATE_UPDATE_INTERVAL = 300  # 5 minutes
@@ -140,10 +142,6 @@ Cette API offre des services complets de conversion de devises en temps réel av
             {
                 'name': 'User',
                 'description': 'Gestion du profil utilisateur'
-            },
-            {
-                'name': 'Dashboard',
-                'description': 'Interface web et statistiques'
             }
         ],
         'components': {
