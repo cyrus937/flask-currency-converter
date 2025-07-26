@@ -134,7 +134,7 @@ def register_blueprints(app):
     api.register_blueprint(user_bp)
     api.register_blueprint(currencies_bp)
     api.register_blueprint(conversions_bp)
-    api.register_blueprint(api_dashboard)  # API pour le dashboard
+    # api.register_blueprint(api_dashboard)  # API pour le dashboard
 
     app.register_blueprint(dashboard_bp)
     app.register_blueprint(auth_pages_bp)  # Pages d'authentification pour l'interface web
