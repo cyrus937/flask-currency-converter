@@ -3,4 +3,5 @@ __pycache__
 migrations
 instance
 venv/
-logs/
+*.log
+celerybeat-schedule
