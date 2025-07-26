@@ -26,7 +26,7 @@ class RateFetcherService:
         
         return providers
     
-    def fetch_rate(self, from_currency: str, to_currency: str) -> Decimal:
+    def  fetch_rate(self, from_currency: str, to_currency: str) -> Decimal:
         """Récupère un taux avec fallback entre providers"""
         
         from_currency = from_currency.upper()

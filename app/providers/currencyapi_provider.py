@@ -1,10 +1,12 @@
 from dataclasses import dataclass
+from datetime import datetime
 from decimal import Decimal
 from typing import Dict, List
 import currencyapicom
 import app
 from app.extensions import db
 from app.models.currency import Currency
+from app.models.exchange_rate import ExchangeRate
 from app.providers.base_provider import BaseProvider
 
 @dataclass
@@ -80,7 +82,33 @@ class CurrencyAPIProvider(BaseProvider):
         db.session.commit()
         app.logger.info("Currency data fetched and updated successfully.")
         
-    def convert_exchange_rates(self) -> None:
-        """Convertit les taux de change en utilisant le provider actuel."""
+    def fetch_exchange_rates(self) -> None:
+        """Récupère les taux de change en utilisant le provider actuel."""
         result = self.client.latest()
         
+        if not result or 'data' not in result:
+            app.logger.error("No exchange rates data found.")
+            return
+
+        try:
+            last_updated_provider = None if 'last_updated_at' not in result else result['meta']['last_updated_at']
+            
+            for key, value in result["data"].items():
+                try:
+                    new_rate = ExchangeRate(
+                        from_currency="USD",
+                        to_currency=value['code'],
+                        rate=value['value'],
+                        provider=self.name,
+                        last_updated_provider=datetime.fromisoformat(last_updated_provider) if last_updated_provider else datetime.utcnow()
+                    )
+                    db.session.add(new_rate)
+                except Exception as e:
+                    app.logger.error(f"Error processing exchange rate {key}: {e}")
+                    continue
+
+            db.session.commit()
+            app.logger.info("Exchange rates converted successfully.")
+        except Exception as e:
+            app.logger.error(f"Error committing exchange rates: {e}")
+            db.session.rollback()
