@@ -4,27 +4,16 @@ from decimal import Decimal
 from typing import Dict, List
 import currencyapicom
 import app
+from app.config import BaseConfig
 from app.extensions import db
 from app.models.currency import Currency
 from app.models.exchange_rate import ExchangeRate
 from app.providers.base_provider import BaseProvider
 
-@dataclass
-class CurrencyData:
-    symbol: str
-    name: str
-    symbol_native: str
-    decimal_digits: int
-    rounding: float
-    code: str
-    name_plural: str
-    type: str
-    countries: List[str]
-
 
 class CurrencyAPIProvider(BaseProvider):
     def __init__(self):
-        super().__init__(api_key=app.config.CURRENCYAPI_API_KEY)
+        super().__init__(api_key=BaseConfig.CURRENCYAPI_API_KEY)
         self.name = "CurrencyAPI"
         self.client = currencyapicom.Client(api_key=self.api_key)
         
@@ -69,18 +58,19 @@ class CurrencyAPIProvider(BaseProvider):
                         rounding=value['rounding'],
                         code=key,
                         name_plural=value['name_plural'],
-                        type=value.get('type', 'fiat'),
+                        # type=value.get('type', 'fiat'),
+                        is_crypto=(value.get('type', 'fiat') == 'crypto'),
                         countries_code=",".join(countries)
                     )
                     db.session.add(data)
-                    app.logger.info(f"Added new currency: {key} - {value['name']}")
-                
+                    print(f"Added new currency: {key} - {value['name']}")
+
             except Exception as e:
-                app.logger.error(f"Error processing currency {key}: {e}")
+                print(f"Error processing currency {key}: {e}")
                 continue
             
         db.session.commit()
-        app.logger.info("Currency data fetched and updated successfully.")
+        print("Currency data fetched and updated successfully.")
         
     def fetch_exchange_rates(self) -> None:
         """Récupère les taux de change en utilisant le provider actuel."""
@@ -104,11 +94,11 @@ class CurrencyAPIProvider(BaseProvider):
                     )
                     db.session.add(new_rate)
                 except Exception as e:
-                    app.logger.error(f"Error processing exchange rate {key}: {e}")
+                    print(f"Error processing exchange rate {key}: {e}")
                     continue
 
             db.session.commit()
-            app.logger.info("Exchange rates converted successfully.")
+            print("Exchange rates converted successfully.")
         except Exception as e:
-            app.logger.error(f"Error committing exchange rates: {e}")
+            print(f"Error committing exchange rates: {e}")
             db.session.rollback()

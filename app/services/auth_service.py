@@ -3,6 +3,7 @@ from flask import request
 from werkzeug.security import generate_password_hash
 from datetime import datetime
 import secrets
+import app
 from app.config import BaseConfig
 from app.models.user import User
 from app.models.session import Session

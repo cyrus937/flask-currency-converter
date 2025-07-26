@@ -7,7 +7,7 @@ class Currency(BaseModel):
     """Modèle devise"""
     __tablename__ = 'currencies'
     
-    code = db.Column(db.String(3), unique=True, nullable=False, index=True)  # USD, EUR, etc.
+    code = db.Column(db.String(30), unique=True, nullable=False, index=True)  # USD, EUR, etc.
     name = db.Column(db.String(100), nullable=False)  # US Dollar, Euro, etc.
     symbol = db.Column(db.String(100), nullable=True) 
     symbol_native = db.Column(db.String(10))  # $, €, etc.

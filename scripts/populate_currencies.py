@@ -6,6 +6,7 @@ current_dir = os.path.dirname(os.path.abspath(__file__))
 parent_dir = os.path.dirname(current_dir)
 sys.path.insert(0, parent_dir)
 
+import app
 from app import create_app
 from app.extensions import db
 from app.models.currency import Currency
@@ -119,7 +120,16 @@ if __name__ == '__main__':
     print("🚀 Démarrage du script de population des devises...")
     
     if check_environment():
-        populate_default_currencies()
+        app = create_app(os.environ.get('FLASK_ENV', 'development'))
+        with app.app_context():
+            print("✅ Environnement vérifié. Lancement de la population des devises...")
+            # populate_default_currencies()
+            from app.providers.currencyapi_provider import CurrencyAPIProvider
+            provider = CurrencyAPIProvider()
+            print("🔄 Récupération des devises depuis le provider...")
+            provider.fetch_currencies()
+        # populate_default_currencies()
+        # print("✅ Environnement vérifié avec succès. Vous pouvez lancer le script.")
     else:
         print("❌ Problème d'environnement détecté. Arrêt du script.")
         sys.exit(1)
