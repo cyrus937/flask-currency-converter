@@ -9,12 +9,13 @@ class ExchangeRate(BaseModel):
     """Modèle taux de change"""
     __tablename__ = 'exchange_rates'
     
-    from_currency = db.Column(db.String(3), nullable=False, index=True)
-    to_currency = db.Column(db.String(3), nullable=False, index=True)
+    from_currency = db.Column(db.String(10), nullable=False, index=True)
+    to_currency = db.Column(db.String(10), nullable=False, index=True)
     rate = db.Column(db.Numeric(precision=20, scale=8), nullable=False)  # Précision élevée
     provider = db.Column(db.String(50), nullable=False)  # fixer, ecb, etc.
     is_active = db.Column(db.Boolean, default=True)
-    
+    last_updated_provider = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+
     # Index composé pour optimiser les requêtes
     __table_args__ = (
         db.Index('idx_currency_pair', 'from_currency', 'to_currency'),
