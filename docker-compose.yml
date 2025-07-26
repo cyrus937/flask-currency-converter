@@ -17,6 +17,7 @@ services:
       - .:/app
     networks:
       - flask_network
+    # command: /bin/sh -c "flask run & sleep 10 && python populate_currencies.py && wait"
     
   db:
     image: postgres:15
