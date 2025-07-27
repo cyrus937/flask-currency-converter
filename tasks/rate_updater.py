@@ -91,7 +91,7 @@ celery.conf.beat_schedule = {
     # Récupération de tous les taux toutes les 2.5 heures
     'fetch-all-exchange-rates': {
         'task': 'tasks.rate_updater.fetch_all_exchange_rates',
-        'schedule': 60 * 60 * 2.5,  # Toutes les 2.5 heures
+        'schedule': 9000,  # Toutes les 2.5 heures
     },
 }
 
