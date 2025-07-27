@@ -4,4 +4,4 @@ migrations
 instance
 venv/
 *.log
-celerybeat-schedule
+celerybeat-schedule*
