@@ -71,7 +71,7 @@ services:
   
   celery-beat:
     build: .
-    command: celery -A tasks.celery_app beat --loglevel=info
+    command: celery -A tasks.celery_app beat --loglevel=info --scheduler=celery.beat:PersistentScheduler
     environment:
       - FLASK_ENV=development
       - DATABASE_URL=postgresql://postgres:password@db:5432/flask_auth_currency
