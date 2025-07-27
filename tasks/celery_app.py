@@ -14,7 +14,7 @@ import os
 def make_celery(app):
     """Crée l'instance Celery avec le contexte Flask"""
     celery = Celery(
-        app.import_name,
+        __name__,
         backend=app.config['CELERY_RESULT_BACKEND'],
         broker=app.config['CELERY_BROKER_URL']
     )
@@ -32,3 +32,4 @@ def make_celery(app):
 # Créer l'app Flask et Celery
 flask_app = create_app(os.environ.get('FLASK_ENV', 'production'))
 celery = make_celery(flask_app)
+celery.autodiscover_tasks(['tasks'], related_name='rate_updater')
