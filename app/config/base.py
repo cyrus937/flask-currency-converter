@@ -54,7 +54,7 @@ class BaseConfig:
     DEFAULT_BASE_CURRENCY = 'USD'
     RATE_UPDATE_INTERVAL = 300  # 5 minutes
     RATE_CACHE_TIMEOUT = 600    # 10 minutes
-    CONVERSION_FEE_RATE = 0.01  # 1%
+    CONVERSION_FEE_RATE = 0.0  # 0%
     
     # Security
     BCRYPT_LOG_ROUNDS = 12
