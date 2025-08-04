@@ -119,5 +119,5 @@ class Conversion(BaseModel):
             'fee_amount': float(self.fee_amount),
             'fee_rate': float(self.fee_rate),
             'provider': self.provider,
-            'timestamp': self.created_at.isoformat()
+            'timestamp': self.created_at
         }

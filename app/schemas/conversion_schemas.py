@@ -19,6 +19,25 @@ class ConversionRequestSchema(Schema):
         if not value.isupper():
             raise ValidationError('Le code de devise doit être en majuscules')
 
+class BatchConversionRequestSchema(Schema):
+    """Schéma pour une demande de conversion en lot"""
+    amount = fields.Float(required=True, validate=validate.Range(min=0.01, max=1000000000))
+    from_currency = fields.Str(required=True, validate=validate.Length(equal=3))
+    to_currencies = fields.List(fields.Str(validate=validate.Length(equal=3)), required=True, validate=validate.Length(max=10))
+    
+    @validates('from_currency')
+    def validate_from_currency(self, value):
+        if not value.isupper():
+            raise ValidationError('Le code de devise doit être en majuscules')
+    
+    @validates('to_currencies')
+    def validate_to_currencies(self, value):
+        for currency in value:
+            if not currency.isupper():
+                raise ValidationError('Tous les codes de devise doivent être en majuscules')
+        if len(value) > 10:
+            raise ValidationError('Le nombre maximum de devises cibles est 10')
+
 
 class ConversionResponseSchema(Schema):
     """Schéma pour la réponse de conversion"""
