@@ -38,7 +38,7 @@ class Currency(BaseModel):
     @classmethod
     def get_popular_currencies(cls):
         """Retourne les devises les plus populaires"""
-        popular_codes = ['USD', 'EUR', 'GBP', 'JPY', 'CHF', 'CAD', 'AUD', 'BTC', 'ETH']
+        popular_codes = ['USD', 'EUR', 'GBP', 'JPY', 'CHF', 'CAD', 'AUD', 'BTC', 'ETH', 'XOF']
         return cls.query.filter(cls.code.in_(popular_codes), cls.is_active == True).all()
     
     def to_dict(self):
