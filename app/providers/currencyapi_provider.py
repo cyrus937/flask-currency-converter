@@ -9,6 +9,7 @@ from app.extensions import db
 from app.models.currency import Currency
 from app.models.exchange_rate import ExchangeRate
 from app.providers.base_provider import BaseProvider
+from flask import current_app
 
 
 class CurrencyAPIProvider(BaseProvider):
@@ -77,7 +78,7 @@ class CurrencyAPIProvider(BaseProvider):
         result = self.client.latest()
         
         if not result or 'data' not in result:
-            app.logger.error("No exchange rates data found.")
+            current_app.logger.error("No exchange rates data found.")
             return
 
         try:
