@@ -101,15 +101,12 @@ class Conversion(BaseModel):
             func.count().desc()
         ).limit(10).all()
         
-        # result.extend(result_1)
         # Fusionner les résultats pour éviter les doublons
         currencies = set()
         for currency in result:
             currencies.add(currency.from_currency)
         for currency in result_1:
             currencies.add(currency.to_currency)
-            
-        print(currencies)
             
         return list(currencies)
 
