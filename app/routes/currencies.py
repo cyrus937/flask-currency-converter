@@ -6,7 +6,7 @@ from app.models.currency import Currency
 from app.models.exchange_rate import ExchangeRate
 from app.services.currency_service import CurrencyService
 from app.services.rate_fetcher_service import RateFetcherService
-from app.schemas.currency_schemas import CurrencySchema, CurrencyListSchema
+from app.schemas.currency_schemas import AddFavoriteCurrencySchema, CurrencySchema, CurrencyListSchema, FavoriteCurrenciesSchema
 from app.schemas.response_schemas import (
     CurrencyRatesResponseSchema, ProvidersStatusSchema, MessageSchema
 )
@@ -104,10 +104,6 @@ Récupère les taux de change en temps réel pour une devise de base.
     """,
     tags=['Currencies']
 )
-@currencies_bp.arguments({
-    'base': {'type': 'string', 'default': 'USD'},
-    'symbols': {'type': 'array', 'items': {'type': 'string'}}
-})
 @limiter.limit("1000 per hour")
 def get_latest_rates():
     """Taux de change actuels"""
@@ -117,7 +113,7 @@ def get_latest_rates():
         symbols = [s.strip() for s in symbols if s.strip()]
         
         if not symbols:
-            symbols = ['EUR', 'GBP', 'JPY', 'CHF', 'CAD', 'AUD']
+            symbols = ['EUR', 'GBP', 'JPY', 'CHF', 'CAD', 'AUD', 'XOF']
         
         rates = {}
         rate_fetcher = RateFetcherService()
@@ -142,32 +138,9 @@ def get_latest_rates():
         abort(500, message='Erreur lors de la récupération des taux')
 
 
-@currencies_bp.route('/providers/status', methods=['GET'])
-@currencies_bp.response(200, ProvidersStatusSchema)
-@currencies_bp.doc(
-    summary="Statut des providers",
-    description="Vérifie le statut et la disponibilité des providers de taux de change",
-    tags=['Currencies']
-)
-@limiter.limit("100 per hour")
-def get_providers_status():
-    """Statut des providers de taux"""
-    try:
-        rate_fetcher = RateFetcherService()
-        status = rate_fetcher.test_providers()
-        
-        return {
-            'providers': status,
-            'available_providers': rate_fetcher.get_available_providers()
-        }
-        
-    except Exception:
-        abort(500, message='Erreur lors de la vérification des providers')
-
-
 @currencies_bp.route('/favorites', methods=['GET'])
 @currencies_bp.doc(security=[{"bearerAuth": []}])
-@currencies_bp.response(200, schema={'type': 'object', 'properties': {'favorite_currencies': {'type': 'array', 'items': {'type': 'string'}}}})
+@currencies_bp.response(200, FavoriteCurrenciesSchema)
 @currencies_bp.doc(
     summary="Devises favorites",
     description="Récupère les devises favorites de l'utilisateur connecté",
@@ -183,7 +156,7 @@ def get_favorite_currencies():
         user: User = User.query.get(user_id)
 
         if not user:
-            abort(404, message='Utilisateur non trouvé')
+            abort(401, message='Utilisateur non connecté')
         
         favorites = user.get_favorite_currencies()
         
@@ -197,7 +170,7 @@ def get_favorite_currencies():
 
 @currencies_bp.route('/favorites', methods=['POST'])
 @currencies_bp.doc(security=[{"bearerAuth": []}])
-@currencies_bp.arguments(schema={'type': 'object', 'properties': {'currency_code': {'type': 'string'}}}, location='json')
+@currencies_bp.arguments(AddFavoriteCurrencySchema, location='json', content_type='application/json')
 @currencies_bp.response(200, MessageSchema)
 @currencies_bp.doc(
     summary="Ajouter devise favorite",
