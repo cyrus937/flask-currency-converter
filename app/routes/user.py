@@ -81,7 +81,7 @@ def update_profile(args):
 @user_bp.response(200, UserStatsSchema)
 @user_bp.doc(
     summary="Statistiques utilisateur",
-    description="Statistiques d'activité de l'utilisateur (conversions, sessions, etc.)",
+    description="Statistiques d'activité de l'utilisateur les 30 derniers jours (conversions, sessions, etc.)",
     tags=['User']
 )
 @jwt_required()

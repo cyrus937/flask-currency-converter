@@ -22,7 +22,7 @@ class RateFetcherService:
             providers.append(FixerProvider(BaseConfig.FIXER_API_KEY))
         
         # Provider ECB (gratuit, toujours disponible)
-        providers.append(ECBProvider())
+        # providers.append(ECBProvider())
         
         return providers
     
