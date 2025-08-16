@@ -37,6 +37,9 @@ Retourne la liste de toutes les devises supportées par l'API.
 - Devises asiatiques : CNY, INR, KRW, SGD, HKD, JPY
 - Devises européennes : NOK, SEK, DKK, PLN, CZK
 - Cryptomonnaies : BTC, ETH, LTC, ADA, DOT
+
+**Exemple :**
+`GET /api/currencies?type=fiat`
     """,
     tags=['Currencies']
 )
@@ -101,6 +104,10 @@ Récupère les taux de change en temps réel pour une devise de base.
     """,
     tags=['Currencies']
 )
+@currencies_bp.arguments({
+    'base': {'type': 'string', 'default': 'USD'},
+    'symbols': {'type': 'array', 'items': {'type': 'string'}}
+})
 # @limiter.limit("100000000 per hour")
 def get_latest_rates():
     """Taux de change actuels"""
