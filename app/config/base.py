@@ -60,7 +60,7 @@ class BaseConfig:
     BCRYPT_LOG_ROUNDS = 12
     
     # CORS
-    CORS_ORIGINS = ["http://localhost:3000", "http://localhost:5000", "https://localhost:5000"]
+    CORS_ORIGINS = ["http://localhost:3000", "http://localhost:5000", "https://localhost:5000", "https://app-currency-converter.my-finapp.com/"]
 
     # Configuration OpenAPI/Swagger
     API_TITLE = "Currency Converter API"
@@ -84,19 +84,13 @@ Cette API offre des services complets de conversion de devises en temps réel av
 
 ### Fonctionnalités principales :
 - 🔐 **Authentification JWT** avec refresh tokens
-- 💱 **Conversion de 40+ devises** (fiat et crypto)
+- 💱 **Conversion de 150+ devises** (fiat et crypto)
 - 📊 **Historique des conversions**
 - ⭐ **Gestion des devises favorites**
 - 🚀 **Cache Redis** pour performances optimales
 - 📈 **Statistiques et analytics**
 
-### Providers de taux :
-- Fixer.io (API premium)
-- Banque Centrale Européenne (gratuit)
-- Fallback automatique
-
 ### Sécurité :
-- Rate limiting intelligent
 - Tokens JWT avec expiration
 - Blacklist des tokens révoqués
 - Validation des données avec Marshmallow
@@ -122,7 +116,7 @@ Cette API offre des services complets de conversion de devises en temps réel av
                 'description': 'Serveur de développement'
             },
             {
-                'url': 'https://api.currencyconverter.com',
+                'url': 'https://api-currency-converter.my-finapp.com/',
                 'description': 'Serveur de production'
             }
         ],
@@ -130,6 +124,10 @@ Cette API offre des services complets de conversion de devises en temps réel av
             {
                 'name': 'Authentication',
                 'description': 'Endpoints d\'authentification et gestion des comptes'
+            },
+            {
+                'name': 'API Keys',
+                'description': 'Gestion des clés API'
             },
             {
                 'name': 'Conversions',
