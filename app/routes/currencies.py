@@ -108,7 +108,7 @@ Récupère les taux de change en temps réel pour une devise de base.
     'base': {'type': 'string', 'default': 'USD'},
     'symbols': {'type': 'array', 'items': {'type': 'string'}}
 })
-# @limiter.limit("100000000 per hour")
+@limiter.limit("1000 per hour")
 def get_latest_rates():
     """Taux de change actuels"""
     try:
