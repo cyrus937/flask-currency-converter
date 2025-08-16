@@ -16,7 +16,7 @@ class CacheService:
         except Exception:
             pass
         return None
-    
+
     @staticmethod
     def set_rate(cache_key, rate_data, timeout=300):
         """Sauvegarde un taux dans le cache"""
@@ -53,3 +53,30 @@ class CacheService:
         """Invalide le cache des favoris utilisateur"""
         cache_key = f"user_favorites:{user_id}"
         cache.delete(cache_key)
+    
+    @staticmethod
+    def get_popular_currencies(cache_key):
+        """Récupère les devises populaires depuis le cache"""
+        try:
+            cached_data = cache.get(cache_key)
+            if cached_data:
+                return json.loads(cached_data) if isinstance(cached_data, str) else cached_data
+        except Exception:
+            pass
+        return None
+
+    @staticmethod
+    def set_popular_currencies(cache_key, currencies: list, timeout=10800):
+        """Sauvegarde les devises populaires dans le cache"""
+        try:
+            cache.set(cache_key, json.dumps(currencies), timeout=timeout)
+        except Exception as e:
+            print(f"Erreur cache: {e}")
+    
+    @staticmethod
+    def invalidate_popular_currencies(cache_key):
+        """Invalide le cache des devises populaires"""
+        try:
+            cache.delete(cache_key)
+        except Exception as e:
+            print(f"Erreur lors de l'invalidation du cache: {e}")

@@ -88,12 +88,6 @@ class AuthService:
         
         # Mettre à jour la dernière connexion
         user.update_last_login()
-        print("Here is the user profile after authentication:")
-        logging.info("Here is the user profile after authentication:")
-        print(f"User {user.email} authenticated successfully. Expires in {BaseConfig.JWT_TIME} seconds ")
-        logging.info(f"User {user.email} authenticated successfully. Expires in {BaseConfig.JWT_TIME} seconds")
-        print(f"Session ID: {session.id}")
-        logging.info(f"Session ID: {session.id}")
         
         return {
             'user': user,

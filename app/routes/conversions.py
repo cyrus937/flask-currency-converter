@@ -1,9 +1,10 @@
 # app/routes/conversions.py
+import http
 from flask_smorest import Blueprint, abort
 from flask_jwt_extended import jwt_required, get_jwt_identity
 from flask import request
 from app.services.conversion_service import ConversionService
-from app.schemas.conversion_schemas import ConversionRequestSchema, ConversionResponseSchema
+from app.schemas.conversion_schemas import BatchConversionRequestSchema, ConversionRequestSchema, ConversionResponseSchema
 from app.schemas.response_schemas import (
     ConversionHistoryResponseSchema, ConversionStatsSchema, BatchConversionResponseSchema, ErrorSchema
 )
@@ -20,30 +21,15 @@ conversions_bp = Blueprint(
 @conversions_bp.route('/convert', methods=['POST'])
 @conversions_bp.arguments(ConversionRequestSchema, location='json')
 @conversions_bp.response(200, ConversionResponseSchema)
-@conversions_bp.response(400, ErrorSchema)
+@conversions_bp.alt_response(400, http.HTTPStatus(400).name, schema=ErrorSchema, description='Paramètres invalides')
 @conversions_bp.doc(
     summary="Conversion de devise",
     description="""
-Convertit un montant d'une devise vers une autre en utilisant les taux en temps réel.
-
-**Fonctionnalités :**
-- Support de 40+ devises (fiat et crypto)
-- Taux en temps réel depuis plusieurs providers
-- Calcul automatique des frais de conversion
-- Historique automatique pour les utilisateurs connectés
-- Cache intelligent pour optimiser les performances
-
-**Frais :**
-- Utilisateurs standard : 1%
-- Utilisateurs premium : 0.5%
-- Conversions même devise : gratuit
-
-**Providers utilisés :**
-1. Fixer.io (priorité si clé API disponible)
-2. Banque Centrale Européenne (fallback gratuit)
-    """,
-    tags=['Conversions']
+Convertit un montant d'une devise vers une autre en utilisant les taux en temps réel.""",
+    tags=['Conversions'],
+    security=[{"bearerAuth": []}]
 )
+@jwt_required()
 @limiter.limit("100 per hour")
 def convert_currency(args):
     """Conversion de devise simple"""
@@ -68,27 +54,32 @@ def convert_currency(args):
         return result
         
     except (CurrencyError, CustomValidationError) as e:
-        abort(400, message=str(e))
+        abort(400, errors=e.__dict__, message=str(e.message))
     except Exception:
         abort(500, message='Erreur lors de la conversion')
 
 
 @conversions_bp.route('/batch', methods=['POST'])
+@conversions_bp.arguments(BatchConversionRequestSchema, location='json')
 @conversions_bp.response(200, BatchConversionResponseSchema)
+@conversions_bp.alt_response(400, http.HTTPStatus(400).name, schema=ErrorSchema, description='Paramètres invalides')
+@conversions_bp.alt_response(500, http.HTTPStatus(500).name, schema=ErrorSchema, description='Erreur interne')
 @conversions_bp.doc(
     summary="Conversion en lot",
     description="Convertit un montant vers plusieurs devises simultanément (max 10 devises)",
-    tags=['Conversions']
+    tags=['Conversions'],
+    security=[{"bearerAuth": []}]
 )
-@limiter.limit("20 per hour")
-def batch_convert():
+@jwt_required()
+@limiter.limit("50 per hour")
+def batch_convert(args):
     """Conversion vers plusieurs devises"""
     try:
-        data = request.json
-        amount = data.get('amount')
-        from_currency = data.get('from_currency')
-        to_currencies = data.get('to_currencies', [])
-        
+        amount = args['amount']
+        from_currency = args['from_currency']
+        # to_currencies = args['to_currencies'] if 'to_currencies' in args else []
+        to_currencies = args.get('to_currencies', [])
+
         if not amount or not from_currency or not to_currencies:
             abort(400, message='Paramètres manquants')
         
@@ -131,6 +122,7 @@ def batch_convert():
 @conversions_bp.route('/history', methods=['GET'])
 @conversions_bp.doc(security=[{"bearerAuth": []}])
 @conversions_bp.response(200, ConversionHistoryResponseSchema)
+@conversions_bp.alt_response(500, http.HTTPStatus(500).name, schema=ErrorSchema, description='Erreur interne')
 @conversions_bp.doc(
     summary="Historique des conversions",
     description="Récupère l'historique des conversions de l'utilisateur connecté",
@@ -158,6 +150,8 @@ def get_conversion_history():
 @conversions_bp.route('/stats', methods=['GET'])
 @conversions_bp.doc(security=[{"bearerAuth": []}])
 @conversions_bp.response(200, ConversionStatsSchema)
+@conversions_bp.alt_response(400, http.HTTPStatus(400).name, schema=ErrorSchema, description='Paramètres invalides')
+@conversions_bp.alt_response(500, http.HTTPStatus(500).name, schema=ErrorSchema, description='Erreur interne')
 @conversions_bp.doc(
     summary="Statistiques de conversion",
     description="Statistiques personnalisées des conversions de l'utilisateur",

@@ -4,6 +4,7 @@ from flask_jwt_extended import jwt_required, get_jwt_identity
 from flask import request
 from app.models.currency import Currency
 from app.models.exchange_rate import ExchangeRate
+from app.services.currency_service import CurrencyService
 from app.services.rate_fetcher_service import RateFetcherService
 from app.schemas.currency_schemas import CurrencySchema, CurrencyListSchema
 from app.schemas.response_schemas import (
@@ -74,10 +75,10 @@ def get_currencies():
 def get_popular_currencies():
     """Devises populaires"""
     try:
-        currencies = Currency.get_popular_currencies()
+        currency_service = CurrencyService()
         
         return {
-            'currencies': [currency.to_dict() for currency in currencies]
+            'currencies': currency_service.get_popular_currencies()
         }
         
     except Exception:
@@ -172,8 +173,8 @@ def get_favorite_currencies():
         from app.models.user import User
         
         user_id = get_jwt_identity()
-        user = User.query.get(user_id)
-        
+        user: User = User.query.get(user_id)
+
         if not user:
             abort(404, message='Utilisateur non trouvé')
         
@@ -213,7 +214,7 @@ def add_favorite_currency(args):
             abort(400, message='Devise non supportée')
         
         user_id = get_jwt_identity()
-        user = User.query.get(user_id)
+        user: User = User.query.get(user_id)
         
         user.add_favorite_currency(currency_code)
         
@@ -238,7 +239,7 @@ def remove_favorite_currency(currency_code):
         from app.models.user import User
         
         user_id = get_jwt_identity()
-        user = User.query.get(user_id)
+        user: User = User.query.get(user_id)
         
         user.remove_favorite_currency(currency_code)
         

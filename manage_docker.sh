@@ -29,12 +29,12 @@ print_error() {
 
 # Vérifier que Docker Compose est disponible
 check_docker() {
-    if ! command -v docker-compose &> /dev/null; then
+    if ! command -v docker compose &> /dev/null; then
         print_error "Docker Compose n'est pas installé"
         exit 1
     fi
     
-    if ! docker-compose ps &> /dev/null; then
+    if ! docker compose ps &> /dev/null; then
         print_warning "Aucun service Docker Compose détecté"
     fi
 }
@@ -42,13 +42,13 @@ check_docker() {
 # Démarrer les services de base de données
 start_db() {
     print_info "Démarrage de PostgreSQL et Redis..."
-    docker-compose up -d db redis
+    docker compose up -d db redis
     
     print_info "Attente que la base de données soit prête..."
     sleep 5
     
     # Vérifier que la base est accessible
-    until docker-compose exec db pg_isready -U postgres; do
+    until docker compose exec db pg_isready -U postgres; do
         print_info "En attente de PostgreSQL..."
         sleep 2
     done
@@ -72,7 +72,7 @@ init_migrations() {
     fi
     
     print_info "Initialisation du système de migrations..."
-    docker-compose run --rm web flask db init
+    docker compose run --rm web flask db init
     print_success "Système de migrations initialisé"
 }
 
@@ -89,14 +89,14 @@ create_migration() {
     fi
     
     print_info "Création de la migration: $message"
-    docker-compose run --rm web flask db migrate -m "$message"
+    docker compose run --rm web flask db migrate -m "$message"
     print_success "Migration créée"
 }
 
 # Appliquer les migrations
 upgrade_db() {
     print_info "Application des migrations..."
-    docker-compose run --rm web flask db upgrade
+    docker compose run --rm web flask db upgrade
     print_success "Migrations appliquées"
 }
 
@@ -104,10 +104,10 @@ upgrade_db() {
 status_migrations() {
     print_info "État actuel des migrations:"
     echo "=== Migration actuelle ==="
-    docker-compose run --rm web flask db current
+    docker compose run --rm web flask db current
     echo
     echo "=== Historique des migrations ==="
-    docker-compose run --rm web flask db history
+    docker compose run --rm web flask db history
 }
 
 # Revenir en arrière
@@ -117,7 +117,7 @@ downgrade_db() {
     echo
     if [[ $REPLY =~ ^[Yy]$ ]]; then
         print_info "Retour à la migration précédente..."
-        docker-compose run --rm web flask db downgrade
+        docker compose run --rm web flask db downgrade
         print_success "Migration annulée"
     else
         print_info "Opération annulée"
@@ -127,7 +127,7 @@ downgrade_db() {
 # Initialiser avec des données de test
 init_data() {
     print_info "Initialisation avec des données de test..."
-    docker-compose run --rm web flask init-db
+    docker compose run --rm web flask init-db
     print_success "Données de test créées"
 }
 
@@ -138,7 +138,7 @@ reset_db() {
     
     if [ "$confirm" = "RESET" ]; then
         print_info "Réinitialisation de la base de données..."
-        docker-compose run --rm web flask reset-db
+        docker compose run --rm web flask reset-db
         print_success "Base de données réinitialisée"
     else
         print_info "Opération annulée"
@@ -149,7 +149,7 @@ reset_db() {
 backup_db() {
     local backup_file="backup_$(date +%Y%m%d_%H%M%S).sql"
     print_info "Sauvegarde de la base de données..."
-    docker-compose exec db pg_dump -U postgres flask_auth_currency > "$backup_file"
+    docker compose exec db pg_dump -U postgres flask_auth_currency > "$backup_file"
     print_success "Sauvegarde créée: $backup_file"
 }
 
@@ -168,7 +168,7 @@ restore_db() {
     
     if [[ $REPLY =~ ^[Yy]$ ]]; then
         print_info "Restauration de la base de données..."
-        docker-compose exec -T db psql -U postgres flask_auth_currency < "$backup_file"
+        docker compose exec -T db psql -U postgres flask_auth_currency < "$backup_file"
         print_success "Base de données restaurée"
     else
         print_info "Opération annulée"
@@ -187,7 +187,7 @@ full_setup() {
     
     # 3. Construire l'application
     print_info "Construction de l'image de l'application..."
-    docker-compose build web
+    docker compose build web
     
     # 4. Initialiser les migrations
     init_migrations
@@ -203,7 +203,7 @@ full_setup() {
     
     print_success "🎉 Installation terminée!"
     print_info "Vous pouvez maintenant démarrer l'application avec:"
-    print_info "docker-compose up"
+    print_info "docker compose up"
 }
 
 # Déploiement en production
@@ -215,11 +215,11 @@ deploy() {
     
     # Arrêter les services
     print_info "Arrêt des services..."
-    docker-compose down
+    docker compose down
     
     # Reconstruire
     print_info "Reconstruction des images..."
-    docker-compose build
+    docker compose build
     
     # Démarrer la base
     start_db
@@ -229,7 +229,7 @@ deploy() {
     
     # Redémarrer tous les services
     print_info "Redémarrage des services..."
-    docker-compose up -d
+    docker compose up -d
     
     print_success "✅ Déploiement terminé!"
 }
