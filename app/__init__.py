@@ -129,11 +129,13 @@ def register_blueprints(app):
     from app.routes.currencies import currencies_bp
     from app.routes.conversions import conversions_bp
     from app.routes.dashboard import dashboard_bp, api_dashboard
+    from app.routes.api_key import api_keys_bp
 
     api.register_blueprint(auth_bp)
     api.register_blueprint(user_bp)
     api.register_blueprint(currencies_bp)
     api.register_blueprint(conversions_bp)
+    api.register_blueprint(api_keys_bp)
     # api.register_blueprint(api_dashboard)  # API pour le dashboard
 
     app.register_blueprint(dashboard_bp)
