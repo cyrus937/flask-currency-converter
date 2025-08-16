@@ -151,14 +151,14 @@ def batch_convert(args):
 )
 @conversions_bp.doc(
     summary="Historique des conversions",
-    description="""Récupère l'historique des conversions de l'utilisateur connecté
-    
-    **Paramètres :**
-    - `limit` : Limite du nombre de résultats (défaut: 50)
+    description="""
+Récupère l'historique des conversions de l'utilisateur connecté
 
-    **Exemple :**
-    `GET /api/conversions/history?limit=50`
+**Paramètres :**
+- `limit` : Limite du nombre de résultats (défaut: 50)
 
+**Exemple :**
+`GET /api/conversions/history?limit=50`
     """,
     tags=["Conversions"],
 )
@@ -192,14 +192,14 @@ def get_conversion_history():
 )
 @conversions_bp.doc(
     summary="Statistiques de conversion",
-    description="""Statistiques personnalisées des conversions de l'utilisateur
-    
-    **Paramètres :**
-    - `days` : Nombre de jours pour les statistiques (défaut: 30)
+    description="""
+Statistiques personnalisées des conversions de l'utilisateur
 
-    **Exemple :**
-    `GET /api/conversions/stats?days=30`
+**Paramètres :**
+- `days` : Nombre de jours pour les statistiques (défaut: 30)
 
+**Exemple :**
+`GET /api/conversions/stats?days=30`
     """,
     tags=["Conversions"],
 )
