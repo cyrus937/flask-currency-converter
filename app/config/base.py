@@ -68,7 +68,9 @@ class BaseConfig:
     OPENAPI_SWAGGER_UI_URL = "https://cdn.jsdelivr.net/npm/swagger-ui-dist/"
     OPENAPI_REDOC_PATH = "/redoc"
     OPENAPI_REDOC_URL = "https://cdn.jsdelivr.net/npm/redoc@2.0.0/bundles/redoc.standalone.js"
-    
+
+    # TODO: Changer l'email du support et ajouter une configuration pour l'ajout d'une clé d'api dans le header de la requête.
+
     # Description de l'API
     API_SPEC_OPTIONS = {
         'info': {
@@ -100,7 +102,7 @@ Cette API offre des services complets de conversion de devises en temps réel av
             ''',
             'contact': {
                 'name': 'Support API',
-                'email': 'support@currencyconverter.com'
+                'email': os.environ.get('SUPPORT_EMAIL', '')
             },
             'license': {
                 'name': 'MIT',

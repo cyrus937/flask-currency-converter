@@ -8,6 +8,9 @@ services:
       - DATABASE_URL=postgresql://postgres:password@db:5432/flask_auth_currency
       - REDIS_URL=redis://redis:6379/0
       - JWT_SECRET_KEY=dev-secret-key-change-in-production
+      - SECRET_KEY=your-super-secret-key-change-in-production
+      - CURRENCYAPI_API_KEY=cur_live_sS9vwGwpGcclZEZ778vobqiWE36mVJL40MbNGTg9
+      - SUPPORT_EMAIL=support@my-finapp.com
     depends_on:
       - db
       - redis
