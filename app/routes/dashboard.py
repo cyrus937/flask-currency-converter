@@ -36,13 +36,13 @@ def get_conversion_history():
 
         recent_conversions = Conversion.get_user_history(user_id, limit=5)
         popular_currencies = Currency.get_popular_currencies()
-        # user_favorites = user.get_favorite_currencies()
+        user_favorites = user.get_favorite_currencies()
         
         return {
             user: user.to_dict(include_sensitive=True),
             'recent_conversions': [conv.to_dict() for conv in recent_conversions],
             'popular_currencies': [currency.to_dict() for currency in popular_currencies],
-            # 'user_favorites': user_favorites
+            'user_favorites': user_favorites
         }
         
     except Exception as e:
@@ -59,12 +59,7 @@ def dashboard_home():
     """
     try:
         print("Loading dashboard home...")  # Debugging line
-        return render_template('dashboard/home.html'
-                            #  user=user, 
-                            #  recent_conversions=recent_conversions,
-                            #  popular_currencies=popular_currencies,
-                            #  user_favorites=user_favorites
-                            )
+        return render_template('dashboard/home.html')
         
     except Exception as e:
         print(f"Error loading dashboard: {e}")
