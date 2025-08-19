@@ -15,7 +15,7 @@ Une application Flask complète combinant un système d'authentification robuste
 
 ### Conversion de Devises
 - ✅ Conversion en temps réel (30+ devises)
-- ✅ Providers multiples avec fallback (Fixer.io, ECB)
+- ✅ Providers multiples avec fallback (Currency api actuellement supporté)
 - ✅ Cache Redis pour performances optimales
 - ✅ Historique des conversions
 - ✅ Devises favorites par utilisateur
@@ -34,7 +34,6 @@ Une application Flask complète combinant un système d'authentification robuste
 - **Base de données**: PostgreSQL/SQLite
 - **Cache**: Redis
 - **Tâches**: Celery + Redis
-- **Frontend**: Bootstrap 5, Axios
 - **Tests**: Pytest
 - **Déploiement**: Docker, Gunicorn
 
@@ -91,6 +90,16 @@ docker-compose exec web flask db upgrade
 docker-compose exec web python scripts/populate_currencies.py
 ```
 
+Ou utiliser le fichier manage_docker.sh
+
+```bash
+# Afficher la liste des commande possible
+./manage_docker.sh help
+
+# Installation complète
+./manage_docker.sh setup
+```
+
 ## ⚙️ Configuration
 
 ### Variables d'environnement (.env)
@@ -107,7 +116,10 @@ DATABASE_URL=postgresql://user:pass@localhost/db_name
 REDIS_URL=redis://localhost:6379/0
 
 # APIs externes (optionnel)
-FIXER_API_KEY=your-fixer-api-key
+CURRENCYAPI_API_KEY=your-currency-api-key
+
+# Support Email
+SUPPORT_EMAIL=test-support@currencyconverter.com
 
 # Email (optionnel)
 MAIL_SERVER=smtp.gmail.com
@@ -162,7 +174,7 @@ Documentation Complète :
 
 ### Conversion simple
 ```bash
-curl -X POST http://localhost:5000/api/conversions/convert \
+curl -X POST http://localhost:5000/api/conversions/convert-free \
   -H "Content-Type: application/json" \
   -d '{"amount": 100, "from_currency": "USD", "to_currency": "EUR"}'
 ```
