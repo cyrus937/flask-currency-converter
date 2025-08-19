@@ -1,4 +1,3 @@
-# docker-compose.yml - Version corrigée
 services:
   web:
     build: .
@@ -6,7 +5,6 @@ services:
       - "5000:5000"
     environment:
       - FLASK_ENV=development
-      # ✅ Port 5432 à l'intérieur du réseau Docker
       - DATABASE_URL=postgresql://postgres:password@db:5432/flask_auth_currency
       - REDIS_URL=redis://redis:6379/0
       - JWT_SECRET_KEY=dev-secret-key-change-in-production
@@ -17,7 +15,6 @@ services:
       - .:/app
     networks:
       - flask_network
-    # command: /bin/sh -c "flask run & sleep 10 && python populate_currencies.py && wait"
     
   db:
     image: postgres:15
@@ -28,7 +25,6 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
     ports:
-      # ✅ Correction: 5431 (externe) -> 5432 (interne)
       - "5431:5432"
     networks:
       - flask_network
@@ -86,7 +82,6 @@ services:
     networks:
       - flask_network
 
-# ✅ Ajout d'un réseau personnalisé pour une meilleure isolation
 networks:
   flask_network:
     driver: bridge
