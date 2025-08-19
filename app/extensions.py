@@ -9,7 +9,6 @@ from flask_migrate import Migrate
 
 from flask_smorest import Api
 
-# Initialisation des extensions
 db = SQLAlchemy()
 jwt = JWTManager()
 limiter = Limiter(key_func=get_remote_address)

@@ -50,7 +50,7 @@ def get_conversion_history():
 
 
 @dashboard_bp.route('/')
-# @jwt_required()
+@jwt_required()
 def dashboard_home():
     """
     Dashboard principal (interface web)
