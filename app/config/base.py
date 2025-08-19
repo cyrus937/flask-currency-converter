@@ -43,12 +43,9 @@ class BaseConfig:
     MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
     MAIL_DEFAULT_SENDER = os.environ.get('MAIL_DEFAULT_SENDER')
-    
-    # Currency API Keys
-    FIXER_API_KEY = os.environ.get('FIXER_API_KEY')
-    EXCHANGERATE_API_KEY = os.environ.get('EXCHANGERATE_API_KEY')
-    
-    CURRENCYAPI_API_KEY = os.environ.get('CURRENCYAPI_API_KEY', 'cur_live_sS9vwGwpGcclZEZ778vobqiWE36mVJL40MbNGTg9')
+
+    # TODO: Ajouter la clé API pour CurrencyAPI dans le fichier d'environnement
+    CURRENCYAPI_API_KEY = os.environ.get('CURRENCYAPI_API_KEY', '')
     
     # Currency Configuration
     DEFAULT_BASE_CURRENCY = 'USD'
