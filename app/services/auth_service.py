@@ -5,6 +5,7 @@ from datetime import datetime
 import secrets
 import app
 from app.config import BaseConfig
+from app.models.api_key import ApiKey
 from app.models.user import User
 from app.models.session import Session
 from app.models.refresh_token import RefreshToken
@@ -45,6 +46,9 @@ class AuthService:
 
         user.preferred_currency = preferred_currency
         user.save()
+
+        # TODO: Générer une clé API pour l'utilisateur
+        _, key = ApiKey.create_api_key(name=user.email, owner_id=user.id)
 
         return user
     
