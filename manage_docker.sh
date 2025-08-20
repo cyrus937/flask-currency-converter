@@ -140,7 +140,12 @@ reset_db() {
 
 # Sauvegarder la base de données
 backup_db() {
-    local backup_file="backup_$(date +%Y%m%d_%H%M%S).sql"
+    local backup_dir="backup"
+    local backup_file="${backup_dir}/backup_$(date +%Y%m%d_%H%M%S).sql"
+
+    # Crée le dossier si nécessaire
+    mkdir -p "$backup_dir"
+    
     print_info "Sauvegarde de la base de données..."
     docker compose exec db pg_dump -U postgres flask_auth_currency > "$backup_file"
     print_success "Sauvegarde créée: $backup_file"
