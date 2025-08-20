@@ -170,7 +170,6 @@ def logout():
     Révoque les tokens associés à cette session.
     """
     try:
-        # TODO: Lorsqu'on se déconnecte, on révoque le token d'accès et le refresh token sur la session actuelle. On ne doit plus pouvoir se reconnecter avec un ancien token.
         user_id = get_jwt_identity()
         claims = get_jwt()
         session_id = claims.get('session_id')
@@ -199,7 +198,6 @@ def logout_all():
     Révoque tous les tokens associés au compte.
     """
     try:
-        # TODO: Lorsqu'on se déconnecte de toutes les sessions, on révoque tous les tokens d'accès et refresh tokens. On ne doit plus pouvoir se reconnecter avec un ancien token.
         user_id = get_jwt_identity()
         AuthService.logout_user(user_id)
         
