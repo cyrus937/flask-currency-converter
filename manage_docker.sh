@@ -124,13 +124,6 @@ downgrade_db() {
     fi
 }
 
-# Initialiser avec des données de test
-init_data() {
-    print_info "Initialisation avec des données de test..."
-    docker compose run --rm web flask init-db
-    print_success "Données de test créées"
-}
-
 # Réinitialiser complètement la base
 reset_db() {
     print_error "ATTENTION: Cette opération supprimera TOUTES les données!"
@@ -198,9 +191,6 @@ full_setup() {
     # 6. Appliquer les migrations
     upgrade_db
     
-    # 7. Initialiser les données
-    init_data
-    
     print_success "🎉 Installation terminée!"
     print_info "Vous pouvez maintenant démarrer l'application avec:"
     print_info "docker compose up"
@@ -246,7 +236,6 @@ show_help() {
     echo "  upgrade        Appliquer les migrations"
     echo "  status         Voir l'état des migrations"
     echo "  downgrade      Revenir à la migration précédente"
-    echo "  init-data      Créer des données de test"
     echo "  reset          Réinitialiser complètement la base"
     echo "  backup         Sauvegarder la base de données"
     echo "  restore        Restaurer la base de données"
@@ -289,10 +278,6 @@ case "${1:-help}" in
     downgrade)
         check_docker
         downgrade_db
-        ;;
-    init-data)
-        check_docker
-        init_data
         ;;
     reset)
         check_docker
