@@ -35,16 +35,7 @@ class BaseConfig:
     
     CELERY_RESULT_BACKEND = os.environ.get('CELERY_RESULT_BACKEND', 'redis://localhost:6379/3')
     CELERY_BROKER_URL = os.environ.get('CELERY_BROKER_URL', 'redis://localhost:6379/3')
-    
-    # Email Configuration
-    MAIL_SERVER = os.environ.get('MAIL_SERVER', 'localhost')
-    MAIL_PORT = int(os.environ.get('MAIL_PORT', 587))
-    MAIL_USE_TLS = True
-    MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
-    MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
-    MAIL_DEFAULT_SENDER = os.environ.get('MAIL_DEFAULT_SENDER')
 
-    # TODO: Ajouter la clé API pour CurrencyAPI dans le fichier d'environnement
     CURRENCYAPI_API_KEY = os.environ.get('CURRENCYAPI_API_KEY', '')
     
     # Currency Configuration
@@ -57,7 +48,7 @@ class BaseConfig:
     BCRYPT_LOG_ROUNDS = 12
     
     # CORS
-    CORS_ORIGINS = ["http://localhost:3000", "http://localhost:5000", "https://localhost:5000", "https://app-currency-converter.my-finapp.com/"]
+    CORS_ORIGINS = ["http://localhost:3000", "http://localhost:5000", "https://localhost:5000", "*"]
 
     # Configuration OpenAPI/Swagger
     API_TITLE = "Currency Converter API"
@@ -68,8 +59,6 @@ class BaseConfig:
     OPENAPI_SWAGGER_UI_URL = "https://cdn.jsdelivr.net/npm/swagger-ui-dist/"
     OPENAPI_REDOC_PATH = "/redoc"
     OPENAPI_REDOC_URL = "https://cdn.jsdelivr.net/npm/redoc@2.0.0/bundles/redoc.standalone.js"
-
-    # TODO: Changer l'email du support et ajouter une configuration pour l'ajout d'une clé d'api dans le header de la requête.
 
     # Description de l'API
     API_SPEC_OPTIONS = {
@@ -98,7 +87,9 @@ Cette API offre des services complets de conversion de devises en temps réel av
 1. Créez un compte avec `/api/auth/register`
 2. Connectez-vous avec `/api/auth/login`
 3. Utilisez le token dans l'en-tête `Authorization: Bearer <token>`
-4. Convertissez des devises avec `/api/conversions/convert`
+4. Générez une clé API avec `/api/keys/generate`
+5. Ajoutez votre clé API dans l'en-tête `X-API-Key: <votre_clé_api>`
+6. Convertissez des devises avec `/api/conversions/convert`
             ''',
             'contact': {
                 'name': 'Support API',
@@ -114,10 +105,10 @@ Cette API offre des services complets de conversion de devises en temps réel av
                 'url': 'http://localhost:5000',
                 'description': 'Serveur de développement'
             },
-            {
-                'url': 'https://api-currency-converter.my-finapp.com/',
-                'description': 'Serveur de production'
-            }
+            # {
+            #     'url': 'https://api-currency-converter.my-finapp.com/',
+            #     'description': 'Serveur de production'
+            # }
         ],
         'tags': [
             {
@@ -148,6 +139,12 @@ Cette API offre des services complets de conversion de devises en temps réel av
                     'scheme': 'bearer',
                     'bearerFormat': 'JWT',
                     'description': 'Token JWT obtenu via /api/auth/login'
+                },
+                'apiKeyAuth': {
+                    'type': 'apiKey',
+                    'in': 'header',
+                    'name': 'X-API-Key',
+                    'description': 'Clé API pour accéder aux fonctionnalités avancées'
                 }
             }
         },

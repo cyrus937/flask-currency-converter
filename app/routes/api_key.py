@@ -5,6 +5,7 @@ from flask import request
 from app.models.api_key import ApiKey
 from app.schemas.api_key_schemas import ApiKeyCreateSchema, ApiKeySchema
 from app.schemas.response_schemas import MessageSchema
+from app.middleware.rate_limiter import limiter
 
 api_keys_bp = Blueprint(
     'api_keys', 
@@ -18,11 +19,17 @@ api_keys_bp = Blueprint(
 @api_keys_bp.response(201, ApiKeySchema)
 @api_keys_bp.doc(
     summary="Créer une nouvelle clé API",
-    description="Créer une nouvelle clé API",
+    description="""
+Créer une nouvelle clé API.
+
+Limites :
+- 5 requêtes par minute
+    """,
     tags=["API Keys"],
     security=[{"bearerAuth": []}]
 )
 @jwt_required()
+@limiter.limit("5 per minute")
 def create_api_key():
     try:
         user_id = get_jwt_identity()

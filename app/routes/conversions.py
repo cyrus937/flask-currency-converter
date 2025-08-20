@@ -73,11 +73,12 @@ def convert_currency_free(args):
 @conversions_bp.doc(
     summary="Conversion de devise",
     description="""
-Convertit un montant d'une devise vers une autre en utilisant les taux en temps réel.""",
+Convertit un montant d'une devise vers une autre en utilisant les taux en temps réel.
+Requiert une Api Key
+""",
     tags=["Conversions"],
-    security=[{"bearerAuth": []}],
+    security=[{"apiKeyAuth": []}],
 )
-# @jwt_required()
 @require_auth
 @limiter.limit("100 per hour")
 def convert_currency(args):
@@ -120,9 +121,8 @@ def convert_currency(args):
     summary="Conversion en lot",
     description="Convertit un montant vers plusieurs devises simultanément (max 10 devises)",
     tags=["Conversions"],
-    security=[{"bearerAuth": []}],
+    security=[{"apiKeyAuth": []}],
 )
-# @jwt_required()
 @require_auth
 @limiter.limit("50 per hour")
 def batch_convert(args):
@@ -130,7 +130,6 @@ def batch_convert(args):
     try:
         amount = args["amount"]
         from_currency = args["from_currency"]
-        # to_currencies = args['to_currencies'] if 'to_currencies' in args else []
         to_currencies = args.get("to_currencies", [])
 
         if not amount or not from_currency or not to_currencies:
@@ -190,7 +189,7 @@ Récupère l'historique des conversions de l'utilisateur connecté
     """,
     tags=["Conversions"],
 )
-@jwt_required()
+@require_auth
 def get_conversion_history():
     """Historique des conversions utilisateur"""
     try:
@@ -231,7 +230,7 @@ Statistiques personnalisées des conversions de l'utilisateur
     """,
     tags=["Conversions"],
 )
-@jwt_required()
+@require_auth
 def get_conversion_stats():
     """Statistiques de conversion utilisateur"""
     try:

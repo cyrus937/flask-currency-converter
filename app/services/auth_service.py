@@ -47,9 +47,6 @@ class AuthService:
         user.preferred_currency = preferred_currency
         user.save()
 
-        # TODO: Générer une clé API pour l'utilisateur
-        _, key = ApiKey.create_api_key(name=user.email, owner_id=user.id)
-
         return user
     
     @staticmethod
