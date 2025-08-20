@@ -40,7 +40,12 @@ def register_page():
 @auth_bp.route('/register', methods=['POST'])
 @auth_bp.doc(
     summary="Enregistrement d'un nouvel utilisateur",
-    description="Crée un nouveau compte utilisateur avec email et mot de passe.",
+    description="""
+Crée un nouveau compte utilisateur avec email et mot de passe.
+
+Limites :
+- 5 requêtes par minute
+    """,
     tags=['Authentication'],)
 @auth_bp.arguments(RegisterSchema, location='json', content_type='application/json')
 @auth_bp.response(201, UserProfileSchema, content_type='application/json')
@@ -74,7 +79,12 @@ def register(args):
 @auth_bp.route('/login', methods=['POST'])
 @auth_bp.doc(
     summary="Connexion utilisateur",
-    description="Authentifie un utilisateur et retourne les tokens JWT.",
+    description="""
+Authentifie un utilisateur et retourne les tokens JWT.
+
+Limites :
+- 10 requêtes par minute
+    """,
     tags=['Authentication'],)
 @auth_bp.arguments(LoginSchema, location='json')
 @auth_bp.response(200, LoginResponseSchema, content_type='application/json')
@@ -120,7 +130,12 @@ def login(args):
 @auth_bp.arguments(RefreshTokenSchema, location='json')
 @auth_bp.doc(
     summary="Rafraîchissement des tokens",
-    description="Génère de nouveaux tokens JWT à partir d'un refresh token valide.",
+    description="""
+Génère de nouveaux tokens JWT à partir d'un refresh token valide.
+
+Limites :
+- 20 requêtes par minute
+    """,
     tags=['Authentication'],)
 @auth_bp.response(200, RefreshResponseSchema)
 @auth_bp.alt_response(400, schema=ErrorSchema)
@@ -156,7 +171,9 @@ def refresh(args):
 @auth_bp.route('/logout', methods=['POST'])
 @auth_bp.doc(
     summary="Déconnexion utilisateur",
-    description="Déconnecte l'utilisateur de la session actuelle.",
+    description="""
+Déconnecte l'utilisateur de la session actuelle.
+    """,
     tags=['Authentication'],
     security=[{"bearerAuth": []}])
 @auth_bp.response(200, MessageSchema)
@@ -210,7 +227,12 @@ def logout_all():
 @auth_bp.route('/change-password', methods=['POST'])
 @auth_bp.doc(
     summary="Changement de mot de passe",
-    description="Modifie le mot de passe de l'utilisateur connecté.",
+    description="""
+Modifie le mot de passe de l'utilisateur connecté.
+
+Limites :
+- 3 requêtes par minute
+    """,
     tags=['Authentication'],
     security=[{"bearerAuth": []}])
 @auth_bp.arguments(ChangePasswordSchema, location='json')

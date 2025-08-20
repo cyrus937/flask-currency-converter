@@ -39,8 +39,10 @@ conversions_bp = Blueprint(
     summary="Conversion de devise",
     description="""
 Convertit un montant d'une devise vers une autre en utilisant les taux en temps réel.
-Limité à 5 conversions par heure.
-""",
+
+Limites :
+- 5 requêtes par heure
+    """,
     tags=["Conversions"],
 )
 @limiter.limit("5 per hour")
@@ -74,8 +76,12 @@ def convert_currency_free(args):
     summary="Conversion de devise",
     description="""
 Convertit un montant d'une devise vers une autre en utilisant les taux en temps réel.
-Requiert une Api Key
-""",
+
+Nécessite une Api Key
+
+Limites :
+- 100 requêtes par heure
+    """,
     tags=["Conversions"],
     security=[{"apiKeyAuth": []}],
 )
@@ -119,7 +125,14 @@ def convert_currency(args):
 )
 @conversions_bp.doc(
     summary="Conversion en lot",
-    description="Convertit un montant vers plusieurs devises simultanément (max 10 devises)",
+    description="""
+Convertit un montant vers plusieurs devises simultanément (max 10 devises)
+
+Nécessite une Api Key
+
+Limites :
+- 50 requêtes par heure
+    """,
     tags=["Conversions"],
     security=[{"apiKeyAuth": []}],
 )

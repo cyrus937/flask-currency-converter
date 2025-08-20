@@ -45,7 +45,12 @@ def get_profile():
 @user_bp.response(200, UserProfileSchema)
 @user_bp.doc(
     summary="Mise à jour profil",
-    description="Met à jour les informations du profil utilisateur",
+    description="""
+Met à jour les informations du profil utilisateur
+
+Limites :
+- 10 requêtes par heure
+    """,
     tags=['User']
 )
 @jwt_required()

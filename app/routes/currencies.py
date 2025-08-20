@@ -40,6 +40,9 @@ Retourne la liste de toutes les devises supportées par l'API.
 
 **Exemple :**
 `GET /api/currencies?type=fiat`
+
+Limites :
+- 1000 requêtes par heure
     """,
     tags=['Currencies']
 )
@@ -71,7 +74,12 @@ def get_currencies():
 @currencies_bp.response(200, CurrencyListSchema)
 @currencies_bp.doc(
     summary="Devises populaires",
-    description="Retourne les devises les plus utilisées et échangées",
+    description="""
+Retourne les devises les plus utilisées et échangées
+
+Limites :
+- 1000 requêtes par heure
+    """,
     tags=['Currencies']
 )
 @limiter.limit("1000 per hour")
@@ -101,6 +109,9 @@ Récupère les taux de change en temps réel pour une devise de base.
 
 **Exemple :**
 `GET /api/currencies/rates?base=USD&symbols=EUR,GBP,JPY`
+
+Limites :
+- 1000 requêtes par heure
     """,
     tags=['Currencies']
 )
@@ -174,7 +185,12 @@ def get_favorite_currencies():
 @currencies_bp.response(200, MessageSchema)
 @currencies_bp.doc(
     summary="Ajouter devise favorite",
-    description="Ajoute une devise aux favoris de l'utilisateur",
+    description="""
+Ajoute une devise aux favoris de l'utilisateur
+
+Limites :
+- 100 requêtes par heure
+    """,
     tags=['Currencies']
 )
 @jwt_required()
