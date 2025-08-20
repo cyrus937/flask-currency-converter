@@ -107,7 +107,8 @@ class ConversionService:
         
         # Tentative depuis la base de données
         db_rate = ExchangeRate.get_latest_rate(from_currency, to_currency)
-        if db_rate and not db_rate.is_stale(minutes=10):
+        # On vérifie que le taux trouvé n'est pas obsolète après 100 minutes
+        if db_rate and not db_rate.is_stale(minutes=100):
             rate_data = {
                 'rate': db_rate.rate,
                 'provider': db_rate.provider
@@ -117,15 +118,22 @@ class ConversionService:
         
         # Récupération depuis les providers externes
         try:
-            rate = self.rate_fetcher.fetch_rate(from_currency, to_currency)
-            provider = self.rate_fetcher.last_successful_provider
+            db_usd_from_currency = ExchangeRate.get_latest_rate('USD', from_currency)
+            db_usd_to_currency = ExchangeRate.get_latest_rate('USD', to_currency)
+            
+            rate = db_usd_to_currency.rate / db_usd_from_currency.rate
+            if rate <= 0:
+                raise CurrencyError("Taux de change invalide")
+            
+            # rate = self.rate_fetcher.fetch_rate(from_currency, to_currency)
+            # provider = self.rate_fetcher.last_successful_provider
             
             # Sauvegarder en base
-            ExchangeRate.update_or_create(from_currency, to_currency, rate, provider)
+            ExchangeRate.update_or_create(from_currency, to_currency, rate)
             
             rate_data = {
                 'rate': Decimal(str(rate)),
-                'provider': provider
+                'provider': 'system'
             }
             self.cache.set_rate(cache_key, rate_data, timeout=300)
             
@@ -189,7 +197,7 @@ class ConversionService:
             'fee_amount': 0.0,
             'fee_rate': 0.0,
             'provider': 'system',
-            'timestamp': datetime.utcnow().isoformat()
+            'timestamp': datetime.utcnow()
         }
     
     def _build_conversion_response(self, **kwargs):
@@ -206,5 +214,5 @@ class ConversionService:
             'fee_amount': float(kwargs['fee_data']['fee_amount']),
             'fee_rate': float(kwargs['fee_data']['fee_rate']),
             'provider': kwargs['provider'],
-            'timestamp': datetime.utcnow().isoformat()
+            'timestamp': datetime.utcnow()
         }

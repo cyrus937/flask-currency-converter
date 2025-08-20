@@ -15,7 +15,7 @@ Une application Flask complète combinant un système d'authentification robuste
 
 ### Conversion de Devises
 - ✅ Conversion en temps réel (30+ devises)
-- ✅ Providers multiples avec fallback (Fixer.io, ECB)
+- ✅ Providers multiples avec fallback (Currency api actuellement supporté)
 - ✅ Cache Redis pour performances optimales
 - ✅ Historique des conversions
 - ✅ Devises favorites par utilisateur
@@ -34,7 +34,6 @@ Une application Flask complète combinant un système d'authentification robuste
 - **Base de données**: PostgreSQL/SQLite
 - **Cache**: Redis
 - **Tâches**: Celery + Redis
-- **Frontend**: Bootstrap 5, Axios
 - **Tests**: Pytest
 - **Déploiement**: Docker, Gunicorn
 
@@ -91,6 +90,16 @@ docker-compose exec web flask db upgrade
 docker-compose exec web python scripts/populate_currencies.py
 ```
 
+Ou utiliser le fichier manage_docker.sh
+
+```bash
+# Afficher la liste des commande possible
+./manage_docker.sh help
+
+# Installation complète
+./manage_docker.sh setup
+```
+
 ## ⚙️ Configuration
 
 ### Variables d'environnement (.env)
@@ -107,7 +116,10 @@ DATABASE_URL=postgresql://user:pass@localhost/db_name
 REDIS_URL=redis://localhost:6379/0
 
 # APIs externes (optionnel)
-FIXER_API_KEY=your-fixer-api-key
+CURRENCYAPI_API_KEY=your-currency-api-key
+
+# Support Email
+SUPPORT_EMAIL=test-support@currencyconverter.com
 
 # Email (optionnel)
 MAIL_SERVER=smtp.gmail.com
@@ -141,11 +153,28 @@ POST /api/currencies/favorites   # Ajouter favori
 GET  /api/currencies/rates       # Taux actuels
 ```
 
+## 📖 Accès à la Documentation
+Une fois l'application lancée, vous avez accès à :
+
+- 📊 Swagger UI Interactive : http://localhost:5000/docs
+- 📚 ReDoc (Documentation élégante) : http://localhost:5000/redoc
+- 📄 Spécification OpenAPI : http://localhost:5000/openapi.json
+
+### ✨ Fonctionnalités Swagger
+Documentation Complète :
+
+* ✅ 50+ endpoints documentés avec exemples
+* ✅ Authentification JWT intégrée dans l'interface
+* ✅ Schémas de validation automatiques
+* ✅ Test direct des APIs depuis le navigateur
+* ✅ Codes d'erreur documentés
+* ✅ Groupement par catégories (Auth, Conversions, Currencies, User)
+
 ## 📊 Exemples d'utilisation
 
 ### Conversion simple
 ```bash
-curl -X POST http://localhost:5000/api/conversions/convert \
+curl -X POST http://localhost:5000/api/conversions/convert-free \
   -H "Content-Type: application/json" \
   -d '{"amount": 100, "from_currency": "USD", "to_currency": "EUR"}'
 ```
@@ -166,14 +195,14 @@ curl -X GET http://localhost:5000/api/auth/profile \
 
 ```bash
 # Lancer tous les tests
-pytest
+pytest --disable-warnings
 
 # Tests avec couverture
-pytest --cov=app tests/
+pytest --disable-warnings --cov=app tests/
 
 # Tests spécifiques
-pytest tests/test_auth.py
-pytest tests/test_conversions.py
+pytest --disable-warnings tests/test_auth.py
+pytest --disable-warnings tests/test_conversions.py
 ```
 
 ## 🔧 Déploiement

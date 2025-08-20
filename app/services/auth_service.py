@@ -3,12 +3,16 @@ from flask import request
 from werkzeug.security import generate_password_hash
 from datetime import datetime
 import secrets
+import app
+from app.config import BaseConfig
+from app.models.api_key import ApiKey
 from app.models.user import User
 from app.models.session import Session
 from app.models.refresh_token import RefreshToken
 from app.services.session_service import SessionService
 from app.services.token_service import TokenService
 from app.utils.exceptions import AuthenticationError, ValidationError
+import logging
 
 
 class AuthService:
@@ -20,14 +24,17 @@ class AuthService:
         
         # Validation basique
         if not email or not password or not first_name or not last_name:
-            raise ValidationError("Tous les champs sont requis")
+            logging.error("Tous les champs sont requis pour l'enregistrement")
+            raise ValidationError("Tous les champs sont requis", 400)
         
         if len(password) < 8:
-            raise ValidationError("Le mot de passe doit contenir au moins 8 caractères")
+            logging.error("Le mot de passe doit contenir au moins 8 caractères")
+            raise ValidationError("Le mot de passe doit contenir au moins 8 caractères", 400)
         
         # Vérifier si l'utilisateur existe déjà
         if User.find_by_email(email):
-            raise ValidationError("Un utilisateur avec cet email existe déjà")
+            logging.error(f"Un utilisateur avec l'email {email} existe déjà")
+            raise ValidationError("Un utilisateur avec cet email existe déjà", 400)
         
         # Créer l'utilisateur
         user = User.create_user(
@@ -36,9 +43,10 @@ class AuthService:
             first_name=first_name,
             last_name=last_name
         )
+
         user.preferred_currency = preferred_currency
         user.save()
-        
+
         return user
     
     @staticmethod
@@ -46,16 +54,20 @@ class AuthService:
         """Authentifie un utilisateur et crée une session"""
         
         # Trouver l'utilisateur
-        user = User.find_by_email(email)
+        user: User = User.find_by_email(email)
+        
         if not user or not user.check_password(password):
-            raise AuthenticationError("Email ou mot de passe incorrect")
+            print(f"Authentication failed for email: {email}")
+            raise AuthenticationError("Email ou mot de passe incorrect", 400)
         
         if not user.is_active:
-            raise AuthenticationError("Compte désactivé")
+            print(f"Compte désactivé pour l'utilisateur: {email}")
+            raise AuthenticationError("Compte désactivé", 400)
         
         # Vérifier le nombre de sessions
         if not user.can_create_session():
-            raise AuthenticationError("Nombre maximum de sessions atteint")
+            print(f"Nombre maximum de sessions atteint pour l'utilisateur: {email}")
+            raise AuthenticationError("Nombre maximum de sessions atteint", 400)
         
         # Créer une session
         session = SessionService.create_session(
@@ -82,7 +94,8 @@ class AuthService:
             'user': user,
             'session': session,
             'access_token': access_token,
-            'refresh_token': refresh_token
+            'refresh_token': refresh_token,
+            'expires_in': BaseConfig.JWT_TIME
         }
     
     @staticmethod
@@ -147,7 +160,8 @@ class AuthService:
         
         return {
             'access_token': access_token,
-            'refresh_token': new_refresh_token
+            'refresh_token': new_refresh_token,
+            'expires_in': app.config['JWT_ACCESS_TOKEN_EXPIRES'].total_seconds()
         }
     
     @staticmethod

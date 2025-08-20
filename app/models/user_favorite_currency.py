@@ -59,5 +59,5 @@ class UserFavoriteCurrency(BaseModel):
         return {
             'currency_code': self.currency_code,
             'order_index': self.order_index,
-            'added_at': self.created_at.isoformat()
+            'added_at': self.created_at
         }

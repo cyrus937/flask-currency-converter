@@ -1,8 +1,7 @@
 # app/services/rate_fetcher_service.py
 from decimal import Decimal
 from typing import List, Optional
-from app.providers.fixer_provider import FixerProvider
-from app.providers.ecb_provider import ECBProvider
+from app.providers.currencyapi_provider import CurrencyAPIProvider
 from app.config.base import BaseConfig
 
 
@@ -16,17 +15,14 @@ class RateFetcherService:
     def _initialize_providers(self) -> List:
         """Initialise les providers avec ordre de priorité"""
         providers = []
-        
-        # Provider Fixer.io (si clé API disponible)
-        if BaseConfig.FIXER_API_KEY:
-            providers.append(FixerProvider(BaseConfig.FIXER_API_KEY))
-        
-        # Provider ECB (gratuit, toujours disponible)
-        providers.append(ECBProvider())
-        
+
+        # Provider CurrencyAPI (si clé API disponible)
+        if BaseConfig.CURRENCYAPI_API_KEY:
+            providers.append(CurrencyAPIProvider(BaseConfig.CURRENCYAPI_API_KEY))
+
         return providers
     
-    def fetch_rate(self, from_currency: str, to_currency: str) -> Decimal:
+    def  fetch_rate(self, from_currency: str, to_currency: str) -> Decimal:
         """Récupère un taux avec fallback entre providers"""
         
         from_currency = from_currency.upper()

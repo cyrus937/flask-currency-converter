@@ -18,6 +18,7 @@ class User(BaseModel):
     is_verified = db.Column(db.Boolean, default=False, nullable=False)
     is_premium = db.Column(db.Boolean, default=False, nullable=False)
     last_login = db.Column(db.DateTime)
+    is_admin = db.Column(db.Boolean, default=False, nullable=False)
     
     # Préférences utilisateur pour les devises
     preferred_currency = db.Column(db.String(3), default='USD')
@@ -28,12 +29,13 @@ class User(BaseModel):
     conversions = db.relationship('Conversion', backref='user', lazy='dynamic', cascade='all, delete-orphan')
     favorite_currencies = db.relationship('UserFavoriteCurrency', backref='user', lazy='dynamic', cascade='all, delete-orphan')
     
-    def __init__(self, email, password, first_name, last_name, **kwargs):
+    def __init__(self, email, password, first_name, last_name, is_admin=False, **kwargs):
         super().__init__(**kwargs)
         self.email = email.lower().strip()
         self.first_name = first_name
         self.last_name = last_name
         self.set_password(password)
+        self.is_admin = is_admin
     
     def set_password(self, password):
         """Hash et définit le mot de passe"""
@@ -118,7 +120,7 @@ class User(BaseModel):
         return cls.query.filter_by(email=email.lower().strip()).first()
     
     @classmethod
-    def create_user(cls, email, password, first_name, last_name):
+    def create_user(cls, email, password, first_name, last_name, is_admin=False):
         """Crée un nouvel utilisateur"""
         if cls.find_by_email(email):
             raise ValueError("Un utilisateur avec cet email existe déjà")
@@ -127,7 +129,8 @@ class User(BaseModel):
             email=email,
             password=password,
             first_name=first_name,
-            last_name=last_name
+            last_name=last_name,
+            is_admin=is_admin
         )
         return user.save()
     
@@ -143,8 +146,9 @@ class User(BaseModel):
             'is_verified': self.is_verified,
             'is_premium': self.is_premium,
             'preferred_currency': self.preferred_currency,
-            'created_at': self.created_at.isoformat(),
-            'last_login': self.last_login.isoformat() if self.last_login else None
+            'created_at': self.created_at,
+            'last_login': self.last_login if self.last_login else None,
+            'role': 'admin' if self.is_admin else 'user'
         }
         
         if include_sensitive:

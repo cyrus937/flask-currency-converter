@@ -2,7 +2,7 @@
 from flask_jwt_extended import decode_token, get_jti
 from app.extensions import cache
 from app.models.refresh_token import RefreshToken
-import redis
+# import redis
 
 
 class TokenService:

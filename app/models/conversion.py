@@ -79,6 +79,38 @@ class Conversion(BaseModel):
         return result
     
     @classmethod
+    def get_popular_currencies(cls):
+        """Retourne les devises les plus populaires"""
+        from sqlalchemy import func
+        
+        result = db.session.query(
+            cls.from_currency,
+            func.count().label('conversion_count')
+        ).group_by(
+            cls.from_currency
+        ).order_by(
+            func.count().desc()
+        ).limit(10).all()
+        
+        result_1 = db.session.query(
+            cls.to_currency,
+            func.count().label('conversion_count')
+        ).group_by(
+            cls.to_currency
+        ).order_by(
+            func.count().desc()
+        ).limit(10).all()
+        
+        # Fusionner les résultats pour éviter les doublons
+        currencies = set()
+        for currency in result:
+            currencies.add(currency.from_currency)
+        for currency in result_1:
+            currencies.add(currency.to_currency)
+            
+        return list(currencies)
+
+    @classmethod
     def get_volume_stats(cls, currency_code=None, days=30):
         """Statistiques de volume pour une devise"""
         from datetime import datetime, timedelta
@@ -119,5 +151,5 @@ class Conversion(BaseModel):
             'fee_amount': float(self.fee_amount),
             'fee_rate': float(self.fee_rate),
             'provider': self.provider,
-            'timestamp': self.created_at.isoformat()
+            'timestamp': self.created_at
         }
