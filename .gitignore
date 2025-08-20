@@ -5,3 +5,4 @@ instance
 venv/
 *.log
 celerybeat-schedule*
+backup/
