@@ -1,8 +1,8 @@
 # tests/conftest.py
+from decimal import Decimal
 import sys
 import os
 
-# Ajouter le répertoire parent au Python path
 current_dir = os.path.dirname(os.path.abspath(__file__))
 parent_dir = os.path.dirname(current_dir)
 sys.path.insert(0, parent_dir)
@@ -14,6 +14,7 @@ from app import create_app
 from app.extensions import db
 from app.models.user import User
 from app.models.currency import Currency
+from app.models.exchange_rate import ExchangeRate
 
 
 @pytest.fixture
@@ -46,6 +47,17 @@ def app():
         for currency in currencies:
             currency.save()
         
+        
+        exchange_rates = [
+            ExchangeRate(from_currency='USD', to_currency='EUR', rate=Decimal('0.85'), provider='test_provider'),
+            ExchangeRate(from_currency='USD', to_currency='USD', rate=Decimal('1.00'), provider='test_provider'),
+            ExchangeRate(from_currency='EUR', to_currency='USD', rate=Decimal('1.15'), provider='test_provider'),
+            ExchangeRate(from_currency='GBP', to_currency='USD', rate=Decimal('1.30'), provider='test_provider'),
+        ]
+        
+        for rate in exchange_rates:
+            rate.save()
+
         yield app
         
         db.drop_all()
