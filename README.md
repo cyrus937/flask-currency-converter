@@ -195,14 +195,14 @@ curl -X GET http://localhost:5000/api/auth/profile \
 
 ```bash
 # Lancer tous les tests
-pytest
+pytest --disable-warnings
 
 # Tests avec couverture
-pytest --cov=app tests/
+pytest --disable-warnings --cov=app tests/
 
 # Tests spécifiques
-pytest tests/test_auth.py
-pytest tests/test_conversions.py
+pytest --disable-warnings tests/test_auth.py
+pytest --disable-warnings tests/test_conversions.py
 ```
 
 ## 🔧 Déploiement
